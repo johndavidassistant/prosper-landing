@@ -62,12 +62,18 @@
     font-size: 11px; font-weight: 700;
     letter-spacing: 2.8px; text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
   .gold-bar {
     width: 44px; height: 3px;
     background: var(--gold); border-radius: 2px;
-    margin: 18px 0 28px;
+    margin-bottom: 28px;
+  }
+  /* Centered variant for centered section heads */
+  .gold-bar-center {
+    width: 44px; height: 3px;
+    background: var(--gold); border-radius: 2px;
+    margin: 12px auto 26px;
   }
 
   /* ═══════════════════════════════════════════════════
@@ -144,7 +150,44 @@
     transition: color 0.15s;
   }
   .nav-links a:hover { color: var(--gold); }
-  .nav-cta { flex-shrink: 0; }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Language toggle */
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .lang-btn {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 4px;
+    line-height: 1;
+    transition: color 0.15s;
+  }
+  .lang-btn.active {
+    color: var(--navy);
+  }
+  .lang-btn:hover { color: var(--gold); }
+  .lang-sep {
+    font-size: 10px;
+    color: rgba(26,41,66,0.20);
+    user-select: none;
+    line-height: 1;
+    padding: 0 1px;
+  }
 
   @media (min-width: 768px) {
     .nav-links { display: flex; }
@@ -158,8 +201,8 @@
     background-image:
       radial-gradient(ellipse 90% 70% at 50% -10%, var(--navy-soft) 0%, var(--navy-deep) 65%),
       radial-gradient(ellipse 60% 50% at 50% 75%, rgba(200,149,46,0.07) 0%, transparent 70%),
-      repeating-linear-gradient(0deg,   transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px),
-      repeating-linear-gradient(90deg,  transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px);
+      repeating-linear-gradient(0deg,  transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px);
     border-bottom: 1px solid rgba(200,149,46,0.18);
     padding: 88px 24px 100px;
     text-align: center;
@@ -175,44 +218,53 @@
   }
   .hero-pill {
     display: inline-block;
-    border: 1px solid rgba(200,149,46,0.50);
-    background: rgba(200,149,46,0.10);
-    color: var(--gold);
+    border: 1px solid rgba(200,149,46,0.45);
+    background: rgba(200,149,46,0.08);
+    color: rgba(200,149,46,0.90);
     font-family: var(--sans);
     font-size: 11px; font-weight: 700;
     letter-spacing: 2.5px; text-transform: uppercase;
     padding: 7px 20px; border-radius: 100px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   .hero h1 {
     font-family: var(--display);
-    font-size: clamp(42px, 8vw, 80px);
+    font-size: clamp(44px, 8vw, 84px);
     font-weight: 800;
     color: var(--white);
-    line-height: 1.05;
-    letter-spacing: -1.5px;
-    max-width: 700px;
-    margin: 0 auto 24px;
+    line-height: 1.03;
+    letter-spacing: -2px;
+    max-width: 720px;
+    margin: 0 auto 0;
   }
   .hero h1 span {
     display: block;
     color: var(--gold);
   }
+  /* Gold accent bar anchors the headline */
+  .hero-rule {
+    width: 48px; height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    margin: 28px auto 32px;
+    opacity: 0.90;
+  }
   .hero-sub {
-    font-size: clamp(16px, 2.2vw, 19px);
-    color: rgba(255,255,255,0.62);
-    max-width: 580px;
-    margin: 0 auto 48px;
-    line-height: 1.80;
+    font-size: clamp(16px, 2.1vw, 18px);
+    color: rgba(255,255,255,0.78);
+    max-width: 540px;
+    margin: 0 auto 52px;
+    line-height: 1.82;
+    font-weight: 400;
   }
   .hero-btns {
     display: flex; flex-direction: column;
     align-items: center; gap: 14px;
-    margin-bottom: 48px;
+    margin-bottom: 52px;
   }
   .hero-anchor {
     font-size: 13px;
-    color: rgba(255,255,255,0.38);
+    color: rgba(255,255,255,0.44);
     letter-spacing: 0.2px;
     line-height: 1.7;
     max-width: 480px;
@@ -229,14 +281,14 @@
   .trust-bar {
     background: var(--cream);
     border-bottom: 1px solid var(--cream-dark);
-    padding: 22px 24px;
+    padding: 28px 24px;
   }
   .trust-bar-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10px 32px;
+    gap: 10px 36px;
     max-width: 900px;
     margin: 0 auto;
   }
@@ -244,14 +296,14 @@
     font-size: 13px;
     font-weight: 600;
     color: var(--muted);
-    letter-spacing: 0.2px;
+    letter-spacing: 0.3px;
     white-space: nowrap;
   }
   .trust-sep {
     width: 4px; height: 4px;
     border-radius: 50%;
     background: var(--gold);
-    opacity: 0.7;
+    opacity: 0.55;
     flex-shrink: 0;
   }
   @media (max-width: 520px) { .trust-sep { display: none; } }
@@ -262,7 +314,7 @@
   .paths { background: var(--white); }
   .paths-head {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 64px;
   }
   .paths-head h2 {
     font-family: var(--display);
@@ -291,28 +343,45 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    box-shadow: 0 2px 16px rgba(26,41,66,0.06);
+    box-shadow: 0 2px 16px rgba(26,41,66,0.05);
   }
   .path-card::before {
     content: '';
     position: absolute; top: 0; left: 0; right: 0;
     height: 3px;
     background: var(--gold);
+    transition: height 0.25s;
   }
   .path-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 52px rgba(26,41,66,0.14), 0 0 0 1px rgba(200,149,46,0.22);
-    border-color: rgba(200,149,46,0.40);
+    box-shadow: 0 20px 52px rgba(26,41,66,0.13), 0 0 0 1px rgba(200,149,46,0.22);
+    border-color: rgba(200,149,46,0.38);
   }
-  .path-card:hover .path-icon {
-    background: rgba(200,149,46,0.20);
-    transition: background 0.25s;
+  .path-card:hover .path-icon { background: rgba(200,149,46,0.20); }
+  .path-card:hover::before { height: 4px; }
+
+  /* Featured card: Protect My Family — primary business */
+  .path-card.featured {
+    background: linear-gradient(160deg, rgba(200,149,46,0.06) 0%, rgba(200,149,46,0.01) 100%);
+    border-color: rgba(200,149,46,0.26);
+    box-shadow: 0 4px 28px rgba(200,149,46,0.10), 0 2px 8px rgba(26,41,66,0.06);
   }
-  .path-card::before {
-    transition: height 0.25s;
+  .path-card.featured::before { height: 4px; }
+  .path-card.featured:hover {
+    box-shadow: 0 20px 52px rgba(26,41,66,0.13), 0 0 0 1px rgba(200,149,46,0.35), 0 4px 28px rgba(200,149,46,0.14);
+    border-color: rgba(200,149,46,0.42);
   }
-  .path-card:hover::before {
-    height: 4px;
+
+  .path-badge {
+    display: inline-block;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(200,149,46,0.09);
+    border: 1px solid rgba(200,149,46,0.26);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 18px;
   }
 
   .path-icon {
@@ -321,6 +390,7 @@
     border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 24px;
+    transition: background 0.25s;
   }
   .path-icon svg {
     width: 26px; height: 26px;
@@ -340,7 +410,7 @@
   }
   .path-card p {
     font-size: 15px; color: var(--muted);
-    line-height: 1.75;
+    line-height: 1.78;
     margin-bottom: 28px;
   }
   .path-link {
@@ -363,7 +433,7 @@
     align-items: center;
   }
   @media (min-width: 820px) {
-    .story-inner { grid-template-columns: 400px 1fr; gap: 72px; }
+    .story-inner { grid-template-columns: 400px 1fr; gap: 80px; }
   }
 
   .story-photo {
@@ -374,17 +444,14 @@
     display: flex; align-items: center; justify-content: center;
     position: relative;
     border: 1px solid rgba(200,149,46,0.15);
-    box-shadow: inset 0 0 60px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 48px rgba(26,41,66,0.20), inset 0 0 40px rgba(0,0,0,0.10);
   }
-  /* Subtle inner grid on placeholder — same texture as hero */
-  .story-photo::before {
-    content: '';
-    position: absolute; inset: 0;
-    background:
-      repeating-linear-gradient(0deg,  transparent, transparent 39px, rgba(255,255,255,0.018) 39px, rgba(255,255,255,0.018) 40px),
-      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.018) 39px, rgba(255,255,255,0.018) 40px);
-    pointer-events: none;
+  .story-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
   }
+
+  /* Placeholder fallback styles (unused when img is present) */
   .story-photo-ph {
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
@@ -417,12 +484,6 @@
     max-width: 200px;
     font-style: italic;
   }
-  /* Replace .story-photo-ph with a real <img> when photos are ready:
-     <img src="john-and-wellen.jpg" alt="John David and Wellen"> */
-  .story-photo img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-  }
 
   .story-text .eyebrow { margin-bottom: 14px; }
   .story-text h2 {
@@ -437,17 +498,18 @@
   .story-text p {
     font-size: 17px;
     color: #3A4F6E;
-    line-height: 1.85;
+    line-height: 1.88;
     margin-bottom: 20px;
   }
   .story-text p:last-of-type { margin-bottom: 0; }
   .story-sig {
     margin-top: 36px;
     display: flex; align-items: center; gap: 20px;
-    padding: 24px;
+    padding: 22px 24px;
     background: var(--white);
     border-radius: 12px;
     border-left: 4px solid var(--gold);
+    box-shadow: 0 2px 12px rgba(26,41,66,0.06);
   }
   .story-sig-text {
     font-size: 14px;
@@ -481,7 +543,7 @@
   .how-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
     max-width: 900px;
     margin: 0 auto 56px;
   }
@@ -509,7 +571,7 @@
   .how-step p {
     font-size: 15px;
     color: var(--muted);
-    line-height: 1.75;
+    line-height: 1.78;
   }
   .how-cta { text-align: center; }
 
@@ -617,7 +679,9 @@
     .section { padding: 72px 0; }
     .hero { padding: 64px 20px 80px; }
     .hero-logo { max-width: 240px; margin-bottom: 36px; }
-    .navbar { padding: 0 20px; height: 60px; }
+    .navbar { padding: 0 16px; height: 60px; }
+    .nav-right { gap: 12px; }
+    .btn.nav-cta { padding: 10px 18px; font-size: 13px; }
   }
   </style>
 </head>
@@ -629,13 +693,28 @@
     <img src="assets/logo-navy.jpg" alt="Prosper In America">
   </a>
   <ul class="nav-links">
-    <li><a href="#nossa-historia">About Us</a></li>
-    <li><a href="#caminhos">Services</a></li>
-    <li><a href="#guia">Free Guide</a></li>
+    <li><a href="#nossa-historia"
+          data-en="About Us"
+          data-pt="Sobre Nós">About Us</a></li>
+    <li><a href="#caminhos"
+          data-en="Services"
+          data-pt="Serviços">Services</a></li>
+    <li><a href="#guia"
+          data-en="Free Guide"
+          data-pt="Guia Gratuito">Free Guide</a></li>
   </ul>
-  <a href="#" class="btn btn-gold nav-cta schedule-link">
-    Schedule a Free Call
-  </a>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button class="lang-btn" data-lang="pt">PT</button>
+    </div>
+    <a href="#" class="btn btn-gold nav-cta schedule-link"
+       data-en="Schedule a Free Call"
+       data-pt="Agendar uma Chamada">
+      Schedule a Free Call
+    </a>
+  </div>
 </nav>
 
 
@@ -645,23 +724,39 @@
     <img src="assets/logo-gold.png" alt="Prosper In America">
   </div>
 
-  <p class="hero-pill">For Immigrants and Families Building a Real Life in America</p>
+  <p class="hero-pill"
+     data-en="For Immigrants and Families Building a Real Life in America"
+     data-pt="Para Imigrantes e Famílias Construindo uma Vida Real nos EUA">
+    For Immigrants and Families Building a Real Life in America
+  </p>
 
-  <h1>
+  <h1
+    data-en="Stop Surviving. &lt;span&gt;Start Building.&lt;/span&gt;"
+    data-pt="Pare de Sobreviver. &lt;span&gt;Comece a Construir.&lt;/span&gt;">
     Stop Surviving.
     <span>Start Building.</span>
   </h1>
 
-  <p class="hero-sub">
+  <div class="hero-rule"></div>
+
+  <p class="hero-sub"
+     data-en="Most immigrant families work hard and still feel behind. We built Prosper In America to give you the clarity, the tools, and the roadmap to protect your family, grow your income, and build something that lasts."
+     data-pt="A maioria das famílias imigrantes trabalha muito e ainda assim sente que está ficando para trás. Criamos a Prosper In America para te dar clareza, ferramentas e um caminho real para proteger sua família, crescer sua renda e construir algo que dure.">
     Most immigrant families work hard and still feel behind. We built Prosper In America to give you the clarity, the tools, and the roadmap to protect your family, grow your income, and build something that lasts.
   </p>
 
   <div class="hero-btns">
-    <a href="#guia" class="btn btn-gold">Get the Free Guide</a>
-    <a href="#caminhos" class="btn btn-ghost-light">See How We Can Help ↓</a>
+    <a href="#guia" class="btn btn-gold"
+       data-en="Get the Free Guide"
+       data-pt="Baixar o Guia Gratuito">Get the Free Guide</a>
+    <a href="#caminhos" class="btn btn-ghost-light"
+       data-en="See How We Can Help ↓"
+       data-pt="Ver Como Podemos Ajudar ↓">See How We Can Help ↓</a>
   </div>
 
-  <p class="hero-anchor">
+  <p class="hero-anchor"
+     data-en="John David &amp; Wellen — born from both sides of the immigrant journey, building a clearer path for families in America."
+     data-pt="John David e Wellen — nascidos em lados diferentes da jornada imigrante, construindo um caminho mais claro para famílias na América.">
     John David &amp; Wellen — born from both sides of the immigrant journey, building a clearer path for families in America.
   </p>
 </section>
@@ -670,11 +765,17 @@
 <!-- ══════════════════════════════════════ TRUST BAR ══════════════════════════════════ -->
 <div class="trust-bar">
   <div class="trust-bar-inner">
-    <span class="trust-item">Licensed Financial Professional</span>
+    <span class="trust-item"
+          data-en="Licensed Financial Professional"
+          data-pt="Profissional Financeiro Licenciado">Licensed Financial Professional</span>
     <span class="trust-sep"></span>
-    <span class="trust-item">Serving the Immigrant Community</span>
+    <span class="trust-item"
+          data-en="Serving the Immigrant Community"
+          data-pt="Servindo a Comunidade Imigrante">Serving the Immigrant Community</span>
     <span class="trust-sep"></span>
-    <span class="trust-item">Faith · Family · Structure</span>
+    <span class="trust-item"
+          data-en="Faith · Family · Structure"
+          data-pt="Fé · Família · Estrutura">Faith · Family · Structure</span>
   </div>
 </div>
 
@@ -683,22 +784,35 @@
 <section class="section paths" id="caminhos">
   <div class="wrap">
     <div class="paths-head">
-      <span class="eyebrow">How We Can Help</span>
-      <h2>Three paths.<br>One family. Your future.</h2>
+      <span class="eyebrow"
+            data-en="How We Can Help"
+            data-pt="Como Podemos Ajudar">How We Can Help</span>
+      <div class="gold-bar-center"></div>
+      <h2 data-en="Three paths.&lt;br&gt;One family. Your future."
+          data-pt="Três caminhos.&lt;br&gt;Uma família. Seu futuro.">Three paths.<br>One family. Your future.</h2>
     </div>
 
     <div class="paths-grid">
 
-      <!-- Path 1: Protect My Family -->
-      <div class="path-card">
+      <!-- Path 1: Protect My Family — featured (primary service: Life Insurance) -->
+      <div class="path-card featured">
+        <span class="path-badge"
+              data-en="Most Popular"
+              data-pt="Mais Procurado">Most Popular</span>
         <div class="path-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <h3>Protect My Family</h3>
-        <p>Life insurance and wealth planning for immigrant families who can't afford to lose what they've worked for. Protection built for your real life.</p>
-        <a href="mailto:johndavid.assistant@gmail.com?subject=Life Insurance - Protect My Family" class="path-link">
+        <h3 data-en="Protect My Family"
+            data-pt="Proteja Sua Família">Protect My Family</h3>
+        <p data-en="Life insurance and wealth planning for immigrant families who can't afford to lose what they've worked for. Protection built for your real life."
+           data-pt="Seguro de vida e planejamento financeiro para famílias imigrantes que não podem perder o que construíram. Proteção feita para a sua vida real.">
+          Life insurance and wealth planning for immigrant families who can't afford to lose what they've worked for. Protection built for your real life.
+        </p>
+        <a href="mailto:johndavid.assistant@gmail.com?subject=Life Insurance - Protect My Family" class="path-link"
+           data-en="Learn About Life Insurance →"
+           data-pt="Saiba Mais Sobre Seguro de Vida →">
           Learn About Life Insurance →
         </a>
       </div>
@@ -711,9 +825,15 @@
             <polyline points="17 6 23 6 23 12"/>
           </svg>
         </div>
-        <h3>Increase My Income</h3>
-        <p>Real income paths — remote work, content creation, and opportunities that fit your schedule and your life. No perfect English required.</p>
-        <a href="mailto:johndavid.assistant@gmail.com?subject=Income Opportunities" class="path-link">
+        <h3 data-en="Increase My Income"
+            data-pt="Aumente Sua Renda">Increase My Income</h3>
+        <p data-en="Real income paths — remote work, content creation, and opportunities that fit your schedule and your life. No perfect English required."
+           data-pt="Caminhos reais de renda — trabalho remoto, criação de conteúdo e oportunidades que cabem na sua rotina. Sem inglês perfeito.">
+          Real income paths — remote work, content creation, and opportunities that fit your schedule and your life. No perfect English required.
+        </p>
+        <a href="mailto:johndavid.assistant@gmail.com?subject=Income Opportunities" class="path-link"
+           data-en="Explore Income Paths →"
+           data-pt="Explorar Caminhos de Renda →">
           Explore Income Paths →
         </a>
       </div>
@@ -727,9 +847,15 @@
             <line x1="12" y1="17" x2="12" y2="21"/>
           </svg>
         </div>
-        <h3>Build My Business</h3>
-        <p>A website, a brand identity, and a business system that positions you to attract clients and grow with confidence — built by people who get it.</p>
-        <a href="mailto:johndavid.assistant@gmail.com?subject=Build My Business" class="path-link">
+        <h3 data-en="Build My Business"
+            data-pt="Construa Seu Negócio">Build My Business</h3>
+        <p data-en="A website, a brand identity, and a business system that positions you to attract clients and grow with confidence — built by people who get it."
+           data-pt="Um site, uma identidade de marca e um sistema de negócios que posiciona você para atrair clientes e crescer com confiança — feito por quem entende.">
+          A website, a brand identity, and a business system that positions you to attract clients and grow with confidence — built by people who get it.
+        </p>
+        <a href="mailto:johndavid.assistant@gmail.com?subject=Build My Business" class="path-link"
+           data-en="Start Your Business →"
+           data-pt="Começar Seu Negócio →">
           Start Your Business →
         </a>
       </div>
@@ -744,32 +870,43 @@
   <div class="wrap">
     <div class="story-inner">
 
-      <!-- PHOTO: when ready, replace the inner .story-photo-ph div with:
-           <img src="assets/john-and-wellen.jpg" alt="John David and Wellen">  -->
       <div class="story-photo">
-        <div class="story-photo-ph">
-          <div class="story-photo-initials">J+W</div>
-          <span class="story-photo-caption">John David &amp; Wellen</span>
-          <p class="story-photo-tagline">Two backgrounds.<br>One mission.</p>
-        </div>
+        <img src="assets/images/casal111.jpg" alt="John David & Wellen">
       </div>
 
       <div class="story-text">
-        <span class="eyebrow">Why We Built This</span>
-        <h2>We Know Both Sides of This Journey.</h2>
+        <span class="eyebrow"
+              data-en="Why We Built This"
+              data-pt="Por Que Criamos Isso">Why We Built This</span>
+        <div class="gold-bar"></div>
+        <h2 data-en="We Know Both Sides of This Journey."
+            data-pt="Conhecemos os Dois Lados Dessa Jornada.">We Know Both Sides of This Journey.</h2>
 
-        <p>John David was born and raised in California — but he grew up in an immigrant family. He saw sacrifice up close, including seasons where stability was not guaranteed. That experience didn't break him. It shaped how he sees every family that walks through our door.</p>
+        <p data-en="John David was born and raised in California — but he grew up in an immigrant family. He saw sacrifice up close, including seasons where stability was not guaranteed. That experience didn't break him. It shaped how he sees every family that walks through our door."
+           data-pt="John David nasceu e cresceu na Califórnia — mas cresceu em uma família imigrante. Ele viu de perto o sacrifício, incluindo fases em que a estabilidade não era garantida. Essa experiência não o quebrou. Ela moldou como ele enxerga cada família que passa pela nossa porta.">
+          John David was born and raised in California — but he grew up in an immigrant family. He saw sacrifice up close, including seasons where stability was not guaranteed. That experience didn't break him. It shaped how he sees every family that walks through our door.
+        </p>
 
-        <p>Wellen came from Brazil. She is the immigrant. She knows what it feels like to navigate a system in a language that wasn't yours, to miss home while trying to build a new one, to want to protect your family but not know the right moves.</p>
+        <p data-en="Wellen came from Brazil. She is the immigrant. She knows what it feels like to navigate a system in a language that wasn't yours, to miss home while trying to build a new one, to want to protect your family but not know the right moves."
+           data-pt="Wellen veio do Brasil. Ela é a imigrante. Ela sabe o que é navegar um sistema em um idioma que não é o seu, sentir saudade de casa enquanto tenta construir um novo, querer proteger sua família mas não saber os movimentos certos.">
+          Wellen came from Brazil. She is the immigrant. She knows what it feels like to navigate a system in a language that wasn't yours, to miss home while trying to build a new one, to want to protect your family but not know the right moves.
+        </p>
 
-        <p>Together, we built Prosper In America because we have lived both sides of this story. We know there is a better path — not just to survive, but to build something real, something lasting, something your family can stand on for generations.</p>
+        <p data-en="Together, we built Prosper In America because we have lived both sides of this story. We know there is a better path — not just to survive, but to build something real, something lasting, something your family can stand on for generations."
+           data-pt="Juntos, criamos a Prosper In America porque vivemos os dois lados dessa história. Sabemos que existe um caminho melhor — não apenas para sobreviver, mas para construir algo real, duradouro, algo em que sua família possa se apoiar por gerações.">
+          Together, we built Prosper In America because we have lived both sides of this story. We know there is a better path — not just to survive, but to build something real, something lasting, something your family can stand on for generations.
+        </p>
 
-        <p>Faith is the foundation. Family is the mission. You are the reason.</p>
+        <p data-en="Faith is the foundation. Family is the mission. You are the reason."
+           data-pt="A fé é o alicerce. A família é a missão. Você é o motivo.">
+          Faith is the foundation. Family is the mission. You are the reason.
+        </p>
 
         <div class="story-sig">
           <div class="story-sig-text">
             John David &amp; Wellen
-            <small>Prosper In America · California</small>
+            <small data-en="Prosper In America"
+                   data-pt="Prosper In America">Prosper In America</small>
           </div>
         </div>
       </div>
@@ -783,30 +920,48 @@
 <section class="section how" id="como-funciona">
   <div class="wrap">
     <div class="how-head">
-      <span class="eyebrow">How It Works</span>
-      <h2>Three steps. No pressure. Just clarity.</h2>
+      <span class="eyebrow"
+            data-en="How It Works"
+            data-pt="Como Funciona">How It Works</span>
+      <div class="gold-bar-center"></div>
+      <h2 data-en="Three steps. No pressure. Just clarity."
+          data-pt="Três passos. Sem pressão. Só clareza.">Three steps. No pressure. Just clarity.</h2>
     </div>
 
     <div class="how-grid">
       <div class="how-step">
         <div class="how-num">1</div>
-        <h3>We Listen</h3>
-        <p>A free conversation. No agenda. We want to understand where you are and what you're carrying before suggesting anything.</p>
+        <h3 data-en="We Listen"
+            data-pt="A Gente Escuta">We Listen</h3>
+        <p data-en="A free conversation. No agenda. We want to understand where you are and what you're carrying before suggesting anything."
+           data-pt="Uma conversa gratuita. Sem agenda. Queremos entender onde você está e o que está carregando antes de sugerir qualquer coisa.">
+          A free conversation. No agenda. We want to understand where you are and what you're carrying before suggesting anything.
+        </p>
       </div>
       <div class="how-step">
         <div class="how-num">2</div>
-        <h3>We Build a Plan</h3>
-        <p>Based on your real situation — not a template. Protecting your family, growing your income, or building your business. Sometimes all three.</p>
+        <h3 data-en="We Build a Plan"
+            data-pt="Criamos um Plano">We Build a Plan</h3>
+        <p data-en="Based on your real situation — not a template. Protecting your family, growing your income, or building your business. Sometimes all three."
+           data-pt="Baseado na sua situação real — não em um modelo. Proteger sua família, crescer sua renda, ou construir seu negócio. Às vezes os três.">
+          Based on your real situation — not a template. Protecting your family, growing your income, or building your business. Sometimes all three.
+        </p>
       </div>
       <div class="how-step">
         <div class="how-num">3</div>
-        <h3>You Move Forward</h3>
-        <p>With clarity, a roadmap, and a team that stays with you. Not just one call — a real relationship.</p>
+        <h3 data-en="You Move Forward"
+            data-pt="Você Avança">You Move Forward</h3>
+        <p data-en="With clarity, a roadmap, and a team that stays with you. Not just one call — a real relationship."
+           data-pt="Com clareza, um roteiro e uma equipe que fica com você. Não apenas uma chamada — um relacionamento real.">
+          With clarity, a roadmap, and a team that stays with you. Not just one call — a real relationship.
+        </p>
       </div>
     </div>
 
     <div class="how-cta">
-      <a href="#" class="btn btn-gold schedule-link">
+      <a href="#" class="btn btn-gold schedule-link"
+         data-en="Schedule Your Free Call"
+         data-pt="Agendar Sua Chamada Gratuita">
         Schedule Your Free Call
       </a>
     </div>
@@ -819,9 +974,16 @@
   <div class="wrap">
     <div class="guide-card">
 
-      <span class="eyebrow">Free — No Strings</span>
-      <h2>Os 7 Passos Para Construir<br>Sua Vida Nos EUA</h2>
-      <p class="sub">
+      <span class="eyebrow"
+            data-en="Free — No Strings"
+            data-pt="Gratuito — Sem Compromisso">Free — No Strings</span>
+      <h2 data-en="7 Steps to Building Your Life in America"
+          data-pt="Os 7 Passos Para Construir&lt;br&gt;Sua Vida Nos EUA">
+        7 Steps to Building Your Life in America
+      </h2>
+      <p class="sub"
+         data-en="A free guide from John David and Wellen for Brazilians and immigrants navigating America — from banking and credit to income, protection, and building something real."
+         data-pt="Um guia gratuito de John David e Wellen para brasileiros e imigrantes navegando a América — de conta bancária e crédito até renda, proteção e como construir algo real.">
         A free guide from John David and Wellen for Brazilians and immigrants navigating America — from banking and credit to income, protection, and building something real.
       </p>
 
@@ -850,21 +1012,25 @@
     <img src="assets/logo-gold.png" alt="Prosper In America">
   </div>
 
-  <p class="footer-tagline">
+  <p class="footer-tagline"
+     data-en="Building real lives in America —&lt;br&gt;with faith, structure, and purpose."
+     data-pt="Construindo vidas reais na América —&lt;br&gt;com fé, estrutura e propósito.">
     Building real lives in America —<br>with faith, structure, and purpose.
   </p>
 
   <nav class="footer-links" aria-label="Footer navigation">
-    <a href="#nossa-historia">About Us</a>
-    <a href="#caminhos">Services</a>
-    <a href="#guia">Free Guide</a>
-    <a href="mailto:johndavid.assistant@gmail.com">Contact</a>
+    <a href="#nossa-historia" data-en="About Us" data-pt="Sobre Nós">About Us</a>
+    <a href="#caminhos" data-en="Services" data-pt="Serviços">Services</a>
+    <a href="#guia" data-en="Free Guide" data-pt="Guia Gratuito">Free Guide</a>
+    <a href="mailto:johndavid.assistant@gmail.com" data-en="Contact" data-pt="Contato">Contact</a>
   </nav>
 
   <p class="footer-copy">
     © 2026 Prosper In America · John David &amp; Wellen
   </p>
-  <p class="footer-disclaimer">
+  <p class="footer-disclaimer"
+     data-en="This site is educational and does not constitute legal, financial, tax, or immigration advice. Consult a licensed professional for your specific situation."
+     data-pt="Este site é educacional e não constitui aconselhamento jurídico, financeiro, fiscal ou de imigração. Consulte um profissional licenciado para sua situação específica.">
     This site is educational and does not constitute legal, financial, tax, or immigration advice. Consult a licensed professional for your specific situation.
   </p>
 </footer>
@@ -874,16 +1040,44 @@
 <script async src="https://tally.so/widgets/embed.js"></script>
 
 <script>
-  // ── SCHEDULER URL ──────────────────────────────────────────────────────────
-  // Replace the value below with your Calendly, Tally, or booking page link.
-  // All "Schedule a Free Call" buttons on this page will update automatically.
-  // Example: 'https://calendly.com/johndavid/30min'
-  //          'https://tally.so/r/yourform'
-  var SCHEDULE_URL = 'mailto:johndavid.assistant@gmail.com?subject=I%27d%20like%20to%20schedule%20a%20free%20call';
+  // ── SCHEDULER URLS ─────────────────────────────────────────────────────────
+  var SCHEDULE_URL_EN = 'https://wa.me/13526303930?text=Hi%20John%2C%20I%20saw%20your%20page.%20I%20want%20to%20schedule%20a%20clarity%20call%20and%20understand%20how%20to%20build%20structure%20for%20my%20family%20here%20in%20the%20U.S.';
+  var SCHEDULE_URL_PT = 'https://wa.me/13526303930?text=Oi%20John%2C%20vi%20sua%20p%C3%A1gina.%20Quero%20agendar%20uma%20conversa%20para%20entender%20como%20posso%20estruturar%20melhor%20minha%20vida%20financeira%20aqui%20nos%20EUA.';
   // ──────────────────────────────────────────────────────────────────────────
 
-  document.querySelectorAll('.schedule-link').forEach(function(el) {
-    el.href = SCHEDULE_URL;
+  function applyScheduleLinks(lang) {
+    var url = lang === 'pt' ? SCHEDULE_URL_PT : SCHEDULE_URL_EN;
+    document.querySelectorAll('.schedule-link').forEach(function(el) {
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    });
+  }
+  applyScheduleLinks('en');
+
+  // ── LANGUAGE TOGGLE ────────────────────────────────────────────────────────
+  var currentLang = 'en';
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+    document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    applyScheduleLinks(lang);
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.getAttribute('data-lang');
+      if (lang !== currentLang) setLanguage(lang);
+    });
   });
 </script>
 
