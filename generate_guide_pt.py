@@ -142,7 +142,8 @@ def build():
     story = []
 
     # ── CAPA ────────────────────────────────────────────────
-    cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/cover - 5Passos.png'
+    cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/NovaCapaGuia5Passos.png'
+    casal_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/FotoCasalDeRevista001.jpg'
 
     def cover_bg(canvas, doc):
         canvas.saveState()
@@ -184,6 +185,16 @@ def build():
     story.append(sp(16))
     story.append(Paragraph('— Wellen', S['sig_name']))
     story.append(Paragraph('Prosper In America', S['sig_brand']))
+    story.append(sp(14))
+    story.append(Paragraph('wa.me/13526303930', S['cover_url']))
+    story.append(sp(16))
+    if os.path.exists(casal_img_path):
+        img_casal = Image(casal_img_path, width=2.2*inch, height=2.2*inch, kind='proportional')
+        img_casal.hAlign = 'LEFT'
+        story.append(img_casal)
+    # ── TESTIMONIAL PLACEHOLDER 1 — after Wellen's letter ─────
+    # story.append(sp(14))
+    # story.append(pull_quote_p("[DEPOIMENTO] Nome, Profissão — Cidade. Citação em 2-3 frases.", S))
     story.append(PageBreak())
 
     # ── COMO USAR ────────────────────────────────────────────
@@ -204,6 +215,19 @@ def build():
     story.append(sp(12))
     story.append(Paragraph("Depois da base, vêm as próximas fases:", S['body']))
     story.append(Paragraph("aumentar sua renda e construir algo que dure.", S['body_italic']))
+    story.append(sp(16))
+
+    # ── IDENTIDADE PROSPER IN AMERICA (Rule 1: first 15 seconds clarity) ────
+    story.append(callout_p(
+        "Prosper In America é um serviço de consultoria para imigrantes brasileiros nos EUA. "
+        "A gente ajuda famílias a organizar a base financeira, proteger o que estão construindo, "
+        "e criar caminhos para aumentar a renda. "
+        "Este guia é gratuito. Se quiser ajuda pra aplicar o que está aqui, "
+        "a conversa começa no WhatsApp. Sem compromisso.",
+        S
+    ))
+    story.append(sp(8))
+    story.append(Paragraph('wa.me/13526303930', S['cover_url']))
     story.append(sp(16))
 
     story.append(Paragraph('Passos deste guia', S['section_head']))
@@ -599,6 +623,9 @@ def build():
     story.append(Paragraph("Essas são as próximas fases.", S['body']))
     story.append(sp(10))
     story.append(Paragraph("Mas elas só funcionam quando a base está certa.", S['body_bold']))
+    # ── TESTIMONIAL PLACEHOLDER 2 — after Step 5 base summary ──────────────
+    # story.append(sp(14))
+    # story.append(pull_quote_p("[DEPOIMENTO] Nome, Profissão — Cidade. Citação em 2-3 frases.", S))
 
     # ── SE VOCÊ CONTINUAR ───────────────────────────────────
     story.append(PageBreak())
@@ -655,6 +682,14 @@ def build():
     story.append(Paragraph('Sem pressão.', S['cta_body']))
     story.append(Paragraph('Sem promessa.', S['cta_body']))
     story.append(Paragraph('Só direção.', S['cta_body']))
+    if os.path.exists(casal_img_path):
+        img_cta = Image(casal_img_path, width=2.0*inch, height=2.0*inch, kind='proportional')
+        img_cta.hAlign = 'CENTER'
+        story.append(img_cta)
+        story.append(sp(12))
+    # ── TESTIMONIAL PLACEHOLDER 3 — near CTA ────────────────────────────────
+    # story.append(Paragraph('"[DEPOIMENTO] Citação curta. Nome, Cidade."', S['body_italic']))
+    # story.append(sp(8))
     story.append(Spacer(1, 0.4*inch))
     story.append(Paragraph(
         '<a href="https://wa.me/13526303930" color="white">Quero conversar no WhatsApp →</a>',

@@ -182,7 +182,8 @@ doc = Document()
 set_doc_margins(doc)
 
 # ── CAPA ─────────────────────────────────────────────────────
-cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/cover - 5Passos.png'
+cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/NovaCapaGuia5Passos.png'
+casal_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/FotoCasalDeRevista001.jpg'
 if os.path.exists(cover_img_path):
     p_cover = doc.add_paragraph()
     p_cover.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -252,6 +253,22 @@ p_brand.paragraph_format.space_before = Pt(0)
 p_brand.paragraph_format.space_after = Pt(6)
 add_run(p_brand, 'Prosper In America', size=11, color=GOLD)
 
+spacer(doc, 12)
+p_wa = doc.add_paragraph()
+p_wa.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p_wa.paragraph_format.space_before = Pt(4)
+p_wa.paragraph_format.space_after = Pt(14)
+add_run(p_wa, 'wa.me/13526303930', italic=True, size=10, color=MUTED)
+
+if os.path.exists(casal_img_path):
+    p_casal = doc.add_paragraph()
+    p_casal.paragraph_format.space_before = Pt(0)
+    p_casal.paragraph_format.space_after = Pt(8)
+    p_casal.add_run().add_picture(casal_img_path, width=Inches(2.2))
+
+# ── TESTIMONIAL PLACEHOLDER 1 — after Wellen's letter ─────
+# pull_quote(doc, '[DEPOIMENTO] Nome, Profissão — Cidade. Citação em 2-3 frases.')
+
 doc.add_page_break()
 
 # ── COMO USAR ────────────────────────────────────────────────
@@ -274,6 +291,22 @@ body(doc, 'Depois da base, vêm as próximas fases:')
 body(doc, 'aumentar sua renda e construir algo que dure.', italic=True, color=MUTED)
 
 spacer(doc, 16)
+
+# ── IDENTIDADE PROSPER IN AMERICA (Rule 1: first 15 seconds clarity) ────
+callout_line(doc,
+    'Prosper In America é um serviço de consultoria para imigrantes brasileiros nos EUA. '
+    'A gente ajuda famílias a organizar a base financeira, proteger o que estão construindo, '
+    'e criar caminhos para aumentar a renda. '
+    'Este guia é gratuito. Se quiser ajuda pra aplicar o que está aqui, '
+    'a conversa começa no WhatsApp. Sem compromisso.'
+)
+spacer(doc, 8)
+p_wa2 = doc.add_paragraph()
+p_wa2.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p_wa2.paragraph_format.space_before = Pt(0)
+p_wa2.paragraph_format.space_after = Pt(14)
+add_run(p_wa2, 'wa.me/13526303930', italic=True, size=10, color=MUTED)
+
 section_head(doc, 'Passos deste guia')
 
 for num, title in [
@@ -721,6 +754,8 @@ spacer(doc, 12)
 body(doc, 'Essas são as próximas fases.')
 spacer(doc, 10)
 body(doc, 'Mas elas só funcionam quando a base está certa.', bold=True, color=NAVY)
+# ── TESTIMONIAL PLACEHOLDER 2 — after Step 5 base summary ──────────────
+# pull_quote(doc, '[DEPOIMENTO] Nome, Profissão — Cidade. Citação em 2-3 frases.')
 
 # ── SE VOCÊ CONTINUAR ────────────────────────────────────────
 doc.add_page_break()
@@ -792,7 +827,18 @@ for cta_line in [
         p_c.paragraph_format.space_after = Pt(4)
         add_run(p_c, cta_line, size=13, color=BODY)
 
-spacer(doc, 32)
+spacer(doc, 16)
+if os.path.exists(casal_img_path):
+    p_casal_cta = doc.add_paragraph()
+    p_casal_cta.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_casal_cta.paragraph_format.space_before = Pt(0)
+    p_casal_cta.paragraph_format.space_after = Pt(12)
+    p_casal_cta.add_run().add_picture(casal_img_path, width=Inches(2.0))
+# ── TESTIMONIAL PLACEHOLDER 3 — near CTA ────────────────────────────────
+# p_t3 = doc.add_paragraph()
+# p_t3.alignment = WD_ALIGN_PARAGRAPH.CENTER
+# add_run(p_t3, '"[DEPOIMENTO] Citação curta. Nome, Cidade."', italic=True, size=10, color=MUTED)
+spacer(doc, 16)
 
 p_btn = doc.add_paragraph()
 p_btn.alignment = WD_ALIGN_PARAGRAPH.CENTER

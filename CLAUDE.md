@@ -272,3 +272,50 @@ Specific things that undermine the premium positioning:
 - Do not redesign layout without explicit instruction — iteration is incremental
 - Do not commit credentials, API keys, or Tally form IDs as sensitive — they are already public-facing
 - Do not modify `obrigado.html` unless explicitly asked — it is separately managed
+
+---
+
+## PIA Communication Rules (permanent — corrected 2026-04-28)
+
+These apply to every WhatsApp message, outreach sequence, testimonial request, and referral ask.
+
+- No hyphens or dashes in client-facing messages — they make messages feel formatted, not human
+- Write short natural sentences instead of dash-connected phrases
+- Portuguese must sound like real Brazilian WhatsApp, not formal marketing copy
+- Outreach is always staged — never combine asks:
+  - Message 1: feedback only, one link, one easy question
+  - Message 2: testimonial permission + short bio (after they respond)
+  - Message 3: referral ask — minimum 1 week later, only after engagement
+- Do NOT include referral ask in Message 2
+- Do NOT overload Message 1
+
+Full rules: `05 Prosper In America/PIA Communication Rules.md` in the vault
+
+---
+
+## PIA Conversion Rules (permanent — added 2026-04-28)
+
+These apply to every PIA asset: PDF, website, emails, and client-facing copy.
+
+**Rule 1 — First 15 seconds clarity (non-negotiable)**
+Every asset must answer WHO, WHAT, and NEXT STEP within the first 15 seconds:
+- WHO: Prosper In America — John David and Wellen
+- WHAT: Consulting for Brazilian immigrants — finances, protection, income, business
+- NEXT STEP: WhatsApp conversation, free, no pressure
+
+**Rule 2 — Social proof (non-negotiable)**
+- Real testimonials required at two positions: early (before middle) and near the CTA
+- Format: name, profession, city, 2–3 sentence quote, optional photo
+- Never fabricate, suggest, or publish without explicit written confirmation
+
+**Rule 3 — Messaging simplicity (non-negotiable)**
+- No hyphens or dashes as connectors — applies to PDF, website, and email copy, not only WhatsApp
+- Short sentences. One idea per sentence.
+- One objective per message or section.
+
+**Checklist before delivering any PIA asset:**
+- [ ] Answers WHO, WHAT, NEXT STEP in first 15 seconds?
+- [ ] Real social proof in two positions?
+- [ ] No dashes, short sentences, single objective per section?
+
+Full rules: `05 Prosper In America/PIA Conversion Rules.md` in the vault
