@@ -142,8 +142,8 @@ def build():
     story = []
 
     # ── CAPA ────────────────────────────────────────────────
-    cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/NovaCapaGuia5Passos.png'
-    casal_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/FotoCasalDeRevista001.jpg'
+    cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmericaGuia/NovaCapaGuia5Passos.png'
+    casal_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmericaGuia/FotoCasalDeRevista001.jpg'
 
     def cover_bg(canvas, doc):
         canvas.saveState()
@@ -158,9 +158,14 @@ def build():
     story.append(PageBreak())
 
     # ── CARTA DA WELLEN ──────────────────────────────────────
+    # Tighter line style to fit the full letter on one page (leading=20, spaceAfter=5, spaceBefore=2)
+    wellen_line = ParagraphStyle('wellen_line',
+        fontName='Helvetica', fontSize=12, textColor=BODY_C,
+        leading=20, spaceAfter=5, spaceBefore=2)
+
     story.append(Paragraph('Uma Nota da Wellen', S['page_title']))
     story.append(gold_rule())
-    story.append(sp(14))
+    story.append(sp(10))
 
     for line in [
         "Você não veio pra cá pra ficar no mesmo lugar.",
@@ -180,18 +185,13 @@ def build():
         "Se quiser ajuda pra aplicar isso na sua realidade,",
         "fala com a gente direto no WhatsApp.",
     ]:
-        story.append(Paragraph(line, S['welcome_body']))
+        story.append(Paragraph(line, wellen_line))
 
-    story.append(sp(16))
+    story.append(sp(10))
     story.append(Paragraph('— Wellen', S['sig_name']))
     story.append(Paragraph('Prosper In America', S['sig_brand']))
-    story.append(sp(14))
+    story.append(sp(8))
     story.append(Paragraph('wa.me/13526303930', S['cover_url']))
-    story.append(sp(16))
-    if os.path.exists(casal_img_path):
-        img_casal = Image(casal_img_path, width=2.2*inch, height=2.2*inch, kind='proportional')
-        img_casal.hAlign = 'LEFT'
-        story.append(img_casal)
     # ── TESTIMONIAL PLACEHOLDER 1 — after Wellen's letter ─────
     # story.append(sp(14))
     # story.append(pull_quote_p("[DEPOIMENTO] Nome, Profissão — Cidade. Citação em 2-3 frases.", S))
@@ -215,7 +215,7 @@ def build():
     story.append(sp(12))
     story.append(Paragraph("Depois da base, vêm as próximas fases:", S['body']))
     story.append(Paragraph("aumentar sua renda e construir algo que dure.", S['body_italic']))
-    story.append(sp(16))
+    story.append(sp(8))
 
     # ── IDENTIDADE PROSPER IN AMERICA (Rule 1: first 15 seconds clarity) ────
     story.append(callout_p(
@@ -226,9 +226,15 @@ def build():
         "a conversa começa no WhatsApp. Sem compromisso.",
         S
     ))
-    story.append(sp(8))
+    story.append(sp(6))
     story.append(Paragraph('wa.me/13526303930', S['cover_url']))
-    story.append(sp(16))
+    story.append(sp(8))
+
+    # Tighter style for the step index (table of contents) to keep all 5 on one page
+    toc_item = ParagraphStyle('toc_item',
+        fontName='Helvetica', fontSize=12, textColor=NAVY,
+        leading=17, spaceAfter=2, spaceBefore=2,
+        leftIndent=12, backColor=CREAM)
 
     story.append(Paragraph('Passos deste guia', S['section_head']))
     for num, title in [
@@ -238,7 +244,7 @@ def build():
         ('04', 'Construa Seu Crédito'),
         ('05', 'Proteja o Que Você Está Construindo'),
     ]:
-        story.append(Paragraph(f'<font color="#C8952E"><b>{num}</b></font>  {title}', S['step_index']))
+        story.append(Paragraph(f'<font color="#C8952E"><b>{num}</b></font>  {title}', toc_item))
     story.append(PageBreak())
 
     # ── PASSO 1 ──────────────────────────────────────────────
@@ -261,16 +267,16 @@ def build():
     story.append(Paragraph("Nada fica.", S['body']))
     story.append(sp(12))
     story.append(Paragraph("Isso não é falta de esforço.", S['body_bold']))
-    story.append(sp(8))
+    story.append(sp(6))
     story.append(Paragraph("É falta de direção.", S['body_bold']))
-    story.append(sp(16))
+    story.append(sp(10))
 
     story.append(Paragraph('Ninguém te deu o mapa.', S['section_head']))
     story.append(Paragraph("O sistema financeiro aqui não se explica.", S['body']))
     story.append(Paragraph("Ele espera que você já saiba tudo.", S['body']))
-    story.append(sp(10))
+    story.append(sp(6))
     story.append(Paragraph("Se você não sabia — você foi aprendendo no escuro.", S['body']))
-    story.append(sp(14))
+    story.append(sp(8))
 
     story.append(Paragraph('Você decidiu baseado no que apareceu:', S['section_head']))
     for line in [
@@ -279,11 +285,11 @@ def build():
         "o que parecia fazer sentido na hora.",
     ]:
         story.append(Paragraph(f'&nbsp;&nbsp;&nbsp;{line}', S['bullet']))
-    story.append(sp(12))
-    story.append(Paragraph("E algumas dessas decisões já estão te custando.", S['body_bold']))
     story.append(sp(8))
+    story.append(Paragraph("E algumas dessas decisões já estão te custando.", S['body_bold']))
+    story.append(sp(6))
     story.append(Paragraph("Você só ainda não percebeu o quanto.", S['body_bold']))
-    story.append(sp(16))
+    story.append(sp(10))
 
     story.append(Paragraph('O que muda quando você tem a informação certa', S['section_head']))
     for line in [
@@ -293,17 +299,23 @@ def build():
         "O caminho fica claro.",
     ]:
         story.append(Paragraph(line, S['body']))
-    story.append(sp(12))
+    story.append(sp(8))
 
-    story.append(pull_quote_p("A diferença quase nunca é esforço. Quase sempre é informação — e saber em qual ordem agir.", S))
-    story.append(sp(14))
+    # Compact styles for Step 1 bottom to keep transition on same page
+    pq1 = ParagraphStyle('pq1', parent=S['pull_quote'], spaceBefore=6, spaceAfter=6)
+    al1 = ParagraphStyle('al1', parent=S['action_label'], spaceBefore=6)
+    tr1 = ParagraphStyle('tr1', parent=S['transition'], spaceBefore=6)
 
-    story.extend(action_box([
-        'Conta bancária', 'Histórico de crédito', 'Declaração de imposto',
-        'Proteger minha família', 'Construir renda',
-    ], S, subtext='Identifique a área em que você se sente mais atrasado:'))
-    story.append(sp(10))
-    story.append(Paragraph('Quando você entende onde está, o próximo passo é descobrir o que você realmente tem acesso.', S['transition']))
+    story.append(Paragraph('"A diferença quase nunca é esforço. Quase sempre é informação — e saber em qual ordem agir."', pq1))
+    story.append(sp(4))
+
+    story.append(Paragraph('SUA AÇÃO PARA ESTE PASSO', al1))
+    story.append(Paragraph('Identifique a área em que você se sente mais atrasado:', S['action_item']))
+    for item in ['Conta bancária', 'Histórico de crédito', 'Declaração de imposto',
+                 'Proteger minha família', 'Construir renda']:
+        story.append(Paragraph(f'&#9634;  {item}', S['action_item']))
+    story.append(sp(4))
+    story.append(Paragraph('Quando você entende onde está, o próximo passo é descobrir o que você realmente tem acesso.', tr1))
     story.append(PageBreak())
 
     # ── PASSO 2 ──────────────────────────────────────────────
@@ -532,7 +544,7 @@ def build():
     story.append(sp(14))
 
     story.append(Paragraph('Como o risco realmente parece', S['section_head']))
-    step5_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/Step 5 Protection subtle family.png'
+    step5_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmericaGuia/Step 5 Protection subtle family.png'
     if os.path.exists(step5_img_path):
         img5 = Image(step5_img_path, width=4.2*inch, height=2.8*inch, kind='proportional')
         img5.hAlign = 'CENTER'
@@ -634,41 +646,41 @@ def build():
     story.append(sp(16))
 
     story.append(Paragraph("Se nada mudar, daqui a 1 ano sua vida vai estar igual.", S['body']))
-    story.append(sp(12))
+    story.append(sp(8))
     story.append(Paragraph("Mais trabalho.", S['body']))
     story.append(Paragraph("Mais esforço.", S['body']))
     story.append(Paragraph("E a mesma sensação de que algo está faltando.", S['body']))
-    story.append(sp(18))
+    story.append(sp(10))
 
     story.append(Paragraph("Não é porque você não tenta.", S['body']))
-    story.append(sp(12))
+    story.append(sp(8))
     story.append(Paragraph("É porque ninguém te mostrou a ordem certa.", S['body']))
-    story.append(sp(18))
+    story.append(sp(10))
 
     story.append(Paragraph("E esse é o ponto que a maioria das pessoas trava.", S['body']))
-    story.append(sp(12))
+    story.append(sp(8))
     story.append(Paragraph("Elas entendem.", S['body']))
     story.append(sp(4))
     story.append(Paragraph("Mas não fazem nada com isso.", S['body']))
-    story.append(sp(22))
+    story.append(sp(14))
 
     story.append(Paragraph("Você tem duas opções agora:", S['body_strong']))
-    story.append(sp(16))
+    story.append(sp(10))
     story.append(Paragraph("Fechar esse guia… e continuar exatamente onde você está hoje.", S['body']))
-    story.append(sp(12))
+    story.append(sp(8))
     story.append(Paragraph("Ou usar isso como ponto de virada.", S['body_bold']))
-    story.append(sp(22))
+    story.append(sp(14))
 
     story.append(Paragraph("Você não precisa resolver tudo hoje.", S['body']))
-    story.append(sp(12))
+    story.append(sp(8))
     story.append(Paragraph("Mas precisa decidir se vai continuar no mesmo caminho —<br/>ou começar a ajustar isso de forma intencional.", S['body']))
 
     # ── PÁGINA CTA ───────────────────────────────────────────
     story.append(PageBreak())
-    story.append(Spacer(1, 1.8*inch))
+    story.append(Spacer(1, 0.5*inch))
     story.append(Paragraph('Quer conversar sobre a sua situação?', S['cta_title']))
     story.append(gold_rule())
-    story.append(sp(24))
+    story.append(sp(14))
     story.append(Paragraph('Se esse guia fez sentido pra você, não para aqui.', S['cta_body']))
     story.append(sp(8))
     story.append(Paragraph('A maioria das pessoas entende isso…', S['cta_body']))
@@ -682,25 +694,20 @@ def build():
     story.append(Paragraph('Sem pressão.', S['cta_body']))
     story.append(Paragraph('Sem promessa.', S['cta_body']))
     story.append(Paragraph('Só direção.', S['cta_body']))
-    if os.path.exists(casal_img_path):
-        img_cta = Image(casal_img_path, width=2.0*inch, height=2.0*inch, kind='proportional')
-        img_cta.hAlign = 'CENTER'
-        story.append(img_cta)
-        story.append(sp(12))
     # ── TESTIMONIAL PLACEHOLDER 3 — near CTA ────────────────────────────────
     # story.append(Paragraph('"[DEPOIMENTO] Citação curta. Nome, Cidade."', S['body_italic']))
     # story.append(sp(8))
-    story.append(Spacer(1, 0.4*inch))
+    story.append(sp(12))
     story.append(Paragraph(
         '<a href="https://wa.me/13526303930" color="white">Quero conversar no WhatsApp →</a>',
         S['cta_btn']
     ))
-    story.append(sp(14))
+    story.append(sp(10))
     story.append(Paragraph('wa.me/13526303930', S['cover_url']))
-    story.append(sp(12))
+    story.append(sp(8))
     story.append(Paragraph('Se você leu até aqui, você não é a maioria.', S['body_italic']))
-    story.append(Spacer(1, 0.4*inch))
-    story.append(HRFlowable(width='30%', thickness=1, color=GOLD, spaceAfter=10, spaceBefore=10))
+    story.append(sp(16))
+    story.append(HRFlowable(width='30%', thickness=1, color=GOLD, spaceAfter=8, spaceBefore=8))
     story.append(Paragraph('prosperinamerica.com  |  @prosperinamerica', S['cover_url']))
 
     doc.build(story, onFirstPage=cover_bg, onLaterPages=lambda c, d: None)
