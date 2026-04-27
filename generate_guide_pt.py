@@ -1,10 +1,11 @@
+import os
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.colors import HexColor
 from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, PageBreak, HRFlowable
+    SimpleDocTemplate, Paragraph, Spacer, PageBreak, HRFlowable, Image
 )
 
 NAVY  = HexColor('#0F1B2D')
@@ -141,18 +142,18 @@ def build():
     story = []
 
     # ── CAPA ────────────────────────────────────────────────
+    cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/cover - 5Passos.png'
+
     def cover_bg(canvas, doc):
         canvas.saveState()
-        canvas.setFillColor(NAVY)
-        canvas.rect(0, 0, W, H, fill=1, stroke=0)
+        if os.path.exists(cover_img_path):
+            canvas.drawImage(cover_img_path, 0, 0, width=W, height=H, preserveAspectRatio=False)
+        else:
+            canvas.setFillColor(NAVY)
+            canvas.rect(0, 0, W, H, fill=1, stroke=0)
         canvas.restoreState()
 
-    story.append(Spacer(1, 2.2*inch))
-    story.append(Paragraph('PROSPER IN AMERICA', S['cover_title']))
-    story.append(Paragraph('O Guia Financeiro Inicial do Imigrante', S['cover_sub']))
-    story.append(Paragraph('7 Passos Para Construir Sua Vida nos Estados Unidos', S['cover_sub2']))
-    story.append(Spacer(1, 3.0*inch))
-    story.append(Paragraph('prosperinamerica.com', S['cover_url']))
+    story.append(Spacer(1, 0.1))
     story.append(PageBreak())
 
     # ── CARTA DA WELLEN ──────────────────────────────────────
@@ -167,15 +168,14 @@ def build():
         "Não entendia crédito.",
         "Não sabia nem por onde começar.",
         "Aprendi errando.",
-        "Eu sei o que é trabalhar duro —",
-        "e sentir que não está saindo do lugar.",
+        "Eu sei o que é trabalhar duro e não sair do lugar.",
         "Esse guia existe por um motivo:",
         "Te dar clareza.",
         "Te dar direção.",
         "E te ajudar a não pagar o preço dos erros que ninguém te explicou.",
         "Leia isso com atenção.",
         "E mais importante:",
-        "coloque em prática.",
+        "bota em prática.",
         "Se quiser ajuda pra aplicar isso na sua realidade,",
         "fala com a gente direto no WhatsApp.",
     ]:
@@ -191,14 +191,19 @@ def build():
     story.append(gold_rule())
     story.append(sp(10))
 
-    story.append(Paragraph("Este guia tem 7 passos.", S['body']))
-    story.append(Paragraph("Eles seguem uma sequência — mas você não precisa começar do início.", S['body']))
+    story.append(Paragraph("Este guia tem 5 passos essenciais.", S['body']))
     story.append(sp(8))
+    story.append(Paragraph("Eles seguem uma sequência, mas você não precisa começar do início.", S['body']))
+    story.append(sp(10))
     story.append(Paragraph("Se você já tem conta no banco, pule para o Passo 3.", S['body']))
     story.append(Paragraph("Se crédito é o seu maior gap, comece pelo Passo 4.", S['body']))
     story.append(Paragraph("Se você está preocupado com a proteção da sua família, vá direto para o Passo 5.", S['body']))
-    story.append(sp(10))
-    story.append(Paragraph('Encontre onde você está. Comece por aí.', S['body_bold']))
+    story.append(sp(12))
+    story.append(Paragraph('Encontre onde você está.', S['body_bold']))
+    story.append(Paragraph('Comece por aí.', S['body_bold']))
+    story.append(sp(12))
+    story.append(Paragraph("Depois da base, vêm as próximas fases:", S['body']))
+    story.append(Paragraph("aumentar sua renda e construir algo que dure.", S['body_italic']))
     story.append(sp(16))
 
     story.append(Paragraph('Passos deste guia', S['section_head']))
@@ -208,8 +213,6 @@ def build():
         ('03', 'Abra a Conta Certa'),
         ('04', 'Construa Seu Crédito'),
         ('05', 'Proteja o Que Você Está Construindo'),
-        ('06', 'Aumente Sua Renda'),
-        ('07', 'Construa Algo que Dure'),
     ]:
         story.append(Paragraph(f'<font color="#C8952E"><b>{num}</b></font>  {title}', S['step_index']))
     story.append(PageBreak())
@@ -286,8 +289,8 @@ def build():
     story.append(gold_rule())
     story.append(sp(10))
 
-    story.append(Paragraph("Você chega sabendo que precisa de algo pra começar.", S['body']))
-    story.append(Paragraph("Mas sem saber exatamente o que é — ou o que ele abre.", S['body']))
+    story.append(Paragraph("Você sabe que precisa de um número pra começar.", S['body']))
+    story.append(Paragraph("Só não sabe ao certo o que cada um te abre.", S['body']))
     story.append(sp(16))
 
     story.append(Paragraph('SSN — Social Security Number', S['section_head']))
@@ -328,7 +331,7 @@ def build():
 
     story.append(Paragraph('O que isso significa pra você', S['section_head']))
     story.append(Paragraph("Se você tem SSN — você já tem uma vantagem.", S['body']))
-    story.append(Paragraph("Certifique-se de saber o que ele te dá e não te dá acesso.", S['body']))
+    story.append(Paragraph("Entenda o que ele abre — e o que não abre.", S['body']))
     story.append(sp(8))
     story.append(Paragraph("Se você tem ITIN — você tem um ponto de partida real.", S['body']))
     story.append(Paragraph("Muitos bancos, credores e serviços aceitam.", S['body']))
@@ -438,7 +441,8 @@ def build():
     story.append(Paragraph("É por isso que as pessoas ficam presas por mais tempo do que esperavam.", S['body']))
     story.append(sp(8))
     story.append(Paragraph("Você não pode apressar o histórico de crédito.", S['body']))
-    story.append(Paragraph("O que dá pra fazer é evitar os erros que te obrigam a recomeçar — e dar os passos certos cedo o suficiente pra que o tempo trabalhe a seu favor.", S['body']))
+    story.append(Paragraph("O que dá pra fazer: evitar os erros que te obrigam a recomeçar.", S['body']))
+    story.append(Paragraph("E dar os passos certos cedo o suficiente pra que o tempo trabalhe a seu favor.", S['body']))
     story.append(sp(14))
 
     story.append(Paragraph('O que realmente importa — os três fatores', S['section_head']))
@@ -504,6 +508,12 @@ def build():
     story.append(sp(14))
 
     story.append(Paragraph('Como o risco realmente parece', S['section_head']))
+    step5_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/Step 5 Protection subtle family.png'
+    if os.path.exists(step5_img_path):
+        img5 = Image(step5_img_path, width=4.2*inch, height=2.8*inch, kind='proportional')
+        img5.hAlign = 'CENTER'
+        story.append(img5)
+        story.append(sp(10))
     scenario_style = ParagraphStyle('scenario', fontName='Helvetica', fontSize=11.5,
                                     textColor=BODY_C, leading=20, spaceAfter=6, spaceBefore=6,
                                     leftIndent=12, rightIndent=12, backColor=CREAM, borderPad=14)
@@ -553,7 +563,7 @@ def build():
 
     story.append(Paragraph('O que evitar', S['section_head']))
     for label, text in [
-        ('Esperar até se sentir estável:', 'Não existe estável. Estabilidade se constrói, não se espera. Quem espera a hora certa costuma esperar demais.'),
+        ('Esperar até se sentir estável:', 'Não existe estável. Estabilidade se constrói, não se espera. Quem espera o momento perfeito, espera para sempre.'),
         ('Achar que não vai se qualificar:', 'Muita gente nunca verifica. Essa suposição está errada com mais frequência do que as pessoas imaginam.'),
         ('Escolher cobertura só pelo preço:', 'A opção mais barata e a opção certa nem sempre são a mesma coisa.'),
         ('Deixar essa conversa pra quando algo forçar:', 'A hora de pensar em proteger sua família não é durante uma crise. É antes.'),
@@ -575,21 +585,88 @@ def build():
     story.append(sp(8))
     story.append(Paragraph('Observação: A elegibilidade para seguros, coberturas e programas de saúde varia por circunstâncias, status imigratório e estado. Conteúdo informacional apenas — não é aconselhamento de seguros. Consulte um profissional de seguros ou saúde licenciado.', S['compliance']))
 
+    story.append(sp(22))
+    story.append(HRFlowable(width='40%', thickness=1, color=GOLD, spaceAfter=16, spaceBefore=12))
+    story.append(Paragraph("Até aqui, você organizou a base.", S['body_bold']))
+    story.append(sp(10))
+    story.append(Paragraph("É aqui que a maioria para.", S['body']))
+    story.append(sp(12))
+    story.append(Paragraph("Mas quem realmente avança entende duas coisas:", S['body']))
+    story.append(sp(10))
+    story.append(Paragraph("Como aumentar a renda…", S['body']))
+    story.append(Paragraph("E como construir algo que não dependa só do seu tempo.", S['body']))
+    story.append(sp(12))
+    story.append(Paragraph("Essas são as próximas fases.", S['body']))
+    story.append(sp(10))
+    story.append(Paragraph("Mas elas só funcionam quando a base está certa.", S['body_bold']))
+
+    # ── SE VOCÊ CONTINUAR ───────────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('Se você continuar como está…', S['page_title']))
+    story.append(gold_rule())
+    story.append(sp(16))
+
+    story.append(Paragraph("Se nada mudar, daqui a 1 ano sua vida vai estar igual.", S['body']))
+    story.append(sp(12))
+    story.append(Paragraph("Mais trabalho.", S['body']))
+    story.append(Paragraph("Mais esforço.", S['body']))
+    story.append(Paragraph("E a mesma sensação de que algo está faltando.", S['body']))
+    story.append(sp(18))
+
+    story.append(Paragraph("Não é porque você não tenta.", S['body']))
+    story.append(sp(12))
+    story.append(Paragraph("É porque ninguém te mostrou a ordem certa.", S['body']))
+    story.append(sp(18))
+
+    story.append(Paragraph("E esse é o ponto que a maioria das pessoas trava.", S['body']))
+    story.append(sp(12))
+    story.append(Paragraph("Elas entendem.", S['body']))
+    story.append(sp(4))
+    story.append(Paragraph("Mas não fazem nada com isso.", S['body']))
+    story.append(sp(22))
+
+    story.append(Paragraph("Você tem duas opções agora:", S['body_strong']))
+    story.append(sp(16))
+    story.append(Paragraph("Fechar esse guia… e continuar exatamente onde você está hoje.", S['body']))
+    story.append(sp(12))
+    story.append(Paragraph("Ou usar isso como ponto de virada.", S['body_bold']))
+    story.append(sp(22))
+
+    story.append(Paragraph("Você não precisa resolver tudo hoje.", S['body']))
+    story.append(sp(12))
+    story.append(Paragraph("Mas precisa decidir se vai continuar no mesmo caminho —<br/>ou começar a ajustar isso de forma intencional.", S['body']))
+
     # ── PÁGINA CTA ───────────────────────────────────────────
     story.append(PageBreak())
-    story.append(Spacer(1, 1.6*inch))
-    story.append(Paragraph('Precisa de ajuda pra aplicar\nisso na sua situação?', S['cta_title']))
+    story.append(Spacer(1, 1.8*inch))
+    story.append(Paragraph('Quer conversar sobre a sua situação?', S['cta_title']))
     story.append(gold_rule())
-    story.append(sp(20))
-    story.append(Paragraph('Você não precisa fazer isso sozinho.', S['cta_body']))
-    story.append(sp(10))
-    story.append(Paragraph('Se quiser clareza sobre o seu caso específico,', S['cta_body']))
-    story.append(Paragraph('fale com a gente direto no WhatsApp.', S['cta_body']))
-    story.append(Spacer(1, 0.5*inch))
+    story.append(sp(24))
+    story.append(Paragraph('Se esse guia fez sentido pra você, não para aqui.', S['cta_body']))
+    story.append(sp(8))
+    story.append(Paragraph('A maioria das pessoas entende isso…', S['cta_body']))
+    story.append(Paragraph('e não faz nada.', S['cta_body']))
+    story.append(sp(8))
+    story.append(Paragraph('Se você quiser clareza sobre a sua situação,', S['cta_body']))
+    story.append(Paragraph('manda uma mensagem no WhatsApp e me fala onde você está hoje.', S['cta_body']))
+    story.append(sp(8))
+    story.append(Paragraph('A gente olha junto.', S['cta_body']))
+    story.append(sp(8))
+    story.append(Paragraph('Sem pressão.', S['cta_body']))
+    story.append(Paragraph('Sem promessa.', S['cta_body']))
+    story.append(Paragraph('Só direção.', S['cta_body']))
+    story.append(Spacer(1, 0.4*inch))
     story.append(Paragraph(
-        '<a href="https://wa.me/13526303930" color="white">Falar no WhatsApp</a>',
+        '<a href="https://wa.me/13526303930" color="white">Quero conversar no WhatsApp →</a>',
         S['cta_btn']
     ))
+    story.append(sp(14))
+    story.append(Paragraph('wa.me/13526303930', S['cover_url']))
+    story.append(sp(12))
+    story.append(Paragraph('Se você leu até aqui, você não é a maioria.', S['body_italic']))
+    story.append(Spacer(1, 0.4*inch))
+    story.append(HRFlowable(width='30%', thickness=1, color=GOLD, spaceAfter=10, spaceBefore=10))
+    story.append(Paragraph('prosperinamerica.com  |  @prosperinamerica', S['cover_url']))
 
     doc.build(story, onFirstPage=cover_bg, onLaterPages=lambda c, d: None)
     print(f'PDF salvo: {out}')

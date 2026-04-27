@@ -1,3 +1,4 @@
+import os
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
@@ -181,39 +182,26 @@ doc = Document()
 set_doc_margins(doc)
 
 # ── CAPA ─────────────────────────────────────────────────────
-p = doc.add_paragraph()
-p.paragraph_format.space_before = Pt(80)
-p.paragraph_format.space_after = Pt(8)
-p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-set_para_shading(p, '0F1B2D')
-add_run(p, 'PROSPER IN AMERICA', bold=True, size=32, color=GOLD, font='Montserrat')
-
-p2 = doc.add_paragraph()
-p2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p2.paragraph_format.space_before = Pt(0)
-p2.paragraph_format.space_after = Pt(6)
-set_para_shading(p2, '0F1B2D')
-add_run(p2, 'O Guia Financeiro Inicial do Imigrante', size=16, color=CREAM, font='Inter')
-
-p3 = doc.add_paragraph()
-p3.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p3.paragraph_format.space_before = Pt(4)
-p3.paragraph_format.space_after = Pt(4)
-set_para_shading(p3, '0F1B2D')
-add_run(p3, '7 Passos Para Construir Sua Vida nos Estados Unidos', italic=True, size=13, color=CREAM, font='Inter')
-
-for _ in range(6):
-    sp = doc.add_paragraph()
-    sp.paragraph_format.space_before = Pt(0)
-    sp.paragraph_format.space_after = Pt(0)
-    set_para_shading(sp, '0F1B2D')
-
-p4 = doc.add_paragraph()
-p4.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p4.paragraph_format.space_before = Pt(0)
-p4.paragraph_format.space_after = Pt(80)
-set_para_shading(p4, '0F1B2D')
-add_run(p4, 'prosperinamerica.com', size=10, color=MUTED, font='Inter')
+cover_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/cover - 5Passos.png'
+if os.path.exists(cover_img_path):
+    p_cover = doc.add_paragraph()
+    p_cover.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_cover.paragraph_format.space_before = Pt(0)
+    p_cover.paragraph_format.space_after = Pt(0)
+    p_cover.add_run().add_picture(cover_img_path, width=Inches(6.3))
+else:
+    p = doc.add_paragraph()
+    p.paragraph_format.space_before = Pt(80)
+    p.paragraph_format.space_after = Pt(8)
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    set_para_shading(p, '0F1B2D')
+    add_run(p, 'PROSPER IN AMERICA', bold=True, size=32, color=GOLD, font='Montserrat')
+    p2 = doc.add_paragraph()
+    p2.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p2.paragraph_format.space_before = Pt(0)
+    p2.paragraph_format.space_after = Pt(6)
+    set_para_shading(p2, '0F1B2D')
+    add_run(p2, 'O Guia Inicial do Imigrante Brasileiro', size=16, color=CREAM, font='Inter')
 
 doc.add_page_break()
 
@@ -233,8 +221,7 @@ for line in [
     "",
     "Aprendi errando.",
     "",
-    "Eu sei o que é trabalhar duro —",
-    "e sentir que não está saindo do lugar.",
+    "Eu sei o que é trabalhar duro e não sair do lugar.",
     "",
     "Esse guia existe por um motivo:",
     "",
@@ -245,7 +232,7 @@ for line in [
     "Leia isso com atenção.",
     "",
     "E mais importante:",
-    "coloque em prática.",
+    "bota em prática.",
     "",
     "Se quiser ajuda pra aplicar isso na sua realidade,",
     "fala com a gente direto no WhatsApp.",
@@ -272,14 +259,19 @@ heading(doc, 'Como Usar Este Guia', size=20, space_before=12)
 gold_rule(doc)
 spacer(doc, 10)
 
-body(doc, 'Este guia tem 7 passos.')
-body(doc, 'Eles seguem uma sequência — mas você não precisa começar do início.')
+body(doc, 'Este guia tem 5 passos essenciais.')
 spacer(doc, 8)
+body(doc, 'Eles seguem uma sequência, mas você não precisa começar do início.')
+spacer(doc, 10)
 body(doc, 'Se você já tem conta no banco, pule para o Passo 3.')
 body(doc, 'Se crédito é o seu maior gap, comece pelo Passo 4.')
 body(doc, 'Se você está preocupado com a proteção da sua família, vá direto para o Passo 5.')
-spacer(doc, 10)
-body(doc, 'Encontre onde você está. Comece por aí.', bold=True, color=NAVY)
+spacer(doc, 12)
+body(doc, 'Encontre onde você está.', bold=True, color=NAVY)
+body(doc, 'Comece por aí.', bold=True, color=NAVY)
+spacer(doc, 12)
+body(doc, 'Depois da base, vêm as próximas fases:')
+body(doc, 'aumentar sua renda e construir algo que dure.', italic=True, color=MUTED)
 
 spacer(doc, 16)
 section_head(doc, 'Passos deste guia')
@@ -290,8 +282,6 @@ for num, title in [
     ('03', 'Abra a Conta Certa'),
     ('04', 'Construa Seu Crédito'),
     ('05', 'Proteja o Que Você Está Construindo'),
-    ('06', 'Aumente Sua Renda'),
-    ('07', 'Construa Algo que Dure'),
 ]:
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(5)
@@ -384,8 +374,8 @@ body(doc, 'ITIN e SSN — o que cada um é e o que cada um abre.', italic=True, 
 gold_rule(doc)
 spacer(doc, 10)
 
-body(doc, 'Você chega sabendo que precisa de algo pra começar.')
-body(doc, 'Mas sem saber exatamente o que é — ou o que ele abre.')
+body(doc, 'Você sabe que precisa de um número pra começar.')
+body(doc, 'Só não sabe ao certo o que cada um te abre.')
 spacer(doc, 16)
 
 section_head(doc, 'SSN — Social Security Number')
@@ -426,7 +416,7 @@ spacer(doc, 14)
 
 section_head(doc, 'O que isso significa pra você')
 body(doc, 'Se você tem SSN — você já tem uma vantagem.')
-body(doc, 'Certifique-se de saber o que ele te dá e não te dá acesso.')
+body(doc, 'Entenda o que ele abre — e o que não abre.')
 spacer(doc, 8)
 body(doc, 'Se você tem ITIN — você tem um ponto de partida real.')
 body(doc, 'Muitos bancos, credores e serviços aceitam.')
@@ -558,7 +548,8 @@ spacer(doc, 8)
 body(doc, 'É por isso que as pessoas ficam presas por mais tempo do que esperavam.')
 spacer(doc, 8)
 body(doc, 'Você não pode apressar o histórico de crédito.')
-body(doc, 'O que dá pra fazer é evitar os erros que te obrigam a recomeçar — e dar os passos certos cedo o suficiente pra que o tempo trabalhe a seu favor.')
+body(doc, 'O que dá pra fazer: evitar os erros que te obrigam a recomeçar.')
+body(doc, 'E dar os passos certos cedo o suficiente pra que o tempo trabalhe a seu favor.')
 spacer(doc, 14)
 
 section_head(doc, 'O que realmente importa — os três fatores')
@@ -629,6 +620,13 @@ body(doc, 'E é exatamente assim que famílias acabam em crise.')
 spacer(doc, 14)
 
 section_head(doc, 'Como o risco realmente parece')
+step5_img_path = '/Users/miriampalma/Documents/ARCHIVE/ProsperInAmerica Guia/Step 5 Protection subtle family.png'
+if os.path.exists(step5_img_path):
+    p_img5 = doc.add_paragraph()
+    p_img5.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_img5.paragraph_format.space_before = Pt(8)
+    p_img5.paragraph_format.space_after = Pt(10)
+    p_img5.add_run().add_picture(step5_img_path, width=Inches(4.2))
 p_scenario = doc.add_paragraph()
 p_scenario.paragraph_format.space_before = Pt(8)
 p_scenario.paragraph_format.space_after = Pt(6)
@@ -678,7 +676,7 @@ spacer(doc, 12)
 
 section_head(doc, 'O que evitar')
 for label, text in [
-    ('Esperar até se sentir estável:', 'Não existe estável. Estabilidade se constrói, não se espera. Quem espera a hora certa costuma esperar demais.'),
+    ('Esperar até se sentir estável:', 'Não existe estável. Estabilidade se constrói, não se espera. Quem espera o momento perfeito, espera para sempre.'),
     ('Achar que não vai se qualificar:', 'Muita gente nunca verifica. Essa suposição está errada com mais frequência do que as pessoas imaginam.'),
     ('Escolher cobertura só pelo preço:', 'A opção mais barata e a opção certa nem sempre são a mesma coisa.'),
     ('Deixar essa conversa pra quando algo forçar:', 'A hora de pensar em proteger sua família não é durante uma crise. É antes.'),
@@ -710,27 +708,89 @@ for item in [
 spacer(doc, 8)
 compliance(doc, 'Observação: A elegibilidade para seguros, coberturas e programas de saúde varia por circunstâncias, status imigratório e estado. Conteúdo informacional apenas — não é aconselhamento de seguros. Consulte um profissional de seguros ou saúde licenciado.')
 
+spacer(doc, 22)
+body(doc, 'Até aqui, você organizou a base.', bold=True, color=NAVY)
+spacer(doc, 10)
+body(doc, 'É aqui que a maioria para.')
+spacer(doc, 12)
+body(doc, 'Mas quem realmente avança entende duas coisas:')
+spacer(doc, 10)
+body(doc, 'Como aumentar a renda…')
+body(doc, 'E como construir algo que não dependa só do seu tempo.')
+spacer(doc, 12)
+body(doc, 'Essas são as próximas fases.')
+spacer(doc, 10)
+body(doc, 'Mas elas só funcionam quando a base está certa.', bold=True, color=NAVY)
+
+# ── SE VOCÊ CONTINUAR ────────────────────────────────────────
+doc.add_page_break()
+
+section_head(doc, 'Se você continuar como está…', size=20)
+gold_rule(doc)
+spacer(doc, 16)
+
+body(doc, 'Se nada mudar, daqui a 1 ano sua vida vai estar igual.')
+spacer(doc, 12)
+body(doc, 'Mais trabalho.')
+body(doc, 'Mais esforço.')
+body(doc, 'E a mesma sensação de que algo está faltando.')
+spacer(doc, 18)
+
+body(doc, 'Não é porque você não tenta.')
+spacer(doc, 12)
+body(doc, 'É porque ninguém te mostrou a ordem certa.')
+spacer(doc, 18)
+
+body(doc, 'E esse é o ponto que a maioria das pessoas trava.')
+spacer(doc, 12)
+body(doc, 'Elas entendem.')
+spacer(doc, 4)
+body(doc, 'Mas não fazem nada com isso.')
+spacer(doc, 22)
+
+body(doc, 'Você tem duas opções agora:', bold=True, size=13, color=NAVY)
+spacer(doc, 16)
+body(doc, 'Fechar esse guia… e continuar exatamente onde você está hoje.')
+spacer(doc, 12)
+body(doc, 'Ou usar isso como ponto de virada.', bold=True, color=NAVY)
+spacer(doc, 22)
+
+body(doc, 'Você não precisa resolver tudo hoje.')
+spacer(doc, 12)
+body(doc, 'Mas precisa decidir se vai continuar no mesmo caminho —', space_before=6, space_after=2)
+body(doc, 'ou começar a ajustar isso de forma intencional.', space_before=0, space_after=8)
+
 # ── PÁGINA CTA ───────────────────────────────────────────────
 doc.add_page_break()
 
 spacer(doc, 50)
-heading(doc, 'Precisa de ajuda pra aplicar\nisso na sua situação?', size=22, space_before=12, space_after=10, align=WD_ALIGN_PARAGRAPH.CENTER)
+heading(doc, 'Quer conversar sobre a sua situação?', size=22, space_before=12, space_after=10, align=WD_ALIGN_PARAGRAPH.CENTER)
 gold_rule(doc)
-spacer(doc, 20)
+spacer(doc, 24)
 
-body(doc, 'Você não precisa fazer isso sozinho.', bold=True, size=13, color=NAVY, space_before=6, space_after=12)
-
-p_cta1 = doc.add_paragraph()
-p_cta1.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p_cta1.paragraph_format.space_before = Pt(6)
-p_cta1.paragraph_format.space_after = Pt(4)
-add_run(p_cta1, 'Se quiser clareza sobre o seu caso específico,', size=12, color=BODY)
-
-p_cta2 = doc.add_paragraph()
-p_cta2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p_cta2.paragraph_format.space_before = Pt(0)
-p_cta2.paragraph_format.space_after = Pt(6)
-add_run(p_cta2, 'fale com a gente direto no WhatsApp.', size=12, color=BODY)
+for cta_line in [
+    'Se esse guia fez sentido pra você, não para aqui.',
+    '',
+    'A maioria das pessoas entende isso…',
+    'e não faz nada.',
+    '',
+    'Se você quiser clareza sobre a sua situação,',
+    'manda uma mensagem no WhatsApp e me fala onde você está hoje.',
+    '',
+    'A gente olha junto.',
+    '',
+    'Sem pressão.',
+    'Sem promessa.',
+    'Só direção.',
+]:
+    if cta_line == '':
+        spacer(doc, 8)
+    else:
+        p_c = doc.add_paragraph()
+        p_c.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_c.paragraph_format.space_before = Pt(4)
+        p_c.paragraph_format.space_after = Pt(4)
+        add_run(p_c, cta_line, size=13, color=BODY)
 
 spacer(doc, 32)
 
@@ -739,7 +799,7 @@ p_btn.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p_btn.paragraph_format.space_before = Pt(10)
 p_btn.paragraph_format.space_after = Pt(10)
 set_para_shading(p_btn, 'C8952E')
-add_run(p_btn, 'Falar no WhatsApp', bold=True, size=14, color=WHITE)
+add_run(p_btn, 'Quero conversar no WhatsApp →', bold=True, size=14, color=WHITE)
 
 spacer(doc, 10)
 p_url = doc.add_paragraph()
@@ -747,6 +807,20 @@ p_url.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p_url.paragraph_format.space_before = Pt(4)
 p_url.paragraph_format.space_after = Pt(4)
 add_run(p_url, 'wa.me/13526303930', italic=True, size=10, color=MUTED)
+
+spacer(doc, 10)
+p_tag = doc.add_paragraph()
+p_tag.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p_tag.paragraph_format.space_before = Pt(4)
+p_tag.paragraph_format.space_after = Pt(4)
+add_run(p_tag, 'Se você leu até aqui, você não é a maioria.', italic=True, size=10, color=MUTED)
+
+spacer(doc, 20)
+p_footer = doc.add_paragraph()
+p_footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p_footer.paragraph_format.space_before = Pt(4)
+p_footer.paragraph_format.space_after = Pt(4)
+add_run(p_footer, 'prosperinamerica.com  |  @prosperinamerica', size=10, color=MUTED)
 
 # ── SALVAR ───────────────────────────────────────────────────
 out_path = '/Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/prosper_in_america_guia_pt.docx'
