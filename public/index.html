@@ -422,6 +422,24 @@
   }
   .path-link:hover { gap: 10px; }
 
+  /* Soft-signal line below 3 Paths grid (locked copy from Brand Relationship doc) */
+  .paths-soft-signal {
+    background: var(--white);
+    padding: 0 0 64px;
+  }
+  .paths-soft-signal .wrap-sm {
+    text-align: center;
+    border-top: 1px solid rgba(200,149,46,0.30);
+    padding-top: 36px;
+  }
+  .paths-soft-signal p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.78;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
   /* ═══════════════════════════════════════════════════
      STORY
   ═══════════════════════════════════════════════════ */
@@ -714,9 +732,6 @@
     <li><a href="#guia"
           data-en="Free Guide"
           data-pt="Guia Gratuito">Free Guide</a></li>
-    <li><a href="/go-big.html"
-          data-en="Go Big"
-          data-pt="Go Big" style="color: var(--gold);">Go Big</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-toggle" role="group" aria-label="Language">
@@ -903,6 +918,18 @@
 </section>
 
 
+<!-- LOCKED COPY — Brand Relationship doc, do not modify without approval -->
+<div class="paths-soft-signal" aria-hidden="false">
+  <div class="wrap-sm">
+    <p data-en="For clients who need something done directly, we also build the work. We can talk about it."
+       data-pt="Para clientes que precisam de algo direto, a gente também constrói o trabalho. A gente conversa.">
+      For clients who need something done directly, we also build the work. We can talk about it.
+    </p>
+  </div>
+</div>
+<!-- /LOCKED COPY -->
+
+
 <!-- ══════════════════════════════════════ OUR STORY ══════════════════════════════════ -->
 <section class="section story" id="nossa-historia">
   <div class="wrap">
@@ -1044,66 +1071,6 @@
 </section>
 
 
-<!-- ══════════════════════════════════════ GO BIG BAND ════════════════════════════════ -->
-<section class="section gobig-band">
-  <div class="wrap">
-    <div class="gobig-card">
-      <span class="eyebrow"
-            data-en="The Go Big Agency"
-            data-pt="The Go Big Agency">The Go Big Agency</span>
-      <h2 data-en="Already running a business? Go big with us."
-          data-pt="Já tem um negócio? Vai longe com a gente.">
-        Já tem um negócio? Vai longe com a gente.
-      </h2>
-      <p data-en="Marca, site, conteúdo e consultoria para donos de negócio que estão prontos pra ir longe. Five-minute brief and we reply on WhatsApp."
-         data-pt="Marca, site, conteúdo e consultoria para donos de negócio que estão prontos pra ir longe. Briefing de cinco minutos e a gente responde no WhatsApp.">
-        Marca, site, conteúdo e consultoria para donos de negócio que estão prontos pra ir longe. Briefing de cinco minutos e a gente responde no WhatsApp.
-      </p>
-      <a href="/go-big.html" class="btn btn-gold"
-         data-en="See The Go Big Agency"
-         data-pt="Conhecer The Go Big Agency">Conhecer The Go Big Agency</a>
-    </div>
-  </div>
-</section>
-
-<style>
-  .gobig-band { background: var(--navy-deep); padding: 88px 0; position: relative; }
-  .gobig-band::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(ellipse 80% 60% at 50% 0%, var(--navy-soft) 0%, var(--navy-deep) 70%),
-      repeating-linear-gradient(0deg,  transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px),
-      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px);
-    pointer-events: none;
-  }
-  .gobig-card {
-    position: relative;
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-  .gobig-card .eyebrow { color: var(--gold); margin-bottom: 18px; }
-  .gobig-card h2 {
-    font-family: var(--display);
-    font-size: clamp(28px, 4.4vw, 42px);
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: -0.5px;
-    line-height: 1.12;
-    margin-bottom: 22px;
-  }
-  .gobig-card p {
-    font-size: 17px;
-    color: rgba(255,255,255,0.72);
-    line-height: 1.78;
-    max-width: 560px;
-    margin: 0 auto 32px;
-  }
-</style>
-
-
 <!-- ══════════════════════════════════════ FOOTER ══════════════════════════════════════ -->
 <footer>
   <div class="footer-logo">
@@ -1120,7 +1087,6 @@
     <a href="#nossa-historia" data-en="About Us" data-pt="Sobre Nós">About Us</a>
     <a href="#caminhos" data-en="Services" data-pt="Serviços">Services</a>
     <a href="#guia" data-en="Free Guide" data-pt="Guia Gratuito">Free Guide</a>
-    <a href="/go-big.html" data-en="Go Big Agency" data-pt="Go Big Agency">Go Big Agency</a>
     <a href="mailto:johndavid.assistant@gmail.com" data-en="Contact" data-pt="Contato">Contact</a>
   </nav>
 
