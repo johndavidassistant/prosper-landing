@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prosper In America — Stop Surviving. Start Building.</title>
+  <style>html:not(.lang-ready) body{visibility:hidden}</style>
+  <noscript><style>body{visibility:visible !important}</style></noscript>
   <meta name="description" content="John David and Wellen help immigrant families protect what they've built, grow their income, and build something that lasts in America.">
   <meta property="og:title" content="Stop Surviving. Start Building. — Prosper In America">
   <meta property="og:description" content="Life insurance, income paths, and business building for immigrants and families in America.">
@@ -735,9 +737,9 @@
   </ul>
   <div class="nav-right">
     <div class="lang-toggle" role="group" aria-label="Language">
-      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="en">EN</button>
       <span class="lang-sep" aria-hidden="true">|</span>
-      <button class="lang-btn" data-lang="pt">PT</button>
+      <button class="lang-btn active" data-lang="pt">PT</button>
     </div>
     <a href="#" class="btn btn-gold nav-cta schedule-link"
        data-en="Schedule a Free Call"
@@ -1118,10 +1120,10 @@
       el.rel = 'noopener noreferrer';
     });
   }
-  applyScheduleLinks('en');
+  applyScheduleLinks('pt');
 
   // ── LANGUAGE TOGGLE ────────────────────────────────────────────────────────
-  var currentLang = 'en';
+  var currentLang = 'pt';
 
   function setLanguage(lang) {
     currentLang = lang;
@@ -1137,6 +1139,10 @@
 
     applyScheduleLinks(lang);
   }
+
+  // First-paint default. PIA primary copy is Portuguese.
+  setLanguage('pt');
+  document.documentElement.classList.add('lang-ready');
 
   document.querySelectorAll('.lang-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
