@@ -73,25 +73,43 @@
   line-height: 1.7;
 }
 
+/* "designed by GO BIG · @thegobigagency" — single clean line.
+   "designed by" is dim, lowercase. "GO BIG" is real metallic gold gradient.
+   No tracked-uppercase, no underline. */
 .site-footer-design {
   margin: 14px auto 0;
   font-family: 'Inter', system-ui, sans-serif;
-  font-style: italic;
-  font-size: 10px;
-  letter-spacing: 0.30em;
-  text-transform: uppercase;
-  color: rgba(200,149,46,0.55);
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(255,255,255,0.42);
   line-height: 1.6;
 }
 .site-footer-design a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px dotted rgba(200,149,46,0.30);
-  transition: color 0.2s, border-color 0.2s;
+  border-bottom: none;
+  transition: color 0.2s;
 }
-.site-footer-design a:hover {
-  color: #DBA94A;
-  border-bottom-color: rgba(219,169,74,0.65);
+.site-footer-design a:hover { color: #DBA94A; }
+/* Real metallic gold treatment on "GO BIG" — uppercase, tracked tight. */
+.site-footer-design .go-big-grad {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(
+    178deg,
+    #8A6516 0%, #C99632 14%, #F2D175 30%, #FFF3C9 42%,
+    #E8B956 55%, #B58620 70%, #8C6112 84%, #D2A33D 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.site-footer-design .footer-credit-sep {
+  margin: 0 8px;
+  color: rgba(255,255,255,0.30);
 }
 
 .site-footer-fogo {
