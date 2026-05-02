@@ -1139,6 +1139,10 @@
         <input type="text" id="name" name="name" required autocomplete="name">
       </div>
       <div class="form-row">
+        <label for="email" data-en="Email" data-pt="Email" data-es="Email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-row">
         <label for="business" data-en="Business" data-pt="Negócio" data-es="Negócio">Business</label>
         <input type="text" id="business" name="business" required>
       </div>
@@ -1292,16 +1296,67 @@
     });
   });
 
-  // Apps Script forwarding hook. Activates only when APPS_SCRIPT_ENDPOINT is set.
+  // V2 CRM intake. Posts to /.netlify/functions/gobig-intake (which forwards
+  // to Apps Script /exec with the secret held server-side), then redirects to
+  // the thank-you page. data-netlify="true" stays on the form as a no-JS
+  // fallback: if JS is disabled, the form submits to Netlify Forms instead.
   var briefForm = document.getElementById('brief-form');
-  if (briefForm && APPS_SCRIPT_ENDPOINT) {
+  if (briefForm) {
     briefForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      var formData = new FormData(briefForm);
-      fetch(APPS_SCRIPT_ENDPOINT, { method: 'POST', body: formData })
-        .catch(function(){})
+      var get = function(n) {
+        var el = briefForm.querySelector('[name="' + n + '"]');
+        return el && el.value ? el.value.trim() : '';
+      };
+
+      var name  = get('name');
+      var email = get('email');
+      if (!email || email.indexOf('@') === -1) {
+        var ee = briefForm.querySelector('[name="email"]'); if (ee) ee.focus();
+        return;
+      }
+
+      var payload = {
+        name:           name,
+        email:          email,
+        whatsapp:       get('whatsapp'),
+        business:       get('business'),
+        what_do_you_do: get('what_do_you_do'),
+        not_working:    get('not_working'),
+        want:           get('want'),
+        budget:         get('budget'),
+        lang:           currentLang
+      };
+
+      // Local backup so a network failure does not lose the brief silently.
+      try {
+        var pending = JSON.parse(localStorage.getItem('goBigBriefs') || '[]');
+        pending.push(Object.assign({ ts: Date.now() }, payload));
+        localStorage.setItem('goBigBriefs', JSON.stringify(pending));
+      } catch (_) {}
+
+      var btn = briefForm.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+
+      var thankYou = '/obrigado-go-big.html?lang=' + encodeURIComponent(currentLang || 'en');
+      var redirected = false;
+      function go() {
+        if (redirected) return;
+        redirected = true;
+        window.location.href = thankYou;
+      }
+      // Hard cap so a slow function does not strand the user.
+      var safety = setTimeout(go, 4000);
+
+      fetch('/.netlify/functions/gobig-intake', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(function() { /* swallowed; redirect still happens */ })
         .finally(function() {
-          window.location.href = '/obrigado-go-big.html';
+          clearTimeout(safety);
+          go();
         });
     });
   }
