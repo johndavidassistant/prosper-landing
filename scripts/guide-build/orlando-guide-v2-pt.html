@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>O Guia Insider de Orlando</title>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/inter-var-latin.woff2') format('woff2'),url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/inter-var-latin-ext.woff2') format('woff2');}@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-latin.woff2') format('woff2'),url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-latin-ext.woff2') format('woff2');}@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-italic-latin.woff2') format('woff2'),url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-italic-latin-ext.woff2') format('woff2');}
+
+  :root {
+    --navy: #0F1B2D;
+    --pearl: #FAF7F2;
+    --gold-deep: #8A6516;
+    --gold: #B58620;
+    --gold-bright: #D4A446;
+    --gold-pale: #FFF3C9;
+    --ink: #1F2937;
+    --ink-soft: #4B5563;
+  }
+
+  @page {
+    size: letter;
+    margin: 0.95in 0.9in 1.05in 0.9in;
+    background: var(--pearl);
+    @bottom-left {
+      content: "Um guia Prosper In America";
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #6B7280;
+      padding-bottom: 0.3in;
+    }
+    @bottom-right {
+      content: counter(page);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 10pt;
+      color: var(--gold-deep);
+      padding-bottom: 0.3in;
+    }
+    @bottom-center {
+      content: "Mt 6:33";
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 9pt;
+      color: var(--gold-deep);
+      padding-bottom: 0.3in;
+    }
+  }
+  @page cover { margin: 0; background: var(--navy);
+    @bottom-left { content: none; } @bottom-right { content: none; } @bottom-center { content: none; }
+  }
+  @page closing { margin: 0; background: var(--navy);
+    @bottom-left { content: "Um guia Prosper In America"; font-family: 'Inter', sans-serif; font-size: 8pt; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250, 247, 242, 0.7); padding: 0 0.9in 0.4in; }
+    @bottom-right { content: counter(page); font-family: 'Playfair Display', serif; font-style: italic; font-size: 10pt; color: var(--gold-bright); padding: 0 0.9in 0.4in; }
+    @bottom-center { content: "Mt 6:33"; font-family: 'Playfair Display', serif; font-style: italic; font-size: 9pt; color: var(--gold-bright); padding-bottom: 0.4in; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: 'Inter', -apple-system, sans-serif; color: var(--ink); background: transparent; font-weight: 400; line-height: 1.55; }
+
+  .cover {
+    page: cover; page-break-after: always; width: 8.5in; height: 11in; position: relative;
+    background: radial-gradient(ellipse 130% 65% at 50% 115%, rgba(232, 120, 43, 0.28) 0%, rgba(212, 164, 70, 0.18) 25%, rgba(15, 27, 45, 0) 60%), var(--navy);
+    color: var(--pearl); overflow: hidden;
+  }
+  .cover-mark { position: absolute; top: 1.05in; left: 1in; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold-bright); }
+  .cover-center { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); text-align: center; padding: 0 0.9in; }
+  .cover-eyebrow { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 16pt; color: var(--gold-bright); margin-bottom: 0.2in; }
+  .cover-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 600; font-size: 46pt; line-height: 1.1; color: var(--gold-bright); margin-bottom: 0.35in; }
+  .cover-rule { width: 1in; height: 1.5px; background: var(--gold-bright); margin: 0 auto 0.32in; opacity: 0.85; }
+  .cover-subtitle { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 15pt; color: rgba(250, 247, 242, 0.88); margin-bottom: 0.55in; max-width: 5.5in; margin-left: auto; margin-right: auto; line-height: 1.4; }
+  .cover-byline { font-family: 'Inter', sans-serif; font-size: 11pt; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(250, 247, 242, 0.78); }
+  .cover-byline strong { font-weight: 600; color: var(--pearl); }
+  .cover-bottom { position: absolute; bottom: 1.1in; left: 0; right: 0; text-align: center; }
+  .cover-bottom-rule { width: 0.6in; height: 1px; background: var(--gold-bright); margin: 0 auto 0.18in; opacity: 0.7; }
+  .cover-bottom-line { font-family: 'Inter', sans-serif; font-size: 8.5pt; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(250, 247, 242, 0.68); }
+
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  .welcome { padding-top: 0.6in; }
+  .welcome-eyebrow { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.28in; }
+  .welcome-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 700; font-size: 44pt; line-height: 1.08; color: var(--navy); margin-bottom: 0.22in; letter-spacing: -0.012em; }
+  .welcome-rule { width: 0.85in; height: 1.5px; background: var(--gold); margin-bottom: 0.45in; }
+  .welcome p { font-family: 'Inter', sans-serif; font-size: 14pt; line-height: 1.7; color: var(--ink); margin-bottom: 0.32in; max-width: 5.5in; }
+  .welcome-sig { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 16pt; color: var(--gold-deep); margin-top: 0.55in; }
+
+  .chapter { page-break-after: always; padding-top: 0.45in; }
+  .chapter-num { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 12pt; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.2in; }
+  .chapter-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 700; font-size: 38pt; line-height: 1.08; color: var(--navy); margin-bottom: 0.2in; letter-spacing: -0.012em; }
+  .chapter-lede { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 14.5pt; color: var(--ink-soft); margin-bottom: 0.45in; max-width: 5.5in; line-height: 1.45; }
+  .chapter-rule { width: 0.65in; height: 1.5px; background: var(--gold); margin-bottom: 0.45in; }
+
+  .entry { margin-bottom: 0.36in; max-width: 6in; }
+  .entry-name { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 600; font-size: 19pt; color: var(--navy); margin-bottom: 0.07in; letter-spacing: -0.005em; line-height: 1.15; }
+  .entry-meta { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.1in; }
+  .entry-body { font-family: 'Inter', sans-serif; font-size: 12.5pt; line-height: 1.6; color: var(--ink); }
+  .practical .entry { margin-bottom: 0.26in; }
+  .practical .entry-name { font-size: 15pt; }
+
+  .closing { page: closing; page-break-before: always; page-break-after: avoid; width: 8.5in; height: 11in; background: var(--navy); color: var(--pearl); position: relative; overflow: hidden; }
+  .closing-inner { position: absolute; inset: 0; padding: 1.2in 0.9in 1in; }
+  .closing-eyebrow { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 0.25in; }
+  .closing-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 600; font-size: 36pt; line-height: 1.12; color: var(--gold-bright); margin-bottom: 0.2in; }
+  .closing-rule { width: 0.85in; height: 1.5px; background: var(--gold-bright); margin-bottom: 0.5in; opacity: 0.85; }
+  .closing-block { margin-bottom: 0.42in; max-width: 5.6in; }
+  .closing-label { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 10pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 0.08in; }
+  .closing-body { font-family: 'Inter', sans-serif; font-size: 13pt; line-height: 1.55; color: rgba(250, 247, 242, 0.95); }
+  .closing-link { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 15pt; color: var(--gold-bright); margin-top: 0.06in; display: block; }
+  .closing-sig { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 16pt; color: var(--gold-bright); margin-top: 0.7in; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="cover-mark">PROSPER IN AMERICA</div>
+  <div class="cover-center">
+    <div class="cover-eyebrow">O</div>
+    <h1 class="cover-title">Guia Insider<br>de Orlando</h1>
+    <div class="cover-rule"></div>
+    <div class="cover-subtitle">Lugares escolhidos por quem<br>roda Orlando todo dia.</div>
+    <div class="cover-byline">Por <strong>John David</strong></div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-bottom-rule"></div>
+    <div class="cover-bottom-line">Um guia Prosper In America · Designed by GO BIG</div>
+  </div>
+</section>
+
+<section class="page welcome">
+  <div class="welcome-eyebrow">Bem-vindo</div>
+  <h2 class="welcome-title">A Flórida<br>que vale conhecer.</h2>
+  <div class="welcome-rule"></div>
+  <p>Eu rodo Orlando todo dia. Já busquei milhares de visitantes no aeroporto e levei pessoas pra cada parque, cada nascente, cada restaurante brasileiro da cidade.</p>
+  <p>Esses são os lugares pra onde eu mando a minha própria família. Sem armadilha de turista. Sem indicação paga. Só o que eu falaria pra um amigo que veio passar a semana.</p>
+  <div class="welcome-sig">— John David</div>
+</section>
+
+<section class="page chapter">
+  <div class="chapter-num">Um</div>
+  <h2 class="chapter-title">As Nascentes</h2>
+  <p class="chapter-lede">A Flórida que ninguém planeja, e que todo mundo lembra.</p>
+  <div class="chapter-rule"></div>
+
+  <div class="entry">
+    <div class="entry-name">Blue Springs State Park</div>
+    <div class="entry-meta">35 min ao norte · $6 por carro</div>
+    <div class="entry-body">22°C o ano todo. Peixes-boi de novembro a março, dezenas deles vistos de uma passarela. Chegue até as 9 da manhã no inverno ou enche.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">De Leon Springs</div>
+    <div class="entry-meta">45 min ao norte · $6 por carro</div>
+    <div class="entry-body">Frite suas próprias panquecas no Old Spanish Sugar Mill, depois nade na nascente ao lado. Um dia de Flórida de verdade.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Rock Springs em Kelly Park</div>
+    <div class="entry-meta">40 min ao norte · entrada + aluguel de boia</div>
+    <div class="entry-body">Aluga uma boia e desce flutuando uma corredeira de água doce de quase 2 km que termina numa piscina natural. Flórida pura. Chegue antes das 11 nos fins de semana ou fecham a entrada.</div>
+  </div>
+</section>
+
+<section class="page chapter">
+  <div class="chapter-num">Dois</div>
+  <h2 class="chapter-title">Praias que<br>valem a viagem</h2>
+  <p class="chapter-lede">Duas costas pra escolher. Cada uma a uma hora daqui.</p>
+  <div class="chapter-rule"></div>
+
+  <div class="entry">
+    <div class="entry-name">New Smyrna Beach</div>
+    <div class="entry-meta">1 h a leste · costa atlântica</div>
+    <div class="entry-body">Menos cheia que Daytona. Dá pra entrar de carro na areia. A melhor combinação de banho e pôr do sol da costa leste.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Cocoa Beach</div>
+    <div class="entry-meta">45 min a leste · costa atlântica</div>
+    <div class="entry-body">Aluguel de prancha, a famosa loja Ron Jon, calçadão clássico da Flórida. Boa pra meio dia.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Clearwater Beach</div>
+    <div class="entry-meta">1 h 30 a oeste · Golfo do México</div>
+    <div class="entry-body">Areia branca, água mais calma, lado do golfo. Se a sua viagem casar com o pôr do sol, dirija pra oeste.</div>
+  </div>
+</section>
+
+<section class="page chapter">
+  <div class="chapter-num">Três</div>
+  <h2 class="chapter-title">Cidades pra<br>caminhar</h2>
+  <p class="chapter-lede">Cidades a pé. Vista de lago. Um ritmo diferente dos parques.</p>
+  <div class="chapter-rule"></div>
+
+  <div class="entry">
+    <div class="entry-name">Mount Dora</div>
+    <div class="entry-meta">45 min a noroeste · grátis</div>
+    <div class="entry-body">Cidadezinha encantadora à beira do lago. Antiquários, restaurantes na orla, passeio de barco se quiser.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Winter Park</div>
+    <div class="entry-meta">15 min do centro · grátis</div>
+    <div class="entry-body">Dentro de Orlando mas parece outro mundo. Lojas da Park Avenue, ruas de paralelepípedo, o Morse Museum se gostar de vidro Tiffany.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Winter Garden</div>
+    <div class="entry-meta">30 min a oeste · sábado é o dia</div>
+    <div class="entry-body">A feira de sábado de manhã é o programa. Estaciona no centrinho, caminha pelas ruas de paralelepípedo, toma um café, vê as famílias andando de bike na West Orange Trail.</div>
+  </div>
+</section>
+
+<section class="page chapter">
+  <div class="chapter-num">Quatro</div>
+  <h2 class="chapter-title">Conforto Brasileiro</h2>
+  <p class="chapter-lede">Pra quando bate saudade de casa.</p>
+  <div class="chapter-rule"></div>
+
+  <div class="entry">
+    <div class="entry-name">Seabra Foods</div>
+    <div class="entry-meta">Mercado · açougue · self-service por kg</div>
+    <div class="entry-body">Mercado e açougue brasileiro, com self-service de almoço pago por kg — meu favorito, pesa e come. Cortes de verdade pra churrasco, produtos direto do Brasil. Ponto da comunidade quando bate saudade.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Camilla's</div>
+    <div class="entry-meta">Restaurante brasileiro</div>
+    <div class="entry-body">Feijoada nos fins de semana, picanha qualquer dia, café da manhã brasileiro. Autêntico, acolhedor, favorito das famílias.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">First Orlando · Campus Brasileiro</div>
+    <div class="entry-meta">Domingo 9h · café gratuito antes do culto</div>
+    <div class="entry-body">Culto brasileiro de domingo. Chegue às 9h pra tomar café da manhã gratuito antes do culto. Acolhida real da comunidade.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">God of Promises Church</div>
+    <div class="entry-meta">Domingo à noite, 18h</div>
+    <div class="entry-body">Menor, mais íntima, com visão. Se você tá procurando igreja, as duas são casa pra mim.</div>
+  </div>
+</section>
+
+<section class="page chapter">
+  <div class="chapter-num">Cinco</div>
+  <h2 class="chapter-title">Os parques,<br>a verdade</h2>
+  <p class="chapter-lede">Quase tudo que se lê sobre os parques é patrocinado. Aqui é o que eu falaria pra um amigo.</p>
+  <div class="chapter-rule"></div>
+
+  <div class="entry">
+    <div class="entry-name">Magic Kingdom (Disney)</div>
+    <div class="entry-meta">Vale ir uma vez</div>
+    <div class="entry-body">Chegue na abertura, pegue as principais atrações antes das 11, faça uma pausa de meio-dia na piscina do hotel, volte pros fogos. Um dia, não três.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Universal Studios + Islands of Adventure</div>
+    <div class="entry-meta">Melhor pra adultos e crianças maiores</div>
+    <div class="entry-body">Experiência de parque melhor que a Disney pra adultos e crianças maiores. Harry Potter é o motivo. Se o orçamento permitir, compre o Express Pass — economiza 4 a 5 horas de fila.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Volcano Bay</div>
+    <div class="entry-meta">Melhor parque aquático de Orlando</div>
+    <div class="entry-body">O melhor parque aquático de Orlando. Melhor que o da Disney. Meio dia no verão.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Disney Springs</div>
+    <div class="entry-meta">Pula o rótulo de "parque"</div>
+    <div class="entry-body">É um complexo de lojas e restaurantes, não uma experiência. Vale 2 horas à noite pra comer e passear, não como destino.</div>
+  </div>
+</section>
+
+<section class="page chapter">
+  <div class="chapter-num">Seis</div>
+  <h2 class="chapter-title">Onde ficar</h2>
+  <p class="chapter-lede">Se você tem flexibilidade de hospedagem, isso importa mais do que parece.</p>
+  <div class="chapter-rule"></div>
+
+  <div class="entry">
+    <div class="entry-name">Windsor Island Resort</div>
+    <div class="entry-meta">Davenport · 25 min dos parques</div>
+    <div class="entry-body">Onde eu fico quando família visita. Condomínio fechado, segurança alta, resort completo com parque aquático, lazy river, academia, restaurante. Mais tranquilo que os hotéis da Disney e quase metade do preço pelo que entrega.</div>
+  </div>
+</section>
+
+<section class="page chapter practical">
+  <div class="chapter-num">Sete</div>
+  <h2 class="chapter-title">Na prática</h2>
+  <p class="chapter-lede">As coisas que um guia normalmente esquece de falar.</p>
+  <div class="chapter-rule"></div>
+
+  <div class="entry">
+    <div class="entry-name">Direção</div>
+    <div class="entry-body">Orlando é cidade de carro. Pedágio em todo lugar. Pegue o SunPass ou o plano de pedágio da locadora. O Google Maps subestima o trânsito entre 16h e 19h. Some 30%.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Clima</div>
+    <div class="entry-body">No verão chove todo dia às 15h, dura 30 minutos. Não cancele nada, só se proteja por uns instantes.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Gorjeta</div>
+    <div class="entry-body">Em restaurante o padrão é 20%. $2-5 por mala em hotel. Em rideshare, qualquer coisa é apreciada, nada é obrigatório.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Idioma</div>
+    <div class="entry-body">A maior parte do setor de serviço fala espanhol e bastante português. Restaurantes brasileiros sempre falam português. Espanhol ou inglês resolve em qualquer lugar.</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-name">Golpes comuns</div>
+    <div class="entry-body">Três pra ficar atento: quem aborda perto da Disney ou Universal vendendo "ingresso com desconto" — siga reto. Apresentações de timeshare prometendo ingresso grátis — sua manhã desaparece pra ganhar ingresso que sai mais barato online. Motoristas de rideshare oferecendo corrida fora do app — sempre peça pelo app.</div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="closing-inner">
+    <div class="closing-eyebrow">Oito · Fique em contato</div>
+    <h1 class="closing-title">Até a próxima.</h1>
+    <div class="closing-rule"></div>
+
+    <div class="closing-block">
+      <div class="closing-label">Mais guias, todo mês</div>
+      <div class="closing-body">Atualizações e novos guias todo mês. Financeiro, família, negócios e Orlando por estação.</div>
+      <span class="closing-link">prosperinamerica.com/ride</span>
+    </div>
+
+    <div class="closing-block">
+      <div class="closing-label">Quer uma corrida ou conversar</div>
+      <div class="closing-body">WhatsApp, qualquer hora.</div>
+      <span class="closing-link">+1 (352) 630-3930</span>
+    </div>
+
+    <div class="closing-block">
+      <div class="closing-label">Construindo algo enquanto está aqui</div>
+      <div class="closing-body">Marca ou site.</div>
+      <span class="closing-link">prosperinamerica.com/go-big</span>
+    </div>
+
+    <div class="closing-sig">— John David</div>
+  </div>
+</section>
+
+</body>
+</html>
