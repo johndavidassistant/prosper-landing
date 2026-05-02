@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Orlando enviado. Prosper In America.</title>
+  <meta name="description" content="Pronto. Seu guia Insider de Orlando está a caminho. Baixe agora e confira sua caixa de entrada.">
+  <link rel="canonical" href="https://prosperinamerica.com/obrigado-orlando.html">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-var-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/playfair-display-var-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/site-header.css">
+  <link rel="stylesheet" href="/css/site-footer.css">
+  <style>
+    :root {
+      --navy:      #0F1B2D;
+      --navy-mid:  #1A2942;
+      --navy-dark: #06101F;
+      --pearl:     #FAF7F2;
+      --gold:      #C8952E;
+      --gold-lite: #DBA94A;
+      --gold-top:  #D6A348;
+      --gold-bot:  #B5841F;
+      --ember:     #E8782B;
+      --muted:     #5A6A84;
+      --display:   'Playfair Display', Georgia, serif;
+      --sans:      'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--sans);
+      background: var(--navy);
+      color: var(--pearl);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, var(--navy-mid) 0%, var(--navy) 70%),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(232,120,43,0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 35% at 50% 40%, rgba(200,149,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body > * { position: relative; z-index: 1; }
+
+    /* OBRIGADO BANNER (top) — small clean header with brand logo */
+    .obrigado-banner {
+      padding: 22px 24px 18px;
+      border-bottom: 1px solid rgba(200,149,46,0.10);
+      text-align: center;
+    }
+    .obrigado-banner a { display: inline-block; }
+    .obrigado-banner img {
+      height: 44px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      opacity: 0.92;
+    }
+
+    /* OBRIGADO MAIN — centers the content vertically */
+    .obrigado-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 24px;
+    }
+    .accent-rule {
+      width: 56px; height: 2px;
+      background: linear-gradient(90deg, var(--gold-top), var(--gold-bot));
+      border-radius: 2px;
+      margin: 0 auto 36px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      opacity: 0.85;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(36px, 6.5vw, 64px);
+      color: var(--pearl);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 560px;
+      margin-bottom: 22px;
+    }
+    p {
+      font-size: 17px;
+      color: rgba(250,247,242,0.74);
+      max-width: 520px;
+      line-height: 1.78;
+      margin-bottom: 14px;
+    }
+    .divider {
+      width: 48px; height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin: 32px auto;
+    }
+    .dl-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin: 28px 0 8px;
+    }
+    .dl-label {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 15px; font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+      min-width: 280px;
+      justify-content: center;
+    }
+    .dl-btn:hover { background: var(--gold-lite); }
+    .dl-btn-primary { box-shadow: 0 0 0 2px rgba(232,120,43,0.20); }
+    .dl-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: rgba(250,247,242,0.78);
+      font-size: 15px; font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 8px;
+      border: 1.5px solid rgba(250,247,242,0.25);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      min-width: 280px;
+      justify-content: center;
+    }
+    .dl-btn-ghost:hover {
+      border-color: rgba(250,247,242,0.55);
+      color: var(--pearl);
+    }
+    .next-label {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 14px;
+    }
+    .ig-row {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .ig-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--pearl);
+      font-size: 14px; font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 100px;
+      border: 1px solid rgba(200,149,46,0.45);
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .ig-btn:hover {
+      background: rgba(200,149,46,0.10);
+      border-color: rgba(200,149,46,0.7);
+      color: var(--gold);
+    }
+    .verse {
+      margin: 56px auto 0;
+      max-width: 36ch;
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(17px, 2.3vw, 21px);
+      line-height: 1.55;
+      color: var(--gold);
+      text-align: center;
+      letter-spacing: 0.005em;
+    }
+    .verse .verse-ref {
+      display: block;
+      margin-top: 14px;
+      font-style: normal;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(200,149,46,0.62);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ UNIFIED SITE HEADER (identical across all pages) ════════════════════ -->
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="/" aria-label="Prosper In America — Home">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" decoding="async">
+    </a>
+    <nav class="site-header-nav" aria-label="Primary">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
+      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
+    </nav>
+    <div class="site-header-right">
+      <div class="site-lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="obrigado-main">
+
+  <div class="accent-rule"></div>
+  <span class="eyebrow"
+        data-en="Guide on the way"
+        data-pt="Guia a caminho"
+        data-es="Guía en camino">Guia a caminho</span>
+
+  <h1 data-en="You're set. Orlando guide on the way."
+      data-pt="Pronto. Seu guia de Orlando está a caminho."
+      data-es="Listo. Tu guía de Orlando está en camino.">
+    Pronto. Seu guia de Orlando está a caminho.
+  </h1>
+
+  <p data-en="We sent it to your email. Check your inbox. If you don't see it, look in spam or promotions."
+     data-pt="Enviamos para o seu email. Confira a caixa de entrada. Se não aparecer, veja em spam ou promoções."
+     data-es="Lo enviamos a tu correo. Revisa tu bandeja. Si no aparece, mira en spam o promociones.">
+    Enviamos para o seu email. Confira a caixa de entrada. Se não aparecer, veja em spam ou promoções.
+  </p>
+
+  <div class="dl-section">
+    <span class="dl-label"
+          data-en="Download now"
+          data-pt="Baixar agora"
+          data-es="Descargar ahora">Baixar agora</span>
+    <a id="dl-primary" href="/assets/guides/orlando-insider-guide-pt.pdf" target="_blank" rel="noopener" class="dl-btn dl-btn-primary">
+      <span data-en="↓ Download Orlando Guide"
+            data-pt="↓ Baixar o Guia de Orlando"
+            data-es="↓ Descargar la Guía de Orlando">↓ Baixar o Guia de Orlando</span>
+    </a>
+    <a href="/assets/guides/orlando-insider-guide-en.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
+      ↓ &nbsp;English version
+    </a>
+    <a href="/assets/guides/orlando-insider-guide-pt.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
+      ↓ &nbsp;Versão em Português
+    </a>
+    <a href="/assets/guides/orlando-insider-guide-es.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
+      ↓ &nbsp;Versión en Español
+    </a>
+  </div>
+
+  <div class="divider"></div>
+
+  <span class="next-label"
+        data-en="Next step"
+        data-pt="Próximo passo"
+        data-es="Siguiente paso">Próximo passo</span>
+
+  <p data-en="Follow on Instagram for real content about building a life worth keeping in America. Plus the FOGO LIVE pre-launch."
+     data-pt="Me siga no Instagram para conteúdo real sobre construir uma vida que vale a pena na América. E o pré-lançamento do FOGO LIVE."
+     data-es="Sigue en Instagram para contenido real sobre construir una vida que valga la pena en América. Y el pre-lanzamiento de FOGO LIVE.">
+    Me siga no Instagram para conteúdo real sobre construir uma vida que vale a pena na América. E o pré-lançamento do FOGO LIVE.
+  </p>
+
+  <div class="ig-row">
+    <a href="https://instagram.com/prosperinamerica" target="_blank" rel="noopener" class="ig-btn">
+      @prosperinamerica
+    </a>
+    <a href="https://instagram.com/ofogolive" target="_blank" rel="noopener" class="ig-btn">
+      @ofogolive
+    </a>
+  </div>
+
+  <p class="verse" lang="pt-BR" aria-label="Mateus 6:33">
+    <span data-en="Seek first the Kingdom of God."
+          data-pt="Buscai primeiro o Reino de Deus."
+          data-es="Buscad primero el Reino de Dios.">Buscai primeiro o Reino de Deus.</span>
+    <span class="verse-ref">Mt 6:33</span>
+  </p>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
+    <a class="site-footer-logo" href="/index.html" aria-label="Prosper In America">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" loading="lazy" decoding="async">
+    </a>
+    <p class="site-footer-tagline"
+       data-en="Building real lives in America. Faith, structure, and purpose."
+       data-pt="Construindo vidas reais na América. Fé, estrutura e propósito."
+       data-es="Construyendo vidas reales en América. Fe, estructura y propósito.">
+      Construindo vidas reais na América. Fé, estrutura e propósito.
+    </p>
+    <nav class="site-footer-nav" aria-label="Footer navigation">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
+      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
+    </nav>
+    <p class="site-footer-copy">© 2026 Prosper In America</p>
+    <p class="site-footer-faith" aria-label="Matthew 6:33">Mt 6:33</p>
+    <p class="site-footer-design"><a href="/go-big.html">Designed by GO BIG</a></p>
+    <p class="site-footer-fogo"
+       data-en="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Coming soon."
+       data-pt="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Em breve."
+       data-es="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Pronto.">
+      O FOGO LIVE. <a href="/fogo-live.html">@ofogolive</a>. Em breve.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Read ?lang= from query string. Default to PT.
+  function readLang() {
+    var q = (window.location.search || '').replace(/^\?/, '');
+    var pairs = q.split('&');
+    for (var i = 0; i < pairs.length; i++) {
+      var kv = pairs[i].split('=');
+      if (kv[0] === 'lang') return decodeURIComponent(kv[1] || '');
+    }
+    return '';
+  }
+
+  var currentLang = 'pt';
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es' : 'en');
+    document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.site-lang-toggle .lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    var dl = document.getElementById('dl-primary');
+    if (dl) dl.href = '/assets/guides/orlando-insider-guide-' + lang + '.pdf';
+  }
+
+  var lang = readLang();
+  if (['en','pt','es'].indexOf(lang) === -1) lang = 'pt';
+  setLanguage(lang);
+
+  document.querySelectorAll('.site-lang-toggle .lang-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var l = this.getAttribute('data-lang');
+      if (l && l !== currentLang) setLanguage(l);
+    });
+  });
+</script>
+
+</body>
+</html>

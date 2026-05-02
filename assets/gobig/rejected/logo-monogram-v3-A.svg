@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  GO BIG — V3 / Variant A — Tesla discipline
+  Heavy grotesk (Helvetica Neue Black / Arial Black fallback).
+  Horizontally stretched scaleX 1.18 — gives the Tesla "wide and confident" proportion
+  without needing a paid Extended cut.
+  Letter-spacing -0.045em — tight, Balenciaga-tight, but readable.
+  No decoration. Letters do all the work.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>
+      .ground { fill: #000000; }
+      .gb {
+        font-family: "Helvetica Neue", "HelveticaNeue-Black", Helvetica, "Arial Black", Arial, sans-serif;
+        font-weight: 900;
+        font-size: 560px;
+        letter-spacing: -0.045em;
+        fill: #FFFFFF;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Black ground -->
+  <rect class="ground" x="0" y="0" width="1080" height="1080"/>
+
+  <!--
+    GB centered, then horizontally stretched 1.18× from the center.
+    The wrapping <g> applies the scale; the inner translate keeps it centered.
+    Visual baseline is set by dominant-baseline=middle on the text.
+  -->
+  <g transform="translate(540 0) scale(1.18 1) translate(-540 0)">
+    <text class="gb" x="540" y="555">GB</text>
+  </g>
+</svg>

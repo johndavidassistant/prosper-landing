@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Go Big Agency — GB Monogram V2 / Variant A
+  Pure GB letterforms. No frame. No accents.
+  Custom-cut geometric paths. Stem width = 22% of letter height.
+  Designed for 64px legibility upward. Black ground, white letters.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!-- Black ground -->
+  <rect x="0" y="0" width="1080" height="1080" fill="#000000"/>
+
+  <!--
+    Letter geometry (locked):
+      G: x=120 to 520, y=220 to 860     (width 400, height 640)
+      B: x=560 to 960, y=220 to 860     (width 400, height 640)
+      Stem width: 140  (35% of letter width, very heavy)
+      Inter-letter gap: 40 (tight)
+  -->
+
+  <!-- ======================== G ======================== -->
+  <!-- Top bar: full width across top -->
+  <rect x="120" y="220" width="400" height="140" fill="#FFFFFF"/>
+  <!-- Left stem: full height -->
+  <rect x="120" y="220" width="140" height="640" fill="#FFFFFF"/>
+  <!-- Bottom bar: full width -->
+  <rect x="120" y="720" width="400" height="140" fill="#FFFFFF"/>
+  <!-- Middle horizontal of G (the "spine") -->
+  <rect x="360" y="580" width="160" height="140" fill="#FFFFFF"/>
+  <!-- Right stem of G: only from middle-bar level down -->
+  <rect x="380" y="580" width="140" height="280" fill="#FFFFFF"/>
+
+  <!-- ======================== B ======================== -->
+  <!-- Left stem: full height -->
+  <rect x="560" y="220" width="140" height="640" fill="#FFFFFF"/>
+  <!-- Top bar -->
+  <rect x="560" y="220" width="400" height="140" fill="#FFFFFF"/>
+  <!-- Middle bar -->
+  <rect x="560" y="470" width="400" height="140" fill="#FFFFFF"/>
+  <!-- Bottom bar -->
+  <rect x="560" y="720" width="400" height="140" fill="#FFFFFF"/>
+  <!-- Upper bowl right stem -->
+  <rect x="820" y="360" width="140" height="110" fill="#FFFFFF"/>
+  <!-- Lower bowl right stem -->
+  <rect x="820" y="610" width="140" height="110" fill="#FFFFFF"/>
+</svg>

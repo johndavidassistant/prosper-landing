@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Saira:wght@900&amp;family=Inter:wght@500&amp;display=swap');
+      .wm-bg { fill: #000000; }
+      .wm-letters {
+        font-family: 'Druk Wide', 'Tungsten Wide', 'Saira', 'Helvetica Neue', 'Arial Black', sans-serif;
+        font-weight: 900;
+        font-stretch: expanded;
+        letter-spacing: 0.06em;
+        fill: #FFFFFF;
+        font-size: 220px;
+      }
+      .wm-period { fill: #C8952E; }
+      .wm-tag {
+        font-family: 'Inter', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.45em;
+        fill: #C8952E;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <rect class="wm-bg" x="0" y="0" width="1600" height="400"/>
+  <text class="wm-letters" x="800" y="240" text-anchor="middle">GO BIG</text>
+  <circle class="wm-period" cx="1188" cy="232" r="18"/>
+  <text class="wm-tag" x="800" y="320" text-anchor="middle">AGENCY</text>
+</svg>

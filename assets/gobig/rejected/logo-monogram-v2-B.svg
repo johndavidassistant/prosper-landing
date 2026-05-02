@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Go Big Agency — GB Monogram V2 / Variant B
+  Same custom GB letterforms.
+  Thick gold structured frame (24px stroke, intentional, no hairline).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!-- Black ground -->
+  <rect x="0" y="0" width="1080" height="1080" fill="#000000"/>
+
+  <!-- Heavy gold frame: outer rect 920x920, stroke 24 -->
+  <rect x="80" y="80" width="920" height="920"
+        fill="none" stroke="#C8952E" stroke-width="24"/>
+
+  <!-- Letter geometry locked identical to Variant A -->
+
+  <!-- ======================== G ======================== -->
+  <rect x="120" y="220" width="400" height="140" fill="#FFFFFF"/>
+  <rect x="120" y="220" width="140" height="640" fill="#FFFFFF"/>
+  <rect x="120" y="720" width="400" height="140" fill="#FFFFFF"/>
+  <rect x="360" y="580" width="160" height="140" fill="#FFFFFF"/>
+  <rect x="380" y="580" width="140" height="280" fill="#FFFFFF"/>
+
+  <!-- ======================== B ======================== -->
+  <rect x="560" y="220" width="140" height="640" fill="#FFFFFF"/>
+  <rect x="560" y="220" width="400" height="140" fill="#FFFFFF"/>
+  <rect x="560" y="470" width="400" height="140" fill="#FFFFFF"/>
+  <rect x="560" y="720" width="400" height="140" fill="#FFFFFF"/>
+  <rect x="820" y="360" width="140" height="110" fill="#FFFFFF"/>
+  <rect x="820" y="610" width="140" height="110" fill="#FFFFFF"/>
+</svg>

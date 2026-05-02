@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O FOGO LIVE. Inglês e Fé toda semana. Em breve.</title>
+  <style>html:not(.lang-ready) body{visibility:hidden}</style>
+  <noscript><style>body{visibility:visible !important}</style></noscript>
+  <meta name="description" content="O FOGO LIVE. A free weekly broadcast. English and faith with John David. A Prosper In America project. Designed by GO BIG.">
+  <link rel="canonical" href="https://prosperinamerica.com/fogo-live.html">
+  <meta property="og:title" content="O FOGO LIVE. Inglês e Fé toda semana.">
+  <meta property="og:description" content="Free weekly English and Faith with John David. A Prosper In America project. Designed by GO BIG.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prosperinamerica.com/fogo-live.html">
+  <meta property="og:image" content="https://prosperinamerica.com/assets/fogo/fogo-live-logo-1024.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="O FOGO LIVE. Inglês e Fé toda semana.">
+  <meta name="twitter:description" content="Free weekly English and Faith with John David.">
+  <meta name="twitter:image" content="https://prosperinamerica.com/assets/fogo/fogo-live-logo-1024.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://prosperinamerica.com/#organization",
+        "name": "Prosper In America",
+        "url": "https://prosperinamerica.com/",
+        "logo": "https://prosperinamerica.com/assets/logo-gold.png",
+        "founder": [
+          { "@type": "Person", "name": "John David" },
+          { "@type": "Person", "name": "Wellen" }
+        ]
+      },
+      {
+        "@type": "BroadcastService",
+        "name": "O FOGO LIVE",
+        "url": "https://prosperinamerica.com/fogo-live.html",
+        "broadcastDisplayName": "O FOGO LIVE",
+        "publisher": { "@id": "https://prosperinamerica.com/#organization" },
+        "inLanguage": ["pt-BR", "en-US"],
+        "description": "Free weekly broadcast combining English language teaching with biblical content. Hosted by John David. A Prosper In America project. Designed by GO BIG."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" as="image" href="/assets/fogo/fogo-live-logo-540.webp" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-var-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/playfair-display-var-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/site-header.css">
+  <link rel="stylesheet" href="/css/site-footer.css">
+
+  <style>
+  :root {
+    --navy-deep:  #0F1B2D;
+    --navy:       #1A2942;
+    --navy-mid:   #223354;
+    --pearl:      #FAF7F2;
+    --gold:       #C8952E;
+    --gold-light: #DBA94A;
+    --gold-pale:  rgba(200,149,46,0.12);
+    --gold-glow:  rgba(200,149,46,0.30);
+    --ember:      #E8782B;
+    --white:      #FFFFFF;
+    --text:       #0F1B2D;
+    --muted:      #5B6E8A;
+    --border:     rgba(255,255,255,0.10);
+    --display:    'Playfair Display', Georgia, serif;
+    --sans:       'Inter', system-ui, -apple-system, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html  { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body  {
+    font-family: var(--sans);
+    color: rgba(255,255,255,0.86);
+    background: var(--navy-deep);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  img   { display: block; max-width: 100%; }
+  a     { color: inherit; text-decoration: none; }
+
+  .wrap    { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .wrap-sm { max-width:  720px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 96px 0; }
+  @media (min-width: 768px) { .section { padding: 128px 0; } }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.36em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .gold-bar-center {
+    width: 44px; height: 3px;
+    background: var(--gold); border-radius: 2px;
+    margin: 12px auto 26px;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: var(--sans); font-size: 15px; font-weight: 700;
+    padding: 15px 32px; border-radius: 8px;
+    cursor: pointer; border: none; text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.1s;
+    white-space: nowrap;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy-deep);
+    box-shadow: 0 4px 20px var(--gold-glow);
+  }
+  .btn-gold:hover { background: var(--gold-light); }
+  .btn-ghost-light {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.35);
+  }
+  .btn-ghost-light:hover {
+    border-color: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.07);
+  }
+
+  /* NAVBAR */
+  .navbar {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(15,27,45,0.92);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 28px;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo img { height: 44px; width: auto; display: block; }
+  .nav-links { display: none; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-size: 14px; font-weight: 600;
+    color: rgba(255,255,255,0.78);
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+  .nav-right { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
+  .lang-toggle { display: flex; align-items: center; gap: 2px; }
+  .lang-btn {
+    font-family: var(--sans); font-size: 11px; font-weight: 700;
+    letter-spacing: 1.6px; text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    background: none; border: none; cursor: pointer;
+    padding: 5px 4px; line-height: 1;
+    transition: color 0.15s;
+  }
+  .lang-btn.active { color: var(--white); }
+  .lang-btn:hover { color: var(--gold); }
+  .lang-sep { font-size: 10px; color: rgba(255,255,255,0.20); padding: 0 1px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 96px 24px 96px;
+    text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 30%, rgba(200,149,46,0.10) 0%, transparent 65%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232,120,43,0.08) 0%, transparent 70%),
+      var(--navy-deep);
+    border-bottom: 1px solid rgba(200,149,46,0.18);
+  }
+  .hero::before {
+    content: '';
+    position: absolute; right: -120px; top: 80px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(232,120,43,0.18) 0%, rgba(232,120,43,0) 65%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero-logo {
+    width: clamp(180px, 28vw, 260px);
+    height: auto;
+    margin: 0 auto 32px;
+    border-radius: 16px;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(200,149,46,0.18);
+  }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.36em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    opacity: 0.85;
+  }
+  .hero-tagline {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(34px, 6vw, 60px);
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    max-width: 720px;
+    margin: 0 auto 18px;
+  }
+  .hero-tagline em {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .hero-sub {
+    font-size: clamp(16px, 2vw, 19px);
+    color: rgba(255,255,255,0.74);
+    max-width: 560px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+
+  /* Hero email signup form */
+  .hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  @media (min-width: 580px) {
+    .hero-form { flex-direction: row; }
+  }
+  .hero-form input[type="email"] {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,149,46,0.30);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: var(--sans);
+    font-size: 15px;
+    padding: 13px 16px;
+    outline: none;
+    transition: border-color 0.18s, background 0.18s;
+    min-width: 0;
+  }
+  .hero-form input::placeholder { color: rgba(255,255,255,0.40); }
+  .hero-form input:focus {
+    border-color: rgba(200,149,46,0.7);
+    background: rgba(255,255,255,0.10);
+  }
+  .hero-form-msg {
+    display: none;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--gold);
+  }
+  .hero-form-msg.is-visible { display: block; }
+  .hero-attribution {
+    margin-top: 32px;
+    font-size: 11px;
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.40);
+  }
+
+  /* WHAT IT IS */
+  .what {
+    background: var(--navy);
+    padding: 96px 0;
+    border-bottom: 1px solid rgba(200,149,46,0.10);
+  }
+  .what-head { text-align: center; max-width: 740px; margin: 0 auto; }
+  .what-head h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(28px, 4.4vw, 42px);
+    color: var(--white);
+    letter-spacing: -0.5px;
+    line-height: 1.18;
+    margin-bottom: 28px;
+  }
+  .what-head p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.74);
+    line-height: 1.85;
+    max-width: 640px;
+    margin: 0 auto 18px;
+  }
+  .what-attribution {
+    margin-top: 28px;
+    font-size: 11px;
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: rgba(200,149,46,0.55);
+  }
+
+  /* SEGMENTS */
+  .segments { background: var(--navy-deep); padding: 96px 0; }
+  .segments-head { text-align: center; margin-bottom: 56px; }
+  .segments-head h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(26px, 4vw, 38px);
+    color: var(--white);
+    letter-spacing: -0.4px;
+  }
+  .segments-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 720px) { .segments-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+  @media (min-width: 1000px) { .segments-grid { grid-template-columns: repeat(4, 1fr); } }
+  .segment-card {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(200,149,46,0.18);
+    border-radius: 14px;
+    padding: 32px 28px;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  }
+  .segment-card:hover {
+    transform: translateY(-3px);
+    background: rgba(200,149,46,0.04);
+    border-color: rgba(200,149,46,0.45);
+  }
+  .segment-card .num {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    border: 1px solid rgba(200,149,46,0.40);
+    border-radius: 50%;
+    color: var(--gold);
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  .segment-card h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+  }
+  .segment-card p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.70);
+    line-height: 1.78;
+  }
+
+  /* SCHEDULE BANNER */
+  .schedule {
+    background:
+      radial-gradient(ellipse 50% 80% at 100% 50%, rgba(232,120,43,0.10) 0%, transparent 60%),
+      var(--navy);
+    border-top: 1px solid rgba(200,149,46,0.18);
+    border-bottom: 1px solid rgba(200,149,46,0.18);
+    padding: 64px 24px;
+    text-align: center;
+  }
+  .schedule .eyebrow { color: var(--gold); }
+  .schedule h2 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(28px, 4.6vw, 44px);
+    color: var(--white);
+    letter-spacing: -0.4px;
+    margin-bottom: 12px;
+  }
+  .schedule h2 em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .schedule p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.70);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* TIP-MISSION */
+  .tip {
+    background: var(--navy-deep);
+    padding: 96px 24px;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+  }
+  .tip::before {
+    content: '';
+    position: absolute; left: 50%; top: 30px;
+    transform: translateX(-50%);
+    width: 64px; height: 64px;
+    background: radial-gradient(circle, rgba(232,120,43,0.40) 0%, rgba(232,120,43,0) 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .tip > * { position: relative; z-index: 1; }
+  .tip h2 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(28px, 4.4vw, 40px);
+    color: var(--white);
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+    max-width: 640px;
+    margin: 0 auto 20px;
+  }
+  .tip h2 em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .tip p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.74);
+    line-height: 1.78;
+    max-width: 520px;
+    margin: 0 auto 36px;
+  }
+  .tip-handle {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(200,149,46,0.10);
+    border: 1px solid rgba(200,149,46,0.45);
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--gold);
+    margin-bottom: 14px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .tip-handle:hover {
+    background: rgba(200,149,46,0.16);
+    border-color: rgba(200,149,46,0.7);
+  }
+  .tip-handle::before {
+    content: '$';
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold-light);
+  }
+  .tip-faith {
+    margin-top: 24px;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.10em;
+    color: rgba(200,149,46,0.55);
+  }
+
+  /* FOUNDER PORTRAIT */
+  .founder {
+    background: var(--navy);
+    padding: 96px 24px;
+    text-align: center;
+  }
+  .founder .eyebrow { color: var(--gold); }
+  .founder h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(26px, 4vw, 38px);
+    color: var(--white);
+    letter-spacing: -0.4px;
+    margin-bottom: 18px;
+  }
+  .founder p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.85;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .founder-photo {
+    position: relative;
+    width: clamp(140px, 18vw, 180px);
+    height: clamp(140px, 18vw, 180px);
+    margin: 0 auto 28px;
+    border-radius: 50%;
+    background:
+      linear-gradient(160deg, rgba(200,149,46,0.10), rgba(232,120,43,0.05)),
+      var(--navy-mid);
+    border: 1px solid rgba(200,149,46,0.36);
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.40);
+  }
+  .founder-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .founder-photo img.is-broken { display: none; }
+  .founder-initials {
+    display: none;
+    position: absolute; inset: 0;
+    align-items: center; justify-content: center;
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 44px;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  .founder-photo img.is-broken ~ .founder-initials { display: flex; }
+
+  /* SUBSCRIBE FOR LAUNCH */
+  .subscribe {
+    background: var(--navy-deep);
+    padding: 96px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(200,149,46,0.10);
+  }
+  .subscribe h2 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(28px, 4.4vw, 42px);
+    color: var(--white);
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+    max-width: 640px;
+    margin: 0 auto 18px;
+  }
+  .subscribe h2 em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .subscribe p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.70);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  /* FOOTER (parallel to PIA) */
+  footer {
+    background: var(--navy-deep);
+    padding: 64px 24px 44px;
+    text-align: center;
+    border-top: 1px solid rgba(200,149,46,0.10);
+  }
+  .footer-logo {
+    margin: 0 auto 24px;
+    max-width: 220px;
+  }
+  .footer-logo img { width: 100%; height: auto; }
+  .footer-tagline {
+    font-size: 14px;
+    color: rgba(255,255,255,0.42);
+    max-width: 400px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    margin-bottom: 36px;
+  }
+  .footer-links a {
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    transition: color 0.15s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.25);
+    line-height: 1.8;
+  }
+  .footer-faith {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    color: rgba(200,149,46,0.55);
+    margin: 4px auto 0;
+    line-height: 1.7;
+  }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: rgba(255,255,255,0.20);
+    max-width: 540px;
+    margin: 16px auto 0;
+    line-height: 1.7;
+  }
+  </style>
+</head>
+<body>
+
+<!-- ══ UNIFIED SITE HEADER (identical across all pages) ════════════════════ -->
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="/" aria-label="Prosper In America — Home">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" decoding="async">
+    </a>
+    <nav class="site-header-nav" aria-label="Primary">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
+      <a href="/fogo-live.html" aria-current="page">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
+    </nav>
+    <div class="site-header-right">
+      <div class="site-lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-label="O FOGO LIVE">
+  <picture>
+    <source type="image/webp" srcset="/assets/fogo/fogo-live-logo-540.webp">
+    <img class="hero-logo" src="/assets/fogo/fogo-live-logo-540.png" alt="O FOGO LIVE" width="540" height="540" fetchpriority="high" decoding="async">
+  </picture>
+
+  <p class="hero-eyebrow"
+     data-en="Coming soon"
+     data-pt="Em breve">Em breve</p>
+
+  <h1 class="hero-tagline"
+      data-en="English. Faith. &lt;em&gt;Family.&lt;/em&gt;"
+      data-pt="Inglês. Fé. &lt;em&gt;Família.&lt;/em&gt;">
+    Inglês. Fé. <em>Família.</em>
+  </h1>
+
+  <p class="hero-sub"
+     data-en="Free weekly broadcast. English with the Word as the textbook. Hosted by John David."
+     data-pt="Programa semanal gratuito. Inglês com a Palavra como livro-texto. Apresentado por John David.">
+    Programa semanal gratuito. Inglês com a Palavra como livro-texto. Apresentado por John David.
+  </p>
+
+  <form class="hero-form" id="fogo-hero-form" novalidate>
+    <input type="email" name="email" required
+           aria-label="Email"
+           placeholder=""
+           data-placeholder-en="Your email"
+           data-placeholder-pt="Seu email">
+    <button type="submit" class="btn btn-gold"
+            data-en="Notify me at launch"
+            data-pt="Avise-me no lançamento">Avise-me no lançamento</button>
+  </form>
+  <p class="hero-form-msg" id="fogo-hero-msg" role="status"
+     data-en="Thanks. We'll write before episode one."
+     data-pt="Obrigado. Avisamos antes do primeiro episódio."></p>
+
+  <p class="hero-attribution"
+     data-en="A Prosper In America project. Designed by GO BIG."
+     data-pt="Um projeto Prosper In America. Designed by GO BIG.">
+    Um projeto Prosper In America. Designed by GO BIG.
+  </p>
+</section>
+
+<!-- WHAT IT IS -->
+<section class="what">
+  <div class="wrap-sm what-head">
+    <span class="eyebrow"
+          data-en="What it is"
+          data-pt="O que é">O que é</span>
+    <div class="gold-bar-center"></div>
+    <h2 data-en="A free weekly broadcast that teaches English through faith."
+        data-pt="Um programa semanal gratuito que ensina inglês pela fé.">
+      Um programa semanal gratuito que ensina inglês pela fé.
+    </h2>
+    <p data-en="O FOGO LIVE is a free weekly YouTube LIVE that combines English language teaching with biblical content. The Word is the textbook. The audience is anyone learning English. The reason is to take care of God's people."
+       data-pt="O FOGO LIVE é um programa semanal gratuito no YouTube que combina ensino de inglês com conteúdo bíblico. A Palavra é o livro-texto. O público é qualquer pessoa que queira aprender inglês. O motivo é cuidar do povo de Deus.">
+      O FOGO LIVE é um programa semanal gratuito no YouTube que combina ensino de inglês com conteúdo bíblico. A Palavra é o livro-texto. O público é qualquer pessoa que queira aprender inglês. O motivo é cuidar do povo de Deus.
+    </p>
+    <p class="what-attribution"
+       data-en="A Prosper In America project. Designed by GO BIG."
+       data-pt="Um projeto Prosper In America. Designed by GO BIG.">
+      Um projeto Prosper In America. Designed by GO BIG.
+    </p>
+  </div>
+</section>
+
+<!-- SEGMENTS -->
+<section class="segments">
+  <div class="wrap">
+    <div class="segments-head">
+      <span class="eyebrow"
+            data-en="Every episode"
+            data-pt="Todo episódio">Todo episódio</span>
+      <div class="gold-bar-center"></div>
+      <h2 data-en="Four segments. One hour."
+          data-pt="Quatro segmentos. Uma hora.">Quatro segmentos. Uma hora.</h2>
+    </div>
+
+    <div class="segments-grid">
+      <article class="segment-card">
+        <div class="num">1</div>
+        <h3 data-en="English Class"
+            data-pt="Aula de Inglês">Aula de Inglês</h3>
+        <p data-en="A short, real lesson built around the verse of the week. Vocabulary, pronunciation, real sentences."
+           data-pt="Uma aula curta e real construída em torno do versículo da semana. Vocabulário, pronúncia, frases reais.">
+          Uma aula curta e real construída em torno do versículo da semana. Vocabulário, pronúncia, frases reais.
+        </p>
+      </article>
+
+      <article class="segment-card">
+        <div class="num">2</div>
+        <h3 data-en="Worship"
+            data-pt="Adoração">Adoração</h3>
+        <p data-en="A song. Sometimes a hymn, sometimes a chorus. Always real, always live."
+           data-pt="Uma canção. Às vezes um hino, às vezes um coro. Sempre real, sempre ao vivo.">
+          Uma canção. Às vezes um hino, às vezes um coro. Sempre real, sempre ao vivo.
+        </p>
+      </article>
+
+      <article class="segment-card">
+        <div class="num">3</div>
+        <h3 data-en="Translated Sermon"
+            data-pt="Sermão Traduzido">Sermão Traduzido</h3>
+        <p data-en="A short message taught bilingually so the whole family can learn together. Same Word, two languages."
+           data-pt="Uma mensagem curta ensinada bilinguemente para que toda a família possa aprender junto. Mesma Palavra, dois idiomas.">
+          Uma mensagem curta ensinada bilinguemente para que toda a família possa aprender junto. Mesma Palavra, dois idiomas.
+        </p>
+      </article>
+
+      <article class="segment-card">
+        <div class="num">4</div>
+        <h3 data-en="Q and A"
+            data-pt="Perguntas e Respostas">Perguntas e Respostas</h3>
+        <p data-en="Real questions from real viewers. About English, about life, about faith. We answer the ones we can."
+           data-pt="Perguntas reais de espectadores reais. Sobre inglês, sobre a vida, sobre fé. Respondemos as que conseguimos.">
+          Perguntas reais de espectadores reais. Sobre inglês, sobre a vida, sobre fé. Respondemos as que conseguimos.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" aria-label="Schedule">
+  <span class="eyebrow"
+        data-en="Schedule"
+        data-pt="Programação">Programação</span>
+  <div class="gold-bar-center"></div>
+  <h2 data-en="Wednesdays. &lt;em&gt;8 PM Eastern.&lt;/em&gt;"
+      data-pt="Quartas-feiras. &lt;em&gt;8 PM Eastern.&lt;/em&gt;">
+    Quartas-feiras. <em>8 PM Eastern.</em>
+  </h2>
+  <p data-en="Every week. Same time. Free for everyone, on YouTube."
+     data-pt="Toda semana. Mesmo horário. Grátis para todos, no YouTube.">
+    Toda semana. Mesmo horário. Grátis para todos, no YouTube.
+  </p>
+</section>
+
+<!-- TIP-MISSION -->
+<section class="tip" aria-label="Support">
+  <span class="eyebrow"
+        data-en="Support the mission"
+        data-pt="Apoie a missão">Apoie a missão</span>
+  <div class="gold-bar-center"></div>
+  <h2 data-en="Support the Kingdom. &lt;em&gt;Keep O FOGO LIVE alive.&lt;/em&gt;"
+      data-pt="Apoie o Reino. &lt;em&gt;Mantenha O FOGO LIVE no ar.&lt;/em&gt;">
+    Apoie o Reino. <em>Mantenha O FOGO LIVE no ar.</em>
+  </h2>
+  <p data-en="Every tip goes directly to keep O FOGO LIVE on the air. Better equipment, better content, free for the audience that needs it most."
+     data-pt="Cada apoio vai direto para manter O FOGO LIVE no ar. Melhor equipamento, melhor conteúdo, gratuito para quem mais precisa.">
+    Cada apoio vai direto para manter O FOGO LIVE no ar. Melhor equipamento, melhor conteúdo, gratuito para quem mais precisa.
+  </p>
+
+  <a class="tip-handle" href="https://cash.app/$JohnDavidAmerica" target="_blank" rel="noopener noreferrer">
+    JohnDavidAmerica
+  </a>
+
+  <p class="tip-faith" aria-label="Matthew 6:33">Mt 6:33</p>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder" aria-label="Founder">
+  <div class="founder-photo">
+    <!-- TODO: drop public/assets/images/jd-portrait.jpg (PIA03 still: JD seated at white table, gold watch, controlled lighting) -->
+    <img src="/assets/images/jd-portrait.jpg" alt="John David"
+         onerror="this.classList.add('is-broken')"
+         decoding="async" width="360" height="360">
+    <span class="founder-initials" aria-hidden="true">JD</span>
+  </div>
+  <span class="eyebrow"
+        data-en="Hosted by"
+        data-pt="Apresentado por">Apresentado por</span>
+  <div class="gold-bar-center"></div>
+  <h2 data-en="John David. American voice. Brazilian heart."
+      data-pt="John David. Voz americana. Coração brasileiro.">
+    John David. Voz americana. Coração brasileiro.
+  </h2>
+  <p data-en="John David was born and raised in California, in an immigrant family. Today he and his wife Wellen build Prosper In America. O FOGO LIVE is the ministry side of that work. Free, weekly, real."
+     data-pt="John David nasceu e cresceu na Califórnia, em uma família imigrante. Hoje, junto com sua esposa Wellen, constrói a Prosper In America. O FOGO LIVE é o lado ministério desse trabalho. Grátis, semanal, real.">
+    John David nasceu e cresceu na Califórnia, em uma família imigrante. Hoje, junto com sua esposa Wellen, constrói a Prosper In America. O FOGO LIVE é o lado ministério desse trabalho. Grátis, semanal, real.
+  </p>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="subscribe" id="subscribe">
+  <span class="eyebrow"
+        data-en="Be there from episode one"
+        data-pt="Esteja lá desde o primeiro episódio">Esteja lá desde o primeiro episódio</span>
+  <div class="gold-bar-center"></div>
+  <h2 data-en="The first &lt;em&gt;LIVE&lt;/em&gt; is being prepared."
+      data-pt="A primeira &lt;em&gt;LIVE&lt;/em&gt; está sendo preparada.">
+    A primeira <em>LIVE</em> está sendo preparada.
+  </h2>
+  <p data-en="Leave your email. We will write before the first episode goes live. No spam. No filler."
+     data-pt="Deixe seu email. Avisamos antes do primeiro episódio entrar no ar. Sem spam. Sem enchimento.">
+    Deixe seu email. Avisamos antes do primeiro episódio entrar no ar. Sem spam. Sem enchimento.
+  </p>
+
+  <form class="hero-form" id="fogo-subscribe-form" style="margin-top: 8px;" novalidate>
+    <input type="email" name="email" required
+           aria-label="Email"
+           placeholder=""
+           data-placeholder-en="Your email"
+           data-placeholder-pt="Seu email">
+    <button type="submit" class="btn btn-gold"
+            data-en="Notify me"
+            data-pt="Avise-me">Avise-me</button>
+  </form>
+  <p class="hero-form-msg" id="fogo-subscribe-msg" role="status"
+     data-en="Thanks. See you on the LIVE."
+     data-pt="Obrigado. Te vejo na LIVE."></p>
+</section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
+    <a class="site-footer-logo" href="/index.html" aria-label="Prosper In America">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" loading="lazy" decoding="async">
+    </a>
+    <p class="site-footer-tagline"
+       data-en="Building real lives in America. Faith, structure, and purpose."
+       data-pt="Construindo vidas reais na América. Fé, estrutura e propósito."
+       data-es="Construyendo vidas reales en América. Fe, estructura y propósito.">
+      Construindo vidas reais na América. Fé, estrutura e propósito.
+    </p>
+    <nav class="site-footer-nav" aria-label="Footer navigation">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
+      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
+    </nav>
+    <p class="site-footer-copy">© 2026 Prosper In America</p>
+    <p class="site-footer-faith" aria-label="Matthew 6:33">Mt 6:33</p>
+    <p class="site-footer-design"><a href="/go-big.html">Designed by GO BIG</a></p>
+    <p class="site-footer-fogo"
+       data-en="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Coming soon."
+       data-pt="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Em breve."
+       data-es="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Pronto.">
+      O FOGO LIVE. <a href="/fogo-live.html">@ofogolive</a>. Em breve.
+    </p>
+    <p class="site-footer-disclaimer"
+       data-en="O FOGO LIVE is a free ministry broadcast. Educational and devotional content. Not financial, legal, or immigration advice."
+       data-pt="O FOGO LIVE é um programa ministério gratuito. Conteúdo educacional e devocional. Não é aconselhamento financeiro, jurídico ou de imigração."
+       data-es="O FOGO LIVE es un programa ministerio gratuito. Contenido educacional y devocional. No es asesoramiento financiero, legal o de inmigración.">
+      O FOGO LIVE é um programa ministério gratuito. Conteúdo educacional e devocional. Não é aconselhamento financeiro, jurídico ou de imigração.
+    </p>
+  </div>
+</footer>
+
+<script>
+  var currentLang = 'pt';
+
+  function applyPlaceholders(lang) {
+    document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(function(el) {
+      el.setAttribute('placeholder', el.getAttribute('data-placeholder-' + lang));
+    });
+  }
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    applyPlaceholders(lang);
+  }
+
+  setLanguage('pt');
+  applyPlaceholders('pt');
+  document.documentElement.classList.add('lang-ready');
+
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.getAttribute('data-lang');
+      if (lang !== currentLang) setLanguage(lang);
+    });
+  });
+
+  // Email capture handlers — Phase 6 will wire to ConvertKit with tag fogo-live-pre-launch.
+  function bindFogoForm(formId, msgId) {
+    var form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var emailEl = form.querySelector('input[name="email"]');
+      var email = emailEl && emailEl.value && emailEl.value.trim();
+      if (!email || email.indexOf('@') === -1) {
+        emailEl && emailEl.focus();
+        return;
+      }
+      // PHASE-6 TODO: POST to ConvertKit with tag=fogo-live-pre-launch, source=fogo-live
+      console.log('[fogo-live-pre-launch]', { source: formId, email: email });
+      try {
+        var pending = JSON.parse(localStorage.getItem('fogoLivePreLaunch') || '[]');
+        pending.push({ source: formId, email: email, ts: Date.now() });
+        localStorage.setItem('fogoLivePreLaunch', JSON.stringify(pending));
+      } catch (_) {}
+      form.reset();
+      var msg = document.getElementById(msgId);
+      if (msg) msg.classList.add('is-visible');
+    });
+  }
+  bindFogoForm('fogo-hero-form', 'fogo-hero-msg');
+  bindFogoForm('fogo-subscribe-form', 'fogo-subscribe-msg');
+</script>
+
+</body>
+</html>

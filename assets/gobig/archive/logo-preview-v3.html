@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Go Big — Logo V3 (Reference-Driven)</title>
+<style>
+  :root { --black: #000000; --gold: #C8952E; --cream: #F6F1E9; --navy: #0F1B2D; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', system-ui, sans-serif; background: #1a1a1a; color: #e5e5e5; padding: 40px; line-height: 1.5; }
+  h1 { font-weight: 800; margin-bottom: 8px; font-size: 28px; letter-spacing: -0.01em; }
+  h2 { font-weight: 600; margin: 40px 0 16px; color: var(--gold); font-size: 14px; letter-spacing: 0.25em; text-transform: uppercase; }
+  .meta { color: #888; margin-bottom: 24px; font-size: 13px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .v { background: #232323; padding: 28px; border-radius: 12px; }
+  .v .vlabel { display: block; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.7; margin-bottom: 12px; color: var(--gold); }
+  .v .vtitle { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+  .v .vsub { font-size: 13px; opacity: 0.7; margin-bottom: 20px; line-height: 1.55; }
+  .ground { padding: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; min-height: 280px; }
+  .ground.bg-black { background: var(--black); }
+  .ground.bg-cream { background: var(--cream); }
+  .ground.bg-navy { background: var(--navy); }
+  .ground.bg-gold { background: var(--gold); }
+  .ground img { max-width: 100%; height: auto; }
+  .ground.size-xl img { width: 280px; }
+  .ground.size-md img { width: 140px; }
+  .row64 { display: flex; gap: 16px; align-items: center; padding: 16px; background: var(--black); border-radius: 8px; }
+  .row64 img { width: 64px; height: 64px; }
+  .row64 .text { font-size: 13px; opacity: 0.8; }
+  .ig-mock { display: flex; align-items: center; gap: 12px; padding: 14px; background: white; color: black; border-radius: 8px; }
+  .ig-mock img { border-radius: 50%; width: 56px; height: 56px; }
+  .ig-mock .handle { font-weight: 700; font-size: 14px; }
+  .ig-mock .sub { font-size: 12px; color: #666; }
+  .verdict { background: #111; padding: 22px; border-radius: 8px; border-left: 3px solid var(--gold); margin-top: 24px; }
+  .verdict h3 { color: var(--gold); margin-bottom: 10px; font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; }
+  .verdict ul { padding-left: 20px; line-height: 1.75; font-size: 14px; }
+  .verdict ul li + li { margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<h1>Go Big — Logo V3 (Reference-Driven)</h1>
+<div class="meta">Anchored to Tesla / Balenciaga / Off-White typography standards. Real grotesk letterforms. No abstract experimentation.</div>
+
+<h2>Side by side — IG profile size</h2>
+<div class="pair">
+  <div class="v">
+    <span class="vlabel">Variant A</span>
+    <div class="vtitle">Tesla discipline</div>
+    <div class="vsub">Helvetica Neue Black, horizontally stretched 1.18×, kerning -0.045em. Pure typography. No frame, no lines, no decoration. Letters do all the work.</div>
+    <div class="ground bg-black size-xl"><img src="logo-monogram-v3-A.svg" alt="GB Tesla discipline"></div>
+  </div>
+  <div class="v">
+    <span class="vlabel">Variant B</span>
+    <div class="vtitle">Balenciaga compact + Off-White industrial</div>
+    <div class="vsub">Heavier compact GB, kerning -0.06em. Gold horizontal rules above and below, with tracked uppercase metadata. Industrial luxury notation.</div>
+    <div class="ground bg-black size-xl"><img src="logo-monogram-v3-B.svg" alt="GB Balenciaga + Off-White"></div>
+  </div>
+</div>
+
+<h2>The 64px stress test</h2>
+<div class="pair">
+  <div class="v">
+    <div class="row64">
+      <img src="logo-monogram-v3-A-64.png" alt="">
+      <div class="text">Variant A at 64px — IG comments, favicon</div>
+    </div>
+  </div>
+  <div class="v">
+    <div class="row64">
+      <img src="logo-monogram-v3-B-64.png" alt="">
+      <div class="text">Variant B at 64px — GB still reads, rules become hairlines</div>
+    </div>
+  </div>
+</div>
+
+<h2>Across grounds (Variant A)</h2>
+<div class="pair">
+  <div class="ground bg-black size-md"><img src="logo-monogram-v3-A.svg" alt=""></div>
+  <div class="ground bg-cream size-md"><img src="logo-monogram-v3-A.svg" alt=""></div>
+  <div class="ground bg-navy size-md"><img src="logo-monogram-v3-A.svg" alt=""></div>
+  <div class="ground bg-gold size-md"><img src="logo-monogram-v3-A.svg" alt=""></div>
+</div>
+
+<h2>Across grounds (Variant B)</h2>
+<div class="pair">
+  <div class="ground bg-black size-md"><img src="logo-monogram-v3-B.svg" alt=""></div>
+  <div class="ground bg-cream size-md"><img src="logo-monogram-v3-B.svg" alt=""></div>
+  <div class="ground bg-navy size-md"><img src="logo-monogram-v3-B.svg" alt=""></div>
+  <div class="ground bg-gold size-md"><img src="logo-monogram-v3-B.svg" alt=""></div>
+</div>
+
+<h2>Instagram profile context</h2>
+<div class="pair">
+  <div class="v">
+    <span class="vlabel">Variant A on IG</span>
+    <div class="ig-mock">
+      <img src="logo-monogram-v3-A.svg" alt="">
+      <div>
+        <div class="handle">thegobigagency</div>
+        <div class="sub">Brand. Site. Marketing.</div>
+      </div>
+    </div>
+  </div>
+  <div class="v">
+    <span class="vlabel">Variant B on IG</span>
+    <div class="ig-mock">
+      <img src="logo-monogram-v3-B.svg" alt="">
+      <div>
+        <div class="handle">thegobigagency</div>
+        <div class="sub">Brand. Site. Marketing.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>What changed from V2</h2>
+<div class="verdict">
+  <h3>Anchored to real-world brand standards</h3>
+  <ul>
+    <li><strong>Out:</strong> hand-drawn rect-stencil shapes (V2 read as Atari, you called it).</li>
+    <li><strong>In:</strong> Helvetica Neue Black — real grotesk letterforms with proper bowls, counters, and notch on the G.</li>
+    <li><strong>Tesla move (Variant A):</strong> 1.18× horizontal scale gives the wide-and-confident proportion without licensing Druk Wide. Letters almost touch. No decoration whatsoever.</li>
+    <li><strong>Balenciaga move (Variant B):</strong> kerning at -0.06em — extreme tight, all-caps discipline.</li>
+    <li><strong>Off-White move (Variant B):</strong> two thin gold horizontal rules with tracked uppercase metadata above and below. Industrial-luxury notation. Not decorative — informational.</li>
+    <li><strong>What is the same as V2:</strong> matte black ground, gold #C8952E (shared with PIA), white type, 64px legibility.</li>
+  </ul>
+</div>
+
+</body>
+</html>

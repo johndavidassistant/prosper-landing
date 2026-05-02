@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THE GO BIG AGENCY — Monogram V6 (final, white ground) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+
+  <path fill="#000000" d="
+    M 95 190
+    L 495 190
+    A 70 70 0 0 1 565 260
+    L 565 320
+    L 155 320
+    L 155 760
+    L 435 760
+    L 435 590
+    L 295 590
+    L 295 510
+    L 565 510
+    L 565 820
+    A 70 70 0 0 1 495 890
+    L 95 890
+    A 70 70 0 0 1 25 820
+    L 25 260
+    A 70 70 0 0 1 95 190
+    Z
+  "/>
+
+  <path fill="#000000" fill-rule="evenodd" d="
+    M 665 190
+    L 985 190
+    A 70 70 0 0 1 1055 260
+    L 1055 820
+    A 70 70 0 0 1 985 890
+    L 665 890
+    A 70 70 0 0 1 595 820
+    L 595 260
+    A 70 70 0 0 1 665 190
+    Z
+    M 725 320 L 725 510 L 925 510 L 925 320 Z
+    M 725 590 L 725 760 L 925 760 L 925 590 Z
+  "/>
+</svg>

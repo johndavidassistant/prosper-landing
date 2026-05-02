@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GO BIG — V7 Horizontal / transparent background / for use on dark surfaces -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 540" width="1800" height="540">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#D6A348"/>
+      <stop offset="50%" stop-color="#C8952E"/>
+      <stop offset="100%" stop-color="#B5841F"/>
+    </linearGradient>
+  </defs>
+
+  <text x="144" y="310"
+        font-family="'Playfair Display','Playfair Display Black',serif"
+        font-weight="900"
+        font-size="220"
+        letter-spacing="-0.025em"
+        fill="url(#goldGrad)"
+        dominant-baseline="alphabetic">GO BIG.</text>
+
+  <text x="150" y="388"
+        font-family="'Inter','Helvetica Neue',sans-serif"
+        font-weight="500"
+        font-size="24"
+        letter-spacing="0.4em"
+        fill="#C8952E">THE GO BIG AGENCY</text>
+</svg>

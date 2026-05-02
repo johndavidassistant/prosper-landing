@@ -1,0 +1,20 @@
+{
+  "name": "prosper-landing",
+  "version": "1.0.0",
+  "description": "Prosper In America + The Go Big Agency. Static HTML site, deployed via Netlify.",
+  "private": true,
+  "scripts": {
+    "lighthouse": "lighthouse",
+    "format": "prettier --write 'public/**/*.{html,css,js}'",
+    "format:check": "prettier --check 'public/**/*.{html,css,js}'",
+    "optimize:svg": "svgo -f public/assets -r --pretty",
+    "qa:screenshots": "node tools/screenshot-qa.js"
+  },
+  "devDependencies": {
+    "lighthouse": "^13.1.0",
+    "prettier": "^3.8.3",
+    "puppeteer-core": "^24.42.0",
+    "sharp": "^0.34.5",
+    "svgo": "^4.0.1"
+  }
+}

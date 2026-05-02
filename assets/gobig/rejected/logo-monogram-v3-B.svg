@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  GO BIG — V3 / Variant B — Balenciaga compact + Off-White notation
+  Same heavy grotesk. NOT stretched (Balenciaga reads more squared than Tesla).
+  Extreme tight kerning -0.06em. Letters almost touching.
+  Off-White move: thin gold serial-number hairlines top + bottom.
+  Industrial luxury, not decorative.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>
+      .ground { fill: #000000; }
+      .gb {
+        font-family: "Helvetica Neue", "HelveticaNeue-Black", Helvetica, "Arial Black", Arial, sans-serif;
+        font-weight: 900;
+        font-size: 600px;
+        letter-spacing: -0.06em;
+        fill: #FFFFFF;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+      .rule { stroke: #C8952E; stroke-width: 6; }
+      .meta {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.5em;
+        fill: #C8952E;
+        text-transform: uppercase;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <rect class="ground" x="0" y="0" width="1080" height="1080"/>
+
+  <!-- Off-White-style industrial top rule + caption -->
+  <line class="rule" x1="180" y1="240" x2="900" y2="240"/>
+  <text class="meta" x="540" y="218">THE GO BIG AGENCY · MMXXVI</text>
+
+  <!-- GB monogram -->
+  <text class="gb" x="540" y="600">GB</text>
+
+  <!-- Bottom industrial rule + caption (mirrors top) -->
+  <line class="rule" x1="180" y1="840" x2="900" y2="840"/>
+  <text class="meta" x="540" y="880">BRAND · WEB · MARKETING</text>
+</svg>

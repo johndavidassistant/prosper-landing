@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  V4 / Direction 3 — GB with subtle letter-cut modification, white ground
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+
+  <g transform="translate(540 0) scale(1.18 1) translate(-540 0)">
+    <text x="540" y="555"
+          font-family="'Switzer Variable','Switzer','Inter',sans-serif"
+          font-weight="900"
+          font-size="560"
+          letter-spacing="-0.045em"
+          fill="#000000"
+          text-anchor="middle"
+          dominant-baseline="middle">GB</text>
+  </g>
+
+  <!-- Same chamfer cut — white-on-white to subtract from the black letter -->
+  <polygon points="885,660 885,725 815,725" fill="#FFFFFF"/>
+  <line x1="885" y1="660" x2="815" y2="725" stroke="#C8952E" stroke-width="6" stroke-linecap="square"/>
+</svg>

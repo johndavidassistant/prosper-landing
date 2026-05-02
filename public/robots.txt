@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /obrigado.html
+Disallow: /obrigado-go-big.html
+
+Sitemap: https://prosperinamerica.com/sitemap.xml

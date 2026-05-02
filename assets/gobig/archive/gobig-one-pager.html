@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Go Big Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0F1A;
+    --gold: #C8952E;
+    --muted: #9A8B6A;
+    --rule: #C8952E;
+  }
+
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #ffffff;
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    padding: 1in 0.75in;
+    margin: 0 auto;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+  }
+  .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 48pt;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .wordmark .accent { color: var(--gold); }
+  .header .sub {
+    margin-top: 14pt;
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* RULE */
+  .rule {
+    height: 1px;
+    background: var(--rule);
+    width: 80%;
+    margin: 0.55in auto;
+    opacity: 0.55;
+  }
+  .rule.short { width: 40%; }
+
+  /* CORE STATEMENT */
+  .core {
+    font-size: 13pt;
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 5.6in;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* TWO-COLUMN BLOCK */
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6in;
+  }
+  .label {
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16pt;
+  }
+  .columns ul {
+    list-style: none;
+    font-size: 12pt;
+    line-height: 1.85;
+    color: var(--ink);
+  }
+
+  /* OFFER */
+  .offer {
+    text-align: center;
+  }
+  .offer .head {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22pt;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .offer .timing {
+    font-size: 12pt;
+    color: var(--ink);
+    margin-top: 6pt;
+  }
+  .offer .price {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 44pt;
+    color: var(--gold);
+    margin-top: 12pt;
+    line-height: 1;
+  }
+  .offer .disclaimer {
+    margin-top: 14pt;
+    font-size: 11pt;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* EXPERIENCE */
+  .experience {
+    max-width: 5.8in;
+    margin: 0 auto;
+  }
+  .experience .quote {
+    font-size: 12pt;
+    line-height: 1.75;
+    color: var(--ink);
+    font-style: italic;
+  }
+  .experience .quote p + p { margin-top: 12pt; }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14pt;
+    color: var(--ink);
+    max-width: 5.5in;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .cta .em { color: var(--gold); }
+
+  /* FOOTER */
+  .footer {
+    margin-top: auto;
+    padding-top: 0.4in;
+    text-align: center;
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  @media print {
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="wordmark">THE <span class="accent">GO BIG</span> AGENCY</div>
+    <div class="sub">Brand · Website · Positioning</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- CORE STATEMENT -->
+  <div class="core">
+    We build the brand businesses need to be taken seriously.
+    From identity to website, we create the presence your customers
+    expect before they ever talk to you.
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- WHO + WHAT -->
+  <div class="columns">
+    <div>
+      <div class="label">Who this is for</div>
+      <ul>
+        <li>Business owners already operating</li>
+        <li>$100K+ revenue, or growing toward it</li>
+        <li>Delivering real service, lacking strong presence</li>
+        <li>Ready to invest in looking professional</li>
+      </ul>
+    </div>
+    <div>
+      <div class="label">What we do</div>
+      <ul>
+        <li>Brand identity. Logo and visual system.</li>
+        <li>Website. Clean, conversion-ready.</li>
+        <li>Positioning. How your business is perceived.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- OFFER -->
+  <div class="offer">
+    <div class="head">Brand + Website</div>
+    <div class="timing">Delivered together in 3 weeks.</div>
+    <div class="price">$2,500</div>
+    <div class="disclaimer">No unnecessary complexity. Just what your business actually needs.</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- EXPERIENCE -->
+  <div class="experience">
+    <div class="label" style="text-align:center;">Real experience</div>
+    <div class="quote">
+      <p>While at a resort, during lunch, she answered a few simple questions over WhatsApp. Within the same flow, she received her first approved logo.</p>
+      <p>The process felt natural, fast, and clear. No long calls, no confusion.</p>
+    </div>
+  </div>
+
+  <div class="rule short"></div>
+
+  <!-- CTA -->
+  <div class="cta">
+    If you are at the point where your business needs to be <span class="em">taken seriously</span>, we can talk.
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">The Go Big Agency</div>
+
+</div>
+
+</body>
+</html>

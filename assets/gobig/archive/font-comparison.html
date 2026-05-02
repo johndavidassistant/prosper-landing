@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Go Big — Font Comparison (Heavy Weights)</title>
+<style>
+  :root { --black: #000000; --gold: #C8952E; --cream: #F6F1E9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, system-ui, sans-serif; background: #1a1a1a; color: #e5e5e5; padding: 32px; }
+  h1 { font-size: 24px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .meta { color: #888; margin-bottom: 28px; font-size: 13px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 20px; }
+  .card { background: var(--black); border-radius: 12px; padding: 32px 28px; }
+  .label { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .meta-line { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; color: #888; margin-bottom: 24px; }
+  .gb-large {
+    font-size: 220px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    text-align: center;
+    margin: 28px 0;
+  }
+  .gb-large.stretch { transform: scaleX(1.18); transform-origin: center; }
+  .row64 { display: flex; gap: 12px; align-items: center; padding-top: 16px; border-top: 1px solid #222; margin-top: 16px; }
+  .gb-64 {
+    width: 96px; height: 96px;
+    background: var(--black); display: flex;
+    align-items: center; justify-content: center;
+    font-size: 56px; font-weight: 900; color: white;
+    letter-spacing: -0.045em;
+    border: 1px solid #222;
+  }
+  .gb-64.stretch { transform: scaleX(1.18); transform-origin: center; }
+  .row64-meta { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; color: #888; }
+  .strip { background: #232323; padding: 16px 20px; border-radius: 8px; margin-bottom: 24px; font-size: 13px; line-height: 1.6; }
+  .strip strong { color: var(--gold); }
+  .footnote { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; color: #666; margin-top: 32px; padding-top: 24px; border-top: 1px solid #222; }
+
+  /* Font assignments — using each font's heaviest available weight */
+  .f-general    { font-family: 'General Sans Variable', 'General Sans', system-ui, sans-serif; font-weight: 700; }
+  .f-cabinet    { font-family: 'Cabinet Grotesk Variable', 'Cabinet Grotesk', system-ui, sans-serif; font-weight: 800; }
+  .f-switzer    { font-family: 'Switzer Variable', 'Switzer', system-ui, sans-serif; font-weight: 900; }
+  .f-satoshi    { font-family: 'Satoshi Variable', 'Satoshi', system-ui, sans-serif; font-weight: 900; }
+  .f-khand      { font-family: 'Khand Variable', 'Khand', system-ui, sans-serif; font-weight: 700; }
+  .f-inter      { font-family: 'Inter', system-ui, sans-serif; font-weight: 900; }
+  .f-helvetica  { font-family: 'Helvetica Neue', Helvetica, system-ui, sans-serif; font-weight: 900; }
+</style>
+</head>
+<body>
+
+<h1>Go Big — Font Comparison (Heavy Weights, Tesla-stretch 1.18×)</h1>
+<div class="meta">All 6 fonts shown at 900 weight (or family's heaviest). Same horizontal stretch (1.18×) and kerning (-0.045em) as Logo V3. Open this file in Safari to see fonts render natively.</div>
+
+<div class="strip">
+  <strong>How to evaluate:</strong> for each font, look at (1) the large GB monogram and (2) the 64px favicon test below it. The right pick is the one that feels most authoritative AND stays solid at small size.
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="label">Option 1</div>
+    <div class="meta-line">Cabinet Grotesk Extrabold (800) — distinctive, slightly editorial</div>
+    <div class="gb-large stretch f-cabinet">GB</div>
+    <div class="row64">
+      <div class="gb-64 stretch f-cabinet">GB</div>
+      <span class="row64-meta">64px favicon test</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Option 2</div>
+    <div class="meta-line">Switzer Black (900) — modern luxury, geometric</div>
+    <div class="gb-large stretch f-switzer">GB</div>
+    <div class="row64">
+      <div class="gb-64 stretch f-switzer">GB</div>
+      <span class="row64-meta">64px favicon test</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Option 3</div>
+    <div class="meta-line">Satoshi Black (900) — clean, premium tech-grade</div>
+    <div class="gb-large stretch f-satoshi">GB</div>
+    <div class="row64">
+      <div class="gb-64 stretch f-satoshi">GB</div>
+      <span class="row64-meta">64px favicon test</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Option 4</div>
+    <div class="meta-line">Inter Black (900) — universal modern grotesk</div>
+    <div class="gb-large stretch f-inter">GB</div>
+    <div class="row64">
+      <div class="gb-64 stretch f-inter">GB</div>
+      <span class="row64-meta">64px favicon test</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Option 5</div>
+    <div class="meta-line">General Sans Bold (700) — lighter than others, friendlier</div>
+    <div class="gb-large stretch f-general">GB</div>
+    <div class="row64">
+      <div class="gb-64 stretch f-general">GB</div>
+      <span class="row64-meta">64px favicon test</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Option 6</div>
+    <div class="meta-line">Khand Bold (700) — CONDENSED (not extended) — different direction</div>
+    <div class="gb-large f-khand" style="transform: none;">GB</div>
+    <div class="row64">
+      <div class="gb-64 f-khand" style="transform: none;">GB</div>
+      <span class="row64-meta">64px — note: condensed proportion, not stretched</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Reference (V3, what we already shipped)</div>
+    <div class="meta-line">Helvetica Neue Black (900) — the V3 baseline for comparison</div>
+    <div class="gb-large stretch f-helvetica">GB</div>
+    <div class="row64">
+      <div class="gb-64 stretch f-helvetica">GB</div>
+      <span class="row64-meta">64px favicon test</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="footnote">
+  My read of the candidates for Bold Premium + Tesla/Balenciaga reference territory:
+  <br><br>
+  <strong>Strong contenders:</strong> Switzer Black, Satoshi Black, Cabinet Grotesk Extrabold, Inter Black.
+  <br>
+  <strong>Skip for the monogram:</strong> Khand (condensed — wrong direction for Tesla wide feel; useful later for tagline-tracked uppercase).
+  <br>
+  <strong>Skip for the monogram:</strong> General Sans (top weight only 700 Bold — not heavy enough).
+  <br><br>
+  Pick 1 to 2 to lock V4. Reply with the option number(s).
+</div>
+
+</body>
+</html>

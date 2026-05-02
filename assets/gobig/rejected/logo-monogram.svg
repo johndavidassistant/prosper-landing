@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Saira:wght@900&amp;display=swap');
+      .gb-bg { fill: #000000; }
+      .gb-frame { fill: none; stroke: #C8952E; stroke-width: 4; }
+      .gb-letters {
+        font-family: 'Druk Wide', 'Tungsten Wide', 'Saira', 'Helvetica Neue', 'Arial Black', sans-serif;
+        font-weight: 900;
+        font-stretch: expanded;
+        letter-spacing: 0.06em;
+        fill: #FFFFFF;
+        font-size: 480px;
+      }
+      .gb-period { fill: #C8952E; }
+      .gb-tag {
+        font-family: 'Inter', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.32em;
+        fill: #C8952E;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+
+  <!-- Black ground -->
+  <rect class="gb-bg" x="0" y="0" width="1080" height="1080"/>
+
+  <!-- Thin gold frame (B-influence: minimal geometric structure) -->
+  <rect class="gb-frame" x="60" y="60" width="960" height="960"/>
+
+  <!-- GB letters, centered -->
+  <text class="gb-letters" x="540" y="640" text-anchor="middle">GB</text>
+
+  <!-- Gold period accent — links the monogram to the wordmark "GO BIG." -->
+  <circle class="gb-period" cx="828" cy="630" r="28"/>
+
+  <!-- Tracked tagline at the bottom — restraint, not shouted -->
+  <text class="gb-tag" x="540" y="940" text-anchor="middle">THE GO BIG AGENCY</text>
+</svg>

@@ -1,321 +1,638 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Go Big Agency. Briefing</title>
-  <meta name="description" content="Marca, site, conteúdo e consultoria para donos de negócio que querem ir longe. Conta o que você precisa e a gente fecha o plano.">
-  <meta property="og:title" content="The Go Big Agency. Briefing">
-  <meta property="og:description" content="Marca, site, conteúdo e consultoria. Briefing rápido e a gente fecha.">
+  <title>The Go Big Agency</title>
+  <meta name="description" content="Brand and website, shipped together in three weeks. The Go Big Agency.">
+  <link rel="canonical" href="https://prosperinamerica.com/go-big.html">
+  <meta property="og:title" content="The Go Big Agency">
+  <meta property="og:description" content="Brand and website, shipped together in three weeks. Two thousand five hundred dollars.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prosperinamerica.com/go-big.html">
+  <meta property="og:image" content="https://prosperinamerica.com/assets/share/gobig-share-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Go Big Agency">
+  <meta name="twitter:description" content="Brand and website, shipped together in three weeks. $2,500.">
+  <meta name="twitter:image" content="https://prosperinamerica.com/assets/share/gobig-share-card.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://prosperinamerica.com/go-big.html#organization",
+        "name": "The Go Big Agency",
+        "alternateName": "GO BIG",
+        "url": "https://prosperinamerica.com/go-big.html",
+        "logo": "https://prosperinamerica.com/assets/gobig/approved/logo-v8-horizontal-clean-1800.png",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Prosper In America",
+          "url": "https://prosperinamerica.com/"
+        },
+        "areaServed": ["US", "BR"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "johndavid@prosperinamerica.com",
+          "contactType": "sales",
+          "availableLanguage": ["English", "Portuguese"]
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Brand and Website",
+        "provider": { "@id": "https://prosperinamerica.com/go-big.html#organization" },
+        "serviceType": "Brand identity, website design, content strategy, marketing consulting.",
+        "description": "Brand and site, shipped together in three weeks. Two thousand five hundred dollars. Fifty percent to start. Fifty percent on delivery.",
+        "offers": {
+          "@type": "Offer",
+          "price": "2500.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>html:not(.lang-ready) body{visibility:hidden}</style>
+  <noscript><style>body{visibility:visible !important}</style></noscript>
+
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-var-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/playfair-display-var-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/site-header.css">
+  <link rel="stylesheet" href="/css/site-footer.css">
 
   <style>
   :root {
-    --navy-deep:  #0F1B2D;
-    --navy:       #1A2942;
-    --navy-mid:   #223354;
-    --navy-soft:  #2A3F63;
-    --white:      #FFFFFF;
-    --cream:      #F6F1E9;
-    --cream-dark: #EDE7DB;
-    --gold:       #C8952E;
-    --gold-light: #DBA94A;
-    --gold-pale:  rgba(200,149,46,0.12);
-    --gold-glow:  rgba(200,149,46,0.30);
-    --text:       #1A2942;
-    --muted:      #5B6E8A;
-    --border:     rgba(26,41,66,0.10);
-    --display:    'Montserrat', 'Inter', system-ui, sans-serif;
-    --sans:       'Inter', system-ui, -apple-system, sans-serif;
+    --bg:           #FFFFFF;
+    --bg-alt:       #FAFAFA;
+    --bg-soft:      #F5F5F5;
+    --navy:         #0A1628;
+    --navy-mid:     #1A2942;
+    --gold:         #C8952E;
+    --gold-light:   #DBA94A;
+    --gold-top:     #D6A348;
+    --gold-mid:     #C8952E;
+    --gold-bot:     #B5841F;
+    --n-92: rgba(10,22,40,0.92);
+    --n-78: rgba(10,22,40,0.78);
+    --n-65: rgba(10,22,40,0.65);
+    --n-50: rgba(10,22,40,0.50);
+    --n-40: rgba(10,22,40,0.40);
+    --n-25: rgba(10,22,40,0.25);
+    --n-12: rgba(10,22,40,0.12);
+    --n-08: rgba(10,22,40,0.08);
+    --gold-rule: rgba(200,149,46,0.40);
+    --gold-rule-soft: rgba(200,149,46,0.22);
+    --display: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html  { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-  body  { font-family: var(--sans); color: var(--text); background: var(--white); line-height: 1.65; -webkit-font-smoothing: antialiased; }
-  img   { display: block; max-width: 100%; }
-  a     { color: inherit; text-decoration: none; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
-  .wrap    { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-  .wrap-sm { max-width:  760px; margin: 0 auto; padding: 0 24px; }
-  .section { padding: 96px 0; }
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+  .submit-btn:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--navy);
+    color: var(--gold);
+    padding: 12px 20px;
+    font-weight: 700;
+    z-index: 9999;
+  }
+  .skip-link:focus {
+    left: 12px;
+    top: 12px;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--navy);
+    line-height: 1.65;
+    font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--gold); color: var(--bg); }
 
+  /* GOLD GRADIENT TEXT (real metallic — locked moments only).
+     8-stop gradient simulates a brushed-metal lozenge of light:
+     dark bend → highlight → shine band → reflection → shadow → bottom catch. */
+  .gold-grad {
+    background: linear-gradient(
+      178deg,
+      #8A6516 0%,
+      #C99632 14%,
+      #F2D175 30%,
+      #FFF3C9 42%,
+      #E8B956 55%,
+      #B58620 70%,
+      #8C6112 84%,
+      #D2A33D 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    filter: drop-shadow(0 1px 0 rgba(255,243,201,0.18))
+            drop-shadow(0 2px 6px rgba(0,0,0,0.40))
+            drop-shadow(0 0 24px rgba(200,149,46,0.16));
+  }
+  /* Heavier glow for the price climax — scale-appropriate. */
+  .price-num.gold-grad {
+    filter: drop-shadow(0 2px 0 rgba(255,243,201,0.22))
+            drop-shadow(0 4px 12px rgba(0,0,0,0.45))
+            drop-shadow(0 0 38px rgba(200,149,46,0.22));
+  }
+
+  /* WRAPS */
+  .wrap     { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .wrap-md  { max-width:  880px; margin: 0 auto; padding: 0 24px; }
+  .wrap-sm  { max-width:  680px; margin: 0 auto; padding: 0 24px; }
+  @media (min-width: 768px) { .wrap, .wrap-md, .wrap-sm { padding: 0 48px; } }
+  @media (min-width: 1024px) { .wrap, .wrap-md, .wrap-sm { padding: 0 72px; } }
+
+  /* EYEBROW */
   .eyebrow {
     display: inline-block;
     font-family: var(--sans);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 2.8px; text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 14px;
   }
-  .gold-bar {
-    width: 44px; height: 3px;
-    background: var(--gold); border-radius: 2px;
-    margin-bottom: 28px;
-  }
-  .gold-bar-center {
-    width: 44px; height: 3px;
-    background: var(--gold); border-radius: 2px;
-    margin: 12px auto 26px;
-  }
-
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center;
-    font-family: var(--sans); font-size: 15px; font-weight: 700;
-    padding: 15px 32px; border-radius: 8px;
-    cursor: pointer; border: none; text-decoration: none;
-    letter-spacing: 0.3px;
-    transition: background 0.18s, box-shadow 0.18s, transform 0.1s;
-    -webkit-tap-highlight-color: transparent;
-    white-space: nowrap;
-  }
-  .btn:active { transform: scale(0.97); }
-  .btn-gold {
+  .eyebrow-rule {
+    width: 28px; height: 1px;
     background: var(--gold);
-    color: var(--navy-deep);
-    box-shadow: 0 4px 20px var(--gold-glow);
+    opacity: 0.45;
+    margin-top: 14px;
   }
-  .btn-gold:hover {
-    background: var(--gold-light);
-    box-shadow: 0 6px 28px rgba(200,149,46,0.45);
+  .eyebrow-center { text-align: center; }
+  .eyebrow-center .eyebrow-rule { margin: 14px auto 0; }
+
+  /* HAIRLINES (much softer than dark version) */
+  .hairline       { height: 1px; background: var(--n-08); }
+  .hairline-soft  { height: 1px; background: var(--n-08); }
+  .hairline-80    { width: 80%; margin: 0 auto; }
+  .hairline-40    { width: 40%; margin: 0 auto; }
+
+  /* CTA INLINE LINK */
+  .cta {
+    display: inline-flex; align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--gold);
+    border-bottom: 1px solid rgba(200,149,46,0.40);
+    padding-bottom: 4px;
+    transition: color 200ms ease, gap 200ms ease, border-color 200ms ease;
   }
-  .btn-ghost-light {
-    background: transparent;
-    color: var(--white);
-    border: 1.5px solid rgba(255,255,255,0.35);
-  }
-  .btn-ghost-light:hover {
-    border-color: rgba(255,255,255,0.75);
-    background: rgba(255,255,255,0.07);
+  .cta:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold-light);
+    gap: 14px;
   }
 
-  .navbar {
-    position: sticky; top: 0; z-index: 200;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 0 28px;
+  /* HEADER (white, restrained) */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     height: 68px;
-    display: flex; align-items: center; justify-content: space-between;
-    box-shadow: 0 1px 12px rgba(26,41,66,0.07);
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--n-08);
+    padding: 0 24px;
   }
-  .nav-logo img { height: 48px; width: auto; display: block; }
-  .nav-links { display: none; gap: 36px; list-style: none; }
-  .nav-links a {
-    font-size: 14px; font-weight: 600;
-    color: var(--navy);
-    letter-spacing: 0.1px;
-    transition: color 0.15s;
+  .header-inner {
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-right { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
-  .lang-toggle { display: flex; align-items: center; gap: 2px; }
+  .header-logo img {
+    height: 22px;
+    display: block;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .header-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--n-65);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color 200ms ease;
+  }
+  .header-link:hover { color: var(--gold); }
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
   .lang-btn {
-    font-family: var(--sans);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 1.6px; text-transform: uppercase;
-    color: var(--muted);
-    background: none; border: none; cursor: pointer;
-    padding: 5px 4px; line-height: 1;
-    transition: color 0.15s;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--n-40);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 4px;
+    line-height: 1;
+    transition: color 200ms ease;
   }
   .lang-btn.active { color: var(--navy); }
   .lang-btn:hover { color: var(--gold); }
-  .lang-sep { font-size: 10px; color: rgba(26,41,66,0.20); user-select: none; line-height: 1; padding: 0 1px; }
-  @media (min-width: 768px) { .nav-links { display: flex; } }
+  .lang-sep { font-size: 10px; color: var(--n-25); line-height: 1; }
 
+  @media (min-width: 768px) {
+    header { height: 80px; padding: 0 48px; }
+    .header-logo img { height: 26px; }
+    .header-right { gap: 36px; }
+  }
+
+  /* HERO — DEEP NAVY (locked 2026-05-01 evening) — cinematic, video-ready */
   .hero {
-    background: var(--navy-deep);
-    background-image:
-      radial-gradient(ellipse 90% 70% at 50% -10%, var(--navy-soft) 0%, var(--navy-deep) 65%),
-      radial-gradient(ellipse 60% 50% at 50% 75%, rgba(200,149,46,0.07) 0%, transparent 70%),
-      repeating-linear-gradient(0deg,  transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px),
-      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.013) 39px, rgba(255,255,255,0.013) 40px);
-    border-bottom: 1px solid rgba(200,149,46,0.18);
-    padding: 88px 24px 100px;
-    text-align: center;
     position: relative;
+    background: var(--navy);
+    padding: 88px 0 112px;
+    min-height: calc(80vh - 68px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    border-bottom: 1px solid rgba(200,149,46,0.18);
   }
-  .hero-pill {
-    display: inline-block;
-    border: 1px solid rgba(200,149,46,0.45);
-    background: rgba(200,149,46,0.08);
-    color: rgba(200,149,46,0.90);
-    font-family: var(--sans);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 2.5px; text-transform: uppercase;
-    padding: 7px 20px; border-radius: 100px;
-    margin-bottom: 36px;
+  /* TODO: Drop gobig-hero-loop.mp4 cinematic luxury sequence —
+     estate, fancy car, executive lounge, businesswoman + businessman quiet luxury */
+  .hero-video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    z-index: 0;
+    pointer-events: none;
+    filter: saturate(0.78) contrast(1.06) brightness(0.62);
   }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% -10%, var(--navy-mid) 0%, var(--navy) 65%),
+      radial-gradient(ellipse 50% 40% at 80% 50%, rgba(200,149,46,0.08) 0%, transparent 70%),
+      linear-gradient(180deg, rgba(15,27,45,0.65) 0%, rgba(15,27,45,0.92) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-inner { width: 100%; position: relative; z-index: 2; }
+
   .hero h1 {
     font-family: var(--display);
-    font-size: clamp(40px, 7.5vw, 76px);
-    font-weight: 800;
-    color: var(--white);
-    line-height: 1.04;
-    letter-spacing: -2px;
-    max-width: 760px;
-    margin: 0 auto;
+    font-weight: 900;
+    font-size: clamp(52px, 10vw, 152px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    color: rgba(255,255,255,0.96);
+    max-width: 13ch;
+    margin-bottom: 44px;
   }
-  .hero h1 span { display: block; color: var(--gold); }
+  .hero h1 em {
+    font-style: normal;
+  }
   .hero-rule {
-    width: 48px; height: 3px;
+    width: 56px;
+    height: 2px;
     background: var(--gold);
-    border-radius: 2px;
-    margin: 28px auto 32px;
     opacity: 0.90;
+    margin-bottom: 36px;
+    border-radius: 2px;
   }
   .hero-sub {
-    font-size: clamp(16px, 2.1vw, 18px);
-    color: rgba(255,255,255,0.78);
-    max-width: 600px;
-    margin: 0 auto 44px;
-    line-height: 1.82;
+    font-family: var(--sans);
+    font-size: clamp(17px, 1.9vw, 21px);
     font-weight: 400;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.72);
+    max-width: 38ch;
+    margin-bottom: 56px;
   }
-  .hero-btns {
-    display: flex; flex-direction: column;
-    align-items: center; gap: 14px;
-    margin-bottom: 36px;
-  }
-  @media (min-width: 580px) {
-    .hero-btns { flex-direction: row; justify-content: center; }
-  }
-  .hero-anchor {
-    font-size: 13px;
-    color: rgba(255,255,255,0.44);
-    letter-spacing: 0.2px;
-    line-height: 1.7;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .hero-anchor a { color: rgba(200,149,46,0.85); border-bottom: 1px solid rgba(200,149,46,0.30); }
-  .hero-anchor a:hover { color: var(--gold-light); }
 
-  .services { background: var(--cream); }
-  .services-head { text-align: center; margin-bottom: 56px; }
-  .services-head h2 {
+  @media (min-width: 768px) {
+    .hero { padding: 144px 0 168px; min-height: calc(80vh - 80px); }
+  }
+
+  /* SECTION */
+  .section {
+    padding: 96px 0;
+  }
+  .section.with-rule { border-top: 1px solid var(--n-08); }
+  .section.bg-alt { background: var(--bg-alt); }
+  @media (min-width: 768px) {
+    .section { padding: 144px 0; }
+  }
+
+  /* OPERATING STATEMENT (centered, light gray bg) */
+  .stmt-block { text-align: center; }
+  .stmt-block .eyebrow-center { margin-bottom: 56px; }
+  .stmt-line {
     font-family: var(--display);
-    font-size: clamp(26px, 4vw, 38px);
-    font-weight: 800;
+    font-weight: 700;
+    font-size: clamp(26px, 4vw, 40px);
+    line-height: 1.22;
+    letter-spacing: -0.015em;
     color: var(--navy);
-    letter-spacing: -0.5px;
-    line-height: 1.15;
-    max-width: 640px;
-    margin: 0 auto 14px;
+    margin-bottom: 32px;
+    max-width: 26ch;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .services-head p {
-    font-size: 17px;
-    color: var(--muted);
-    max-width: 560px;
+  .stmt-line:last-child { margin-bottom: 0; }
+  .stmt-line.muted { color: var(--n-50); }
+
+  /* AI-leverage line — quiet meta-statement, hairline-separated, italic gold. */
+  .leverage-block {
+    margin-top: 96px;
+    padding-top: 56px;
+    border-top: 1px solid var(--gold-rule-soft);
+    max-width: 38ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .leverage-label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .leverage-line {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2.6vw, 28px);
+    line-height: 1.5;
+    color: var(--navy);
     margin: 0 auto;
-    line-height: 1.78;
+    max-width: 36ch;
+    letter-spacing: -0.005em;
   }
-  .services-grid {
+  @media (max-width: 480px) {
+    .leverage-block { margin-top: 64px; padding-top: 40px; }
+  }
+
+  /* WHO + WHAT (asymmetric two-col editorial) */
+  .ww-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 64px;
   }
-  @media (min-width: 720px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 768px) {
+    .ww-grid { grid-template-columns: 5fr 6fr; gap: 112px; }
   }
-  .svc-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 32px 28px 28px;
-    box-shadow: 0 2px 16px rgba(26,41,66,0.05);
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-  .svc-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 3px; background: var(--gold);
-  }
-  .svc-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(26,41,66,0.10);
-    border-color: rgba(200,149,46,0.30);
-  }
-  .svc-tag {
-    display: inline-block;
-    font-size: 10px; font-weight: 700;
-    letter-spacing: 1.6px; text-transform: uppercase;
-    color: var(--gold);
-    background: rgba(200,149,46,0.09);
-    border: 1px solid rgba(200,149,46,0.26);
-    padding: 4px 10px; border-radius: 4px;
-    margin-bottom: 14px;
-  }
-  .svc-card h3 {
+  .ww-col h3 {
     font-family: var(--display);
-    font-size: 19px; font-weight: 800;
-    color: var(--navy);
-    letter-spacing: -0.2px;
-    margin-bottom: 10px;
-  }
-  .svc-card p {
-    font-size: 15px;
-    color: var(--muted);
-    line-height: 1.78;
-  }
-
-  .brief { background: var(--white); }
-  .brief-card {
-    background: var(--cream);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 56px 48px 48px;
-    max-width: 760px;
-    margin: 0 auto;
-    box-shadow: 0 4px 40px rgba(26,41,66,0.08);
-    position: relative;
-    overflow: hidden;
-  }
-  .brief-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--gold);
-    border-radius: 20px 20px 0 0;
-  }
-  .brief-card h2 {
-    font-family: var(--display);
-    font-size: clamp(24px, 3.4vw, 32px);
-    font-weight: 800;
-    color: var(--navy);
-    letter-spacing: -0.3px;
-    margin-bottom: 12px;
-    text-align: center;
-  }
-  .brief-card .sub {
-    font-size: 16px;
-    color: var(--muted);
-    line-height: 1.72;
-    margin-bottom: 36px;
-    text-align: center;
-    max-width: 540px;
-    margin-left: auto; margin-right: auto;
-  }
-
-  .form-row { margin-bottom: 22px; }
-  .form-row label {
-    display: block;
-    font-size: 13px;
     font-weight: 700;
+    font-size: clamp(26px, 3.4vw, 40px);
+    line-height: 1.15;
     color: var(--navy);
-    letter-spacing: 0.2px;
+    margin-top: 28px;
+    margin-bottom: 40px;
+    letter-spacing: -0.018em;
+  }
+  .ww-list { list-style: none; }
+  .ww-list li {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--n-78);
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 18px;
+  }
+  .ww-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px; height: 1px;
+    background: var(--n-50);
+  }
+  .ww-list li:last-child { margin-bottom: 0; }
+
+  /* ANECDOTE (centered, light gray bg, italic Playfair) */
+  .anec { text-align: center; }
+  .anec .eyebrow-center { margin-bottom: 56px; }
+  .anec-quote {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(22px, 3.0vw, 32px);
+    line-height: 1.5;
+    color: var(--navy);
+    max-width: 38ch;
+    margin: 0 auto;
+  }
+  .anec-quote p + p { margin-top: 22px; color: var(--n-78); }
+
+  /* PRICING — DARK SIGNATURE SECTION (full-bleed deep navy, climactic stop) */
+  .section.pricing-section {
+    background: var(--navy);
+    color: var(--bg);
+    padding: 0;
+    border-top: none;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .section.pricing-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 0%, var(--navy-mid) 0%, var(--navy) 65%),
+      radial-gradient(ellipse 60% 45% at 50% 100%, rgba(200,149,46,0.10) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .section.pricing-section::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url('/assets/textures/noise.svg');
+    background-size: 240px 240px;
+    background-repeat: repeat;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .section.pricing-section .wrap-md {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .ghost-mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140vw;
+    height: auto;
+    opacity: 0.08;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    filter: brightness(0) invert(1);
+    will-change: transform;
+  }
+  .pricing { text-align: center; position: relative; }
+  .pricing-eyebrow-block { padding: 0 0 64px; }
+  .pricing .eyebrow { color: var(--gold); }
+  .price-num {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(64px, 14vw, 200px);
+    line-height: 1.10;
+    letter-spacing: -0.04em;
+    margin: 28px 0 48px;
+    padding-bottom: 0.08em;
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    max-width: 100%;
+    word-break: keep-all;
+  }
+  .pricing { overflow: visible; }
+  .pricing .price-line {
+    font-family: var(--sans);
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.92);
     margin-bottom: 8px;
   }
-  .form-row .hint {
-    font-size: 12px;
-    color: var(--muted);
+  .pricing .price-terms {
+    font-family: var(--sans);
+    font-size: 17px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 40px;
+    margin-bottom: 48px;
+    letter-spacing: 0.01em;
+  }
+  .pricing .hairline {
+    background: rgba(200,149,46,0.30);
+  }
+  .price-cta-block { padding: 40px 0 0; }
+  .pricing .cta {
+    color: var(--gold);
+    border-bottom-color: rgba(200,149,46,0.50);
+  }
+  .pricing .cta:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold-light);
+  }
+
+  /* RETAINER (quiet touchpoint between pricing and brief). */
+  .retainer-section { padding: 0; }
+  .retainer-section .wrap-md {
+    padding-top: clamp(80px, 12vw, 144px);
+    padding-bottom: clamp(80px, 12vw, 144px);
+  }
+  .retainer-card {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 64px) clamp(24px, 4vw, 48px);
+    border: 1px solid var(--n-08);
+    border-radius: 2px;
+    background: var(--bg-alt);
+    position: relative;
+  }
+  .retainer-card .eyebrow { color: var(--gold); }
+  .retainer-line {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(24px, 3.2vw, 36px);
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    color: var(--navy);
+    margin: 24px auto 18px;
+    max-width: 28ch;
+  }
+  .retainer-sub {
+    font-family: var(--sans);
+    font-size: clamp(14px, 1.7vw, 16px);
     font-weight: 400;
-    margin-left: 6px;
+    color: var(--n-50);
+    line-height: 1.65;
+    max-width: 36ch;
+    margin: 0 auto 36px;
+  }
+
+  /* BRIEF */
+  .brief-eyebrow { margin-bottom: 32px; }
+  .brief-lede {
+    font-family: var(--display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(22px, 2.8vw, 30px);
+    line-height: 1.45;
+    color: var(--navy);
+    max-width: 36ch;
+    margin-bottom: 72px;
+  }
+  .brief-form { max-width: 640px; }
+  .form-row { margin-bottom: 36px; position: relative; }
+  .form-row label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--n-50);
+    margin-bottom: 14px;
   }
   .form-row input[type="text"],
   .form-row input[type="email"],
@@ -324,415 +641,641 @@
   .form-row select {
     width: 100%;
     font-family: var(--sans);
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 400;
     color: var(--navy);
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 13px 14px;
-    transition: border-color 0.15s, box-shadow 0.15s;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--n-12);
+    border-radius: 0;
+    padding: 14px 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color 200ms ease;
   }
   .form-row input:focus,
   .form-row textarea:focus,
   .form-row select:focus {
     outline: none;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(200,149,46,0.12);
+    border-bottom-color: var(--gold);
+  }
+  .form-row input::placeholder,
+  .form-row textarea::placeholder {
+    color: var(--n-25);
   }
   .form-row textarea {
-    min-height: 110px;
+    min-height: 88px;
     resize: vertical;
-    line-height: 1.6;
+    line-height: 1.5;
   }
-  .radio-group {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  @media (min-width: 580px) {
-    .radio-group.cols-2 { grid-template-columns: repeat(2, 1fr); }
-  }
-  .radio-group label {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    cursor: pointer;
-    font-weight: 500;
+  .form-row select { cursor: pointer; padding-right: 28px; }
+  .form-row select option { background: var(--bg); color: var(--navy); }
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: "\25BE";
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(0);
     font-size: 14px;
-    color: var(--navy);
-    line-height: 1.4;
-    transition: border-color 0.15s, background 0.15s;
-  }
-  .radio-group label:hover {
-    border-color: rgba(200,149,46,0.40);
-  }
-  .radio-group input[type="radio"]:checked + span {
     color: var(--gold);
+    pointer-events: none;
+  }
+
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px; height: 1px;
+    overflow: hidden;
+  }
+
+  .submit-row {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .submit-btn {
+    font-family: var(--sans);
+    font-size: 12px;
     font-weight: 700;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--navy);
+    border: none;
+    border-radius: 2px;
+    padding: 20px 44px;
+    cursor: pointer;
+    min-height: 56px;
+    transition: background 200ms ease;
   }
-  .radio-group label:has(input:checked) {
-    border-color: var(--gold);
-    background: rgba(200,149,46,0.06);
-  }
-  .radio-group input[type="radio"] {
-    margin-top: 3px;
-    accent-color: var(--gold);
-  }
-
-  .honeypot { display: none; }
-
-  .submit-row { text-align: center; margin-top: 12px; }
-  .submit-row .btn { padding: 16px 40px; font-size: 16px; }
+  .submit-btn:hover { background: var(--navy-mid); }
+  .submit-btn:active { transform: translateY(1px); }
   .submit-note {
-    margin-top: 16px;
+    font-family: var(--sans);
     font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
+    color: var(--n-50);
+    letter-spacing: 0.01em;
   }
 
-  @media (max-width: 580px) {
-    .brief-card { padding: 36px 22px 32px; border-radius: 16px; }
-  }
-
-  footer {
-    background: var(--navy-deep);
-    padding: 64px 24px 44px;
+  /* CLOSING — DARK SIGNATURE SECTION (full-bleed deep navy, sealed letter) */
+  .closing {
+    background: var(--navy);
+    padding: 144px 0 96px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: none;
   }
-  .footer-logo { margin: 0 auto 24px; max-width: 220px; }
-  .footer-logo img { width: 100%; height: auto; }
-  .footer-tagline {
-    font-size: 14px;
-    color: rgba(255,255,255,0.42);
-    max-width: 460px;
-    margin: 0 auto 32px;
+  .closing::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% -10%, var(--navy-mid) 0%, var(--navy) 70%),
+      radial-gradient(ellipse 80% 70% at 50% 100%, var(--navy-deep) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 50% 60%, rgba(200,149,46,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .closing::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url('/assets/textures/noise.svg');
+    background-size: 240px 240px;
+    background-repeat: repeat;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .closing-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .closing-line {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(26px, 3.2vw, 40px);
+    line-height: 1.35;
+    color: rgba(255,255,255,0.92);
+    max-width: 28ch;
+    margin: 0 auto 64px;
+  }
+  .closing-line em { font-style: italic; }
+  .closing-mark { margin-bottom: 64px; }
+  .closing-mark img {
+    height: clamp(64px, 9vw, 108px);
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .closing-attr {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.85;
+    margin-bottom: 16px;
+  }
+  .closing-copy {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: rgba(255,255,255,0.40);
+    letter-spacing: 0.04em;
     line-height: 1.7;
   }
-  .footer-links {
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 8px 24px;
-    margin-bottom: 36px;
-  }
-  .footer-links a {
-    font-size: 13px; font-weight: 600;
-    color: rgba(255,255,255,0.45);
-    transition: color 0.15s;
-  }
-  .footer-links a:hover { color: var(--gold); }
-  .footer-copy {
-    font-size: 12px;
-    color: rgba(255,255,255,0.25);
-    line-height: 1.8;
+  .closing-copy a { color: rgba(255,255,255,0.65); transition: color 200ms ease; }
+  .closing-copy a:hover { color: var(--gold); }
+  .closing-faith {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    color: rgba(200,149,46,0.55);
+    margin: 14px 0 0;
+    line-height: 1.7;
   }
 
+  /* MOBILE OVERRIDES */
   @media (max-width: 480px) {
-    .section { padding: 72px 0; }
-    .hero { padding: 64px 20px 80px; }
-    .navbar { padding: 0 16px; height: 60px; }
-    .nav-right { gap: 12px; }
+    .hero { padding: 80px 0 96px; min-height: auto; }
+    .section { padding: 88px 0; }
+    .closing { padding: 96px 0 64px; }
+    .stmt-line { margin-bottom: 24px; }
+    .submit-btn { padding: 18px 36px; }
+  }
+
+  /* GOLD RIBBON CORNER ACCENTS — Hermès-style quiet luxury frame, pricing + closing only. */
+  .gold-ribbon {
+    position: absolute;
+    width: clamp(56px, 7vw, 104px);
+    height: clamp(42px, 5.4vw, 80px);
+    pointer-events: none;
+    user-select: none;
+    z-index: 4;
+    opacity: 0.85;
+  }
+  .gold-ribbon use, .gold-ribbon svg { display: block; width: 100%; height: 100%; }
+  .ribbon-tl { top: 24px;    left: 24px; }
+  .ribbon-tr { top: 24px;    right: 24px;    transform: scaleX(-1); }
+  .ribbon-bl { bottom: 24px; left: 24px;     transform: scaleY(-1); }
+  .ribbon-br { bottom: 24px; right: 24px;    transform: scale(-1); }
+  @media (min-width: 768px) {
+    .ribbon-tl { top: 40px;    left: 40px; }
+    .ribbon-tr { top: 40px;    right: 40px; }
+    .ribbon-bl { bottom: 40px; left: 40px; }
+    .ribbon-br { bottom: 40px; right: 40px; }
+  }
+  @media (max-width: 480px) {
+    .ribbon-tl, .ribbon-tr, .ribbon-bl, .ribbon-br {
+      top: auto; bottom: auto; left: auto; right: auto;
+    }
+    .ribbon-tl { top: 18px; left: 18px; }
+    .ribbon-tr { top: 18px; right: 18px; }
+    .ribbon-bl { bottom: 18px; left: 18px; }
+    .ribbon-br { bottom: 18px; right: 18px; }
+  }
+
+  /* REDUCED MOTION */
+  @media (prefers-reduced-motion: reduce) {
+    .cta, .submit-btn, .lang-btn, .header-link, .form-row input, .form-row textarea, .form-row select, .closing-copy a { transition: none !important; }
+    html { scroll-behavior: auto; }
   }
   </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <a href="/" class="nav-logo" aria-label="Prosper In America Home">
-    <img src="assets/logo-navy.jpg" alt="Prosper In America">
-  </a>
-  <ul class="nav-links">
-    <li><a href="/#nossa-historia"
-          data-en="About"
-          data-pt="Sobre">Sobre</a></li>
-    <li><a href="/#caminhos"
-          data-en="Services"
-          data-pt="Serviços">Serviços</a></li>
-    <li><a href="/go-big.html"
-          data-en="Go Big"
-          data-pt="Go Big" style="color: var(--gold);">Go Big</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-toggle" role="group" aria-label="Language">
-      <button class="lang-btn" data-lang="en">EN</button>
-      <span class="lang-sep" aria-hidden="true">|</span>
-      <button class="lang-btn active" data-lang="pt">PT</button>
+<!-- Gold ribbon symbol — referenced via <use> by every corner ornament. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ribH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F2D175" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F2D175" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ribV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2D175" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F2D175" stop-opacity="0"/>
+    </linearGradient>
+    <symbol id="goldRibbon" viewBox="0 0 100 76" preserveAspectRatio="none">
+      <rect x="0" y="0" width="100" height="2.4" fill="url(#ribH)"/>
+      <rect x="0" y="0" width="2.4"   height="76" fill="url(#ribV)"/>
+      <rect x="0" y="0" width="6.5"  height="6.5" fill="#F2D175" opacity="0.9"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ══ UNIFIED SITE HEADER (identical across all pages) ════════════════════ -->
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="/" aria-label="Prosper In America — Home">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" decoding="async">
+    </a>
+    <nav class="site-header-nav" aria-label="Primary">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
+      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
+    </nav>
+    <div class="site-header-right">
+      <div class="site-lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
     </div>
-    <a href="#brief" class="btn btn-gold"
-       data-en="Start the Brief"
-       data-pt="Começar Briefing">
-      Começar Briefing
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO — DEEP NAVY (locked 2026-05-01 evening) ─────────────────────────── -->
+<section class="hero">
+  <!-- TODO: Drop public/assets/video/gobig-hero-loop.mp4 — cinematic luxury sequence:
+       estate, fancy car, executive lounge, businesswoman + businessman quiet luxury. -->
+  <video class="hero-video"
+         autoplay muted loop playsinline preload="metadata"
+         aria-hidden="true">
+    <source src="/assets/video/gobig-hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="wrap hero-inner">
+    <h1 data-en="We build &lt;em class=&quot;gold-grad&quot;&gt;the brand&lt;/em&gt; small businesses need to be taken seriously."
+        data-pt="Construímos &lt;em class=&quot;gold-grad&quot;&gt;a marca&lt;/em&gt; que pequenos negócios precisam pra serem levados a sério."
+        data-es="Construimos &lt;em class=&quot;gold-grad&quot;&gt;la marca&lt;/em&gt; que los pequeños negocios necesitan para ser tomados en serio.">
+      We build <em class="gold-grad">the brand</em> small businesses need to be taken seriously.
+    </h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub"
+       data-en="If yours has not been doing that, you already know."
+       data-pt="Se a sua não está fazendo isso, você já sabe."
+       data-es="Si la tuya no lo ha estado haciendo, ya lo sabes.">
+      If yours has not been doing that, you already know.
+    </p>
+    <a href="#brief" class="cta"
+       data-en="Start the brief →" data-pt="Começar o briefing →" data-es="Comenzar el briefing →">
+      Start the brief →
     </a>
   </div>
-</nav>
-
-<section class="hero">
-  <p class="hero-pill"
-     data-en="The Go Big Agency. A Prosper In America Brand."
-     data-pt="The Go Big Agency. Uma Marca Prosper In America.">
-    The Go Big Agency. Uma Marca Prosper In America.
-  </p>
-
-  <h1
-    data-en="Build the Brand. &lt;span&gt;Win the Market.&lt;/span&gt;"
-    data-pt="Constrói a Marca. &lt;span&gt;Vence o Mercado.&lt;/span&gt;">
-    Constrói a Marca.
-    <span>Vence o Mercado.</span>
-  </h1>
-
-  <div class="hero-rule"></div>
-
-  <p class="hero-sub"
-     data-en="Marca, site, conteúdo e consultoria para donos de negócio que estão prontos pra ir longe. You bring the business. We bring the structure, the brand, and the system that makes it scale."
-     data-pt="Marca, site, conteúdo e consultoria para donos de negócio que estão prontos pra ir longe. Você traz o negócio. A gente traz a estrutura, a marca e o sistema que faz crescer.">
-    Marca, site, conteúdo e consultoria para donos de negócio que estão prontos pra ir longe. Você traz o negócio. A gente traz a estrutura, a marca e o sistema que faz crescer.
-  </p>
-
-  <div class="hero-btns">
-    <a href="#brief" class="btn btn-gold"
-       data-en="Start the Briefing"
-       data-pt="Começar o Briefing">Começar o Briefing</a>
-    <a href="#servicos" class="btn btn-ghost-light"
-       data-en="See Services"
-       data-pt="Ver Serviços">Ver Serviços</a>
-  </div>
-
-  <p class="hero-anchor"
-     data-en="A sub-brand of &lt;a href=&quot;/&quot;&gt;Prosper In America&lt;/a&gt;. Same family, same standard, focused on growth."
-     data-pt="Uma sub-marca da &lt;a href=&quot;/&quot;&gt;Prosper In America&lt;/a&gt;. Mesma família, mesmo padrão, focada em crescimento.">
-    Uma sub-marca da <a href="/">Prosper In America</a>. Mesma família, mesmo padrão, focada em crescimento.
-  </p>
 </section>
 
-<section class="section services" id="servicos">
+<!-- OPERATING STATEMENT ───────────────────────────────────────────────────── -->
+<section class="section with-rule">
+  <div class="wrap-md stmt-block">
+    <div class="eyebrow-center">
+      <span class="eyebrow"
+            data-en="How we work" data-pt="Como trabalhamos" data-es="Como trabalhamos">How we work</span>
+      <div class="eyebrow-rule"></div>
+    </div>
+    <p class="stmt-line"
+       data-en="Brand and site, shipped together in three weeks."
+       data-pt="Marca e site, entregues juntos em três semanas." data-es="Marca e site, entregues juntos em três semanas.">
+      Brand and site, shipped together in three weeks.
+    </p>
+    <p class="stmt-line"
+       data-en="Two thousand five hundred dollars."
+       data-pt="Dois mil e quinhentos dólares." data-es="Dois mil e quinhentos dólares.">
+      Two thousand five hundred dollars.
+    </p>
+    <p class="stmt-line muted"
+       data-en="We do not discount. We adjust scope."
+       data-pt="Não damos desconto. Ajustamos o escopo." data-es="Não damos desconto. Ajustamos o escopo.">
+      We do not discount. We adjust scope.
+    </p>
+
+    <div class="leverage-block">
+      <span class="leverage-label"
+            data-en="On leverage"
+            data-pt="Sobre alavancagem" data-es="Sobre alavancagem">On leverage</span>
+      <p class="leverage-line"
+         data-en="The fastest part is the build. Everything before it is thinking."
+         data-pt="A parte mais rápida é a construção. Tudo antes disso é pensar." data-es="A parte mais rápida é a construção. Tudo antes disso é pensar.">
+        The fastest part is the build. Everything before it is thinking.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO + WHAT ─────────────────────────────────────────────────────────────── -->
+<section class="section with-rule">
   <div class="wrap">
-    <div class="services-head">
-      <div class="gold-bar-center"></div>
-      <h2 data-en="Four ways we help you go big."
-          data-pt="Quatro formas da gente te ajudar a ir longe.">
-        Quatro formas da gente te ajudar a ir longe.
-      </h2>
-      <p data-en="Pick one. Combine. Or tell us where you are and we figure it out together."
-         data-pt="Escolhe uma. Combina. Ou conta onde você tá e a gente monta junto.">
-        Escolhe uma. Combina. Ou conta onde você tá e a gente monta junto.
-      </p>
-    </div>
-
-    <div class="services-grid">
-      <div class="svc-card">
-        <span class="svc-tag" data-en="Website" data-pt="Site">Site</span>
-        <h3 data-en="Website that closes" data-pt="Site que fecha venda">Site que fecha venda</h3>
-        <p data-en="From a clean one-pager to a full sales site. Real photos, real copy, real conversion. Built to load fast and convert mobile-first."
-           data-pt="De uma página simples a um site completo de venda. Fotos de verdade, texto de verdade, conversão de verdade. Rápido e mobile-first.">
-          De uma página simples a um site completo de venda. Fotos de verdade, texto de verdade, conversão de verdade. Rápido e mobile-first.
-        </p>
+    <div class="ww-grid">
+      <div class="ww-col">
+        <span class="eyebrow"
+              data-en="Who this is for" data-pt="Para quem é" data-es="Para quem é">Who this is for</span>
+        <h3 data-en="Operators ready to look the part."
+            data-pt="Operadores prontos pra parecer o que são." data-es="Operadores prontos pra parecer o que são.">
+          Operators ready to look the part.
+        </h3>
+        <ul class="ww-list">
+          <li data-en="Business owners already operating."
+              data-pt="Donos de negócio já em operação." data-es="Donos de negócio já em operação.">
+            Business owners already operating.
+          </li>
+          <li data-en="$100K+ revenue, or growing toward it."
+              data-pt="$100K+ de faturamento, ou no caminho." data-es="$100K+ de faturamento, ou no caminho.00K+ de faturamento, ou no caminho.">
+            $100K+ revenue, or growing toward it.
+          </li>
+          <li data-en="Delivering real service, lacking strong presence."
+              data-pt="Entregam serviço real, mas falta presença forte." data-es="Entregam serviço real, mas falta presença forte.">
+            Delivering real service, lacking strong presence.
+          </li>
+          <li data-en="Ready to invest in looking professional."
+              data-pt="Prontos pra investir em parecer profissional." data-es="Prontos pra investir em parecer profissional.">
+            Ready to invest in looking professional.
+          </li>
+        </ul>
       </div>
-      <div class="svc-card">
-        <span class="svc-tag" data-en="Branding" data-pt="Identidade">Identidade</span>
-        <h3 data-en="Brand that holds up" data-pt="Marca que se sustenta">Marca que se sustenta</h3>
-        <p data-en="Logo, color, typography, voice. A full kit your team and your clients can recognize across every channel."
-           data-pt="Logo, cor, tipografia, voz. Um kit completo que seu time e seu cliente reconhecem em qualquer canal.">
-          Logo, cor, tipografia, voz. Um kit completo que seu time e seu cliente reconhecem em qualquer canal.
-        </p>
+      <div class="ww-col">
+        <span class="eyebrow"
+              data-en="What we do" data-pt="O que entregamos" data-es="O que entregamos">What we do</span>
+        <h3 data-en="Three things, done at depth."
+            data-pt="Três coisas, feitas com profundidade." data-es="Três coisas, feitas com profundidade.">
+          Three things, done at depth.
+        </h3>
+        <ul class="ww-list">
+          <li data-en="Brand identity. Logo and visual system."
+              data-pt="Identidade de marca. Logo e sistema visual." data-es="Identidade de marca. Logo e sistema visual.">
+            Brand identity. Logo and visual system.
+          </li>
+          <li data-en="Website. Clean, conversion-ready."
+              data-pt="Site. Limpo, pronto pra converter." data-es="Site. Limpo, pronto pra converter.">
+            Website. Clean, conversion-ready.
+          </li>
+          <li data-en="Positioning. How your business is perceived."
+              data-pt="Posicionamento. Como o seu negócio é percebido." data-es="Posicionamento. Como o seu negócio é percebido.">
+            Positioning. How your business is perceived.
+          </li>
+        </ul>
       </div>
-      <div class="svc-card">
-        <span class="svc-tag" data-en="Content" data-pt="Conteúdo">Conteúdo</span>
-        <h3 data-en="Content that builds authority" data-pt="Conteúdo que constrói autoridade">Conteúdo que constrói autoridade</h3>
-        <p data-en="Posts, reels, scripts. A weekly rhythm so your audience knows you, trusts you, and buys from you."
-           data-pt="Posts, reels, scripts. Um ritmo semanal pra sua audiência te conhecer, confiar e comprar de você.">
-          Posts, reels, scripts. Um ritmo semanal pra sua audiência te conhecer, confiar e comprar de você.
-        </p>
-      </div>
-      <div class="svc-card">
-        <span class="svc-tag" data-en="Consulting" data-pt="Consultoria">Consultoria</span>
-        <h3 data-en="Strategy that ships" data-pt="Estratégia que sai do papel">Estratégia que sai do papel</h3>
-        <p data-en="A 30-day sprint or monthly retainer. We sit with you, fix what is leaking, and build the next phase."
-           data-pt="Sprint de 30 dias ou mensalidade. A gente senta com você, arruma o que tá vazando e constrói a próxima fase.">
-          Sprint de 30 dias ou mensalidade. A gente senta com você, arruma o que tá vazando e constrói a próxima fase.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section brief" id="brief">
-  <div class="wrap-sm">
-    <div class="brief-card">
-      <h2 data-en="Tell us about your project."
-          data-pt="Conta pra gente sobre o seu projeto.">
-        Conta pra gente sobre o seu projeto.
-      </h2>
-      <p class="sub"
-         data-en="Five minutes. We read every brief and reply on WhatsApp within 24 hours with a clear next step."
-         data-pt="Cinco minutos. A gente lê cada briefing e responde no WhatsApp em até 24 horas com o próximo passo claro.">
-        Cinco minutos. A gente lê cada briefing e responde no WhatsApp em até 24 horas com o próximo passo claro.
-      </p>
-
-      <form name="go-big-briefing" method="POST" action="/obrigado-go-big.html"
-            data-netlify="true" netlify-honeypot="bot-field" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="go-big-briefing">
-        <input type="hidden" name="subject" value="New Go Big Briefing. prosperinamerica.com">
-        <p class="honeypot">
-          <label>Não preencher: <input name="bot-field"></label>
-        </p>
-
-        <div class="form-row">
-          <label for="name" data-en="Your full name" data-pt="Seu nome completo">Seu nome completo</label>
-          <input type="text" id="name" name="name" required autocomplete="name">
-        </div>
-
-        <div class="form-row">
-          <label for="business" data-en="Business name and what it does in one sentence"
-                                data-pt="Nome do negócio e o que ele faz em uma frase">Nome do negócio e o que ele faz em uma frase</label>
-          <input type="text" id="business" name="business" required>
-        </div>
-
-        <div class="form-row">
-          <label data-en="What do you need most right now?"
-                 data-pt="O que você mais precisa agora?">O que você mais precisa agora?</label>
-          <div class="radio-group cols-2">
-            <label>
-              <input type="radio" name="service" value="Site" required>
-              <span data-en="Website" data-pt="Site">Site</span>
-            </label>
-            <label>
-              <input type="radio" name="service" value="Identidade">
-              <span data-en="Branding (logo / brand kit)" data-pt="Identidade (logo / kit de marca)">Identidade (logo / kit de marca)</span>
-            </label>
-            <label>
-              <input type="radio" name="service" value="Conteúdo">
-              <span data-en="Content (social / reels)" data-pt="Conteúdo (social / reels)">Conteúdo (social / reels)</span>
-            </label>
-            <label>
-              <input type="radio" name="service" value="Consultoria">
-              <span data-en="Marketing / consulting" data-pt="Marketing / consultoria">Marketing / consultoria</span>
-            </label>
-            <label>
-              <input type="radio" name="service" value="Vários">
-              <span data-en="Multiple. Let us figure it out." data-pt="Vários. A gente descobre junto.">Vários. A gente descobre junto.</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label for="current"
-                 data-en="Where is your business today?"
-                 data-pt="Onde seu negócio tá hoje?">Onde seu negócio tá hoje?
-            <span class="hint" data-en="(clients, channels, what is working)"
-                               data-pt="(clientes, canais, o que tá funcionando)">(clientes, canais, o que tá funcionando)</span>
-          </label>
-          <textarea id="current" name="current" required></textarea>
-        </div>
-
-        <div class="form-row">
-          <label for="vision"
-                 data-en="Where do you want it to be in 6 months?"
-                 data-pt="Onde você quer chegar nos próximos 6 meses?">Onde você quer chegar nos próximos 6 meses?</label>
-          <textarea id="vision" name="vision" required></textarea>
-        </div>
-
-        <div class="form-row">
-          <label for="needs"
-                 data-en="What needs to be done now?"
-                 data-pt="O que precisa ser feito agora?">O que precisa ser feito agora?
-            <span class="hint" data-en="(specific deliverables, deadlines, references)"
-                               data-pt="(o que entregar, prazos, referências)">(o que entregar, prazos, referências)</span>
-          </label>
-          <textarea id="needs" name="needs"></textarea>
-        </div>
-
-        <div class="form-row">
-          <label data-en="Investment range you are comfortable with"
-                 data-pt="Faixa de investimento confortável">Faixa de investimento confortável</label>
-          <div class="radio-group cols-2">
-            <label><input type="radio" name="budget" value="<$1K" required><span>Até $1K</span></label>
-            <label><input type="radio" name="budget" value="$1K-$3K"><span>$1K a $3K</span></label>
-            <label><input type="radio" name="budget" value="$3K-$6K"><span>$3K a $6K</span></label>
-            <label><input type="radio" name="budget" value=">$6K"><span>Acima de $6K</span></label>
-            <label><input type="radio" name="budget" value="Não sei ainda"><span data-en="Not sure yet" data-pt="Não sei ainda">Não sei ainda</span></label>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label data-en="Urgency"
-                 data-pt="Urgência">Urgência</label>
-          <div class="radio-group cols-2">
-            <label><input type="radio" name="urgency" value="Esta semana" required><span data-en="This week" data-pt="Esta semana">Esta semana</span></label>
-            <label><input type="radio" name="urgency" value="Este mês"><span data-en="This month" data-pt="Este mês">Este mês</span></label>
-            <label><input type="radio" name="urgency" value="Este trimestre"><span data-en="This quarter" data-pt="Este trimestre">Este trimestre</span></label>
-            <label><input type="radio" name="urgency" value="Sem pressa"><span data-en="No rush" data-pt="Sem pressa">Sem pressa</span></label>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label for="whatsapp" data-en="WhatsApp (with country code)"
-                                data-pt="WhatsApp (com DDI)">WhatsApp (com DDI)</label>
-          <input type="tel" id="whatsapp" name="whatsapp" required placeholder="+1 555 555 5555">
-        </div>
-
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required autocomplete="email">
-        </div>
-
-        <div class="form-row">
-          <label for="referral"
-                 data-en="How did you find us?"
-                 data-pt="Como você chegou até a gente?">Como você chegou até a gente?</label>
-          <input type="text" id="referral" name="referral" placeholder="Ex: Indicação do Wellen, Instagram, Google">
-        </div>
-
-        <div class="form-row">
-          <label for="extra"
-                 data-en="Anything else we should know?"
-                 data-pt="Mais alguma coisa que a gente precisa saber?">Mais alguma coisa que a gente precisa saber?</label>
-          <textarea id="extra" name="extra"></textarea>
-        </div>
-
-        <div class="submit-row">
-          <button type="submit" class="btn btn-gold"
-                  data-en="Send the Brief"
-                  data-pt="Enviar Briefing">Enviar Briefing</button>
-          <p class="submit-note"
-             data-en="We reply on WhatsApp within 24 hours. No spam, no auto-response."
-             data-pt="A gente responde no WhatsApp em até 24 horas. Sem spam, sem resposta automática.">
-            A gente responde no WhatsApp em até 24 horas. Sem spam, sem resposta automática.
-          </p>
-        </div>
-      </form>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-logo">
-    <img src="assets/logo-gold.png" alt="Prosper In America">
+<!-- ANECDOTE ───────────────────────────────────────────────────────────────── -->
+<section class="section with-rule">
+  <div class="wrap-sm anec">
+    <div class="eyebrow-center">
+      <span class="eyebrow"
+            data-en="From a real client" data-pt="De um cliente real" data-es="De um cliente real">From a real client</span>
+      <div class="eyebrow-rule"></div>
+    </div>
+    <div class="anec-quote">
+      <p data-en="She answered a few questions over WhatsApp at lunch."
+         data-pt="Ela respondeu algumas perguntas pelo WhatsApp no almoço." data-es="Ela respondeu algumas perguntas pelo WhatsApp no almoço.">
+        She answered a few questions over WhatsApp at lunch.
+      </p>
+      <p data-en="Within the same flow, she received her first approved logo. The process felt natural, fast, and clear. No long calls, no confusion."
+         data-pt="No mesmo fluxo, recebeu o primeiro logo aprovado. O processo foi natural, rápido e claro. Sem chamadas longas, sem confusão." data-es="No mesmo fluxo, recebeu o primeiro logo aprovado. O processo foi natural, rápido e claro. Sem chamadas longas, sem confusão.">
+        Within the same flow, she received her first approved logo. The process felt natural, fast, and clear. No long calls, no confusion.
+      </p>
+    </div>
   </div>
-  <p class="footer-tagline"
-     data-en="The Go Big Agency. A Prosper In America brand. Built for families, founders, and immigrants going big in America."
-     data-pt="The Go Big Agency. Uma marca Prosper In America. Feita para famílias, fundadores e imigrantes indo longe na América.">
-    The Go Big Agency. Uma marca Prosper In America. Feita para famílias, fundadores e imigrantes indo longe na América.
-  </p>
-  <nav class="footer-links" aria-label="Footer navigation">
-    <a href="/" data-en="Prosper In America" data-pt="Prosper In America">Prosper In America</a>
-    <a href="/#nossa-historia" data-en="About Us" data-pt="Sobre Nós">Sobre Nós</a>
-    <a href="/#guia" data-en="Free Guide" data-pt="Guia Gratuito">Guia Gratuito</a>
-    <a href="#brief" data-en="Briefing" data-pt="Briefing">Briefing</a>
-  </nav>
-  <p class="footer-copy">© 2026 Prosper In America. The Go Big Agency.</p>
+</section>
+
+<!-- PRICING ────────────────────────────────────────────────────────────────── -->
+<section class="section pricing-section">
+  <svg class="gold-ribbon ribbon-tl" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <svg class="gold-ribbon ribbon-tr" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <svg class="gold-ribbon ribbon-bl" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <svg class="gold-ribbon ribbon-br" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <img class="ghost-mark" src="/assets/gobig/approved/logo-v8-horizontal-on-light.svg" alt="" aria-hidden="true">
+  <div class="wrap-md pricing">
+    <div class="pricing-eyebrow-block">
+      <span class="eyebrow"
+            data-en="Brand + Website" data-pt="Marca + Site" data-es="Marca + Site">Brand + Website</span>
+    </div>
+    <div class="price-num gold-grad">$2,500</div>
+    <p class="price-line"
+       data-en="Brand and Site combined."
+       data-pt="Marca e Site juntos." data-es="Marca e Site juntos.">
+      Brand and Site combined.
+    </p>
+    <p class="price-line"
+       data-en="Three weeks from deposit to launch."
+       data-pt="Três semanas do depósito ao lançamento." data-es="Três semanas do depósito ao lançamento.">
+      Three weeks from deposit to launch.
+    </p>
+    <p class="price-terms"
+       data-en="50% to start. 50% on delivery."
+       data-pt="50% pra começar. 50% na entrega." data-es="50% pra começar. 50% na entrega.">
+      50% to start. 50% on delivery.
+    </p>
+    <div class="hairline-80 hairline"></div>
+    <div class="price-cta-block">
+      <a href="#brief" class="cta"
+         data-en="Start the brief →" data-pt="Começar o briefing →" data-es="Começar o briefing →">
+        Start the brief →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RETAINER (quiet touchpoint after pricing) ──────────────────────────────── -->
+<section class="section retainer-section" id="retainer">
+  <div class="wrap-md">
+    <div class="retainer-card">
+      <span class="eyebrow"
+            data-en="Beyond launch" data-pt="Após o lançamento" data-es="Após o lançamento">Beyond launch</span>
+      <p class="retainer-line"
+         data-en="Retainer available on request."
+         data-pt="Retainer disponível sob consulta." data-es="Retainer disponível sob consulta.">
+        Retainer available on request.
+      </p>
+      <p class="retainer-sub"
+         data-en="Ongoing brand stewardship after the build ships."
+         data-pt="Acompanhamento contínuo da marca após o lançamento." data-es="Acompanhamento contínuo da marca após o lançamento.">
+        Ongoing brand stewardship after the build ships.
+      </p>
+      <a href="mailto:johndavid@prosperinamerica.com?subject=GO+BIG+retainer+enquiry"
+         class="cta"
+         data-en="Ask about a retainer →"
+         data-pt="Falar sobre um retainer →" data-es="Falar sobre um retainer →">
+        Ask about a retainer →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BRIEF ──────────────────────────────────────────────────────────────────── -->
+<section class="section with-rule" id="brief">
+  <div class="wrap-md">
+    <div class="brief-eyebrow">
+      <span class="eyebrow"
+            data-en="The brief" data-pt="O briefing" data-es="O briefing">The brief</span>
+    </div>
+    <p class="brief-lede"
+       data-en="Tell us where you are. Tell us where you want to be. We reply within 24 hours on WhatsApp."
+       data-pt="Conta onde você está. Conta onde quer chegar. Respondemos no WhatsApp em até 24 horas." data-es="Conta onde você está. Conta onde quer chegar. Respondemos no WhatsApp em até 24 horas.">
+      Tell us where you are. Tell us where you want to be. We reply within 24 hours on WhatsApp.
+    </p>
+
+    <form class="brief-form"
+          id="brief-form"
+          name="go-big-brief"
+          method="POST"
+          action="/obrigado-go-big.html"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="go-big-brief">
+      <input type="hidden" name="subject" value="[GOBIG-BRIEF] New brief from prosperinamerica.com">
+      <p class="honeypot">
+        <label>Do not fill: <input name="bot-field"></label>
+      </p>
+
+      <div class="form-row">
+        <label for="name" data-en="Name" data-pt="Nome" data-es="Nome">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="business" data-en="Business" data-pt="Negócio" data-es="Negócio">Business</label>
+        <input type="text" id="business" name="business" required>
+      </div>
+      <div class="form-row">
+        <label for="what-do-you-do"
+               data-en="What do you do" data-pt="O que vocês fazem" data-es="O que vocês fazem">What do you do</label>
+        <textarea id="what-do-you-do" name="what_do_you_do" required></textarea>
+      </div>
+      <div class="form-row">
+        <label for="not-working"
+               data-en="What is not working" data-pt="O que não está funcionando" data-es="O que não está funcionando">What is not working</label>
+        <textarea id="not-working" name="not_working" required></textarea>
+      </div>
+      <div class="form-row">
+        <label for="want"
+               data-en="What do you want" data-pt="O que você quer" data-es="O que você quer">What do you want</label>
+        <textarea id="want" name="want" required></textarea>
+      </div>
+      <div class="form-row">
+        <label for="budget"
+               data-en="Budget range" data-pt="Faixa de investimento" data-es="Faixa de investimento">Budget range</label>
+        <div class="select-wrap">
+          <select id="budget" name="budget" required>
+            <option value="" data-en="Select" data-pt="Selecione" data-es="Selecione">Select</option>
+            <option value="under-1k" data-en="Under $1,000" data-pt="Até $1.000" data-es="Até Até $1.000.000">Under $1,000</option>
+            <option value="1k-3k" data-en="$1,000 to $3,000" data-pt="$1.000 a $3.000" data-es="$1.000 a $3.000.000 a $3.000">$1,000 to $3,000</option>
+            <option value="3k-6k" data-en="$3,000 to $6,000" data-pt="$3.000 a $6.000" data-es="$3.000 a $6.000">$3,000 to $6,000</option>
+            <option value="over-6k" data-en="Over $6,000" data-pt="Acima de $6.000" data-es="Acima de $6.000">Over $6,000</option>
+            <option value="not-sure" data-en="Not sure yet" data-pt="Ainda não sei" data-es="Ainda não sei">Not sure yet</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="whatsapp"
+               data-en="WhatsApp (with country code)" data-pt="WhatsApp (com DDI)" data-es="WhatsApp (com DDI)">WhatsApp (with country code)</label>
+        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="+1 555 555 5555">
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="submit-btn"
+                data-en="Submit brief" data-pt="Enviar briefing" data-es="Enviar briefing">
+          Submit brief
+        </button>
+        <span class="submit-note"
+              data-en="Replies within 24 hours on WhatsApp."
+              data-pt="Respondemos no WhatsApp em até 24 horas." data-es="Respondemos no WhatsApp em até 24 horas.">
+          Replies within 24 hours on WhatsApp.
+        </span>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- CLOSING ─────────────────────────────────────────────────────────────── -->
+<section class="closing" aria-label="Closing">
+  <svg class="gold-ribbon ribbon-tl" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <svg class="gold-ribbon ribbon-tr" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <svg class="gold-ribbon ribbon-bl" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <svg class="gold-ribbon ribbon-br" aria-hidden="true" focusable="false"><use href="#goldRibbon"/></svg>
+  <img class="ghost-mark" src="/assets/gobig/approved/logo-v8-horizontal-on-light.svg" alt="" aria-hidden="true">
+  <div class="wrap-md closing-inner">
+    <p class="closing-line"
+       data-en="If your business needs to be taken seriously, &lt;em&gt;we can talk&lt;/em&gt;."
+       data-pt="Se o seu negócio precisa ser levado a sério, &lt;em&gt;a gente conversa&lt;/em&gt;."
+       data-es="Si tu negocio necesita ser tomado en serio, &lt;em&gt;podemos hablar&lt;/em&gt;.">
+      If your business needs to be taken seriously, <em>we can talk</em>.
+    </p>
+    <div class="closing-mark">
+      <img src="/assets/gobig/approved/logo-v8-horizontal-on-light.svg" alt="GO BIG" width="1800" height="540" loading="lazy" decoding="async">
+    </div>
+    <p class="closing-attr"
+       data-en="A Prosper In America company"
+       data-pt="Uma marca Prosper In America"
+       data-es="Una marca Prosper In America">
+      A Prosper In America company
+    </p>
+  </div>
+</section>
+
+<!-- UNIFIED SITE FOOTER ─────────────────────────────────────────────────── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
+    <a class="site-footer-logo" href="/index.html" aria-label="Prosper In America">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" loading="lazy" decoding="async">
+    </a>
+    <p class="site-footer-tagline"
+       data-en="Building real lives in America. Faith, structure, and purpose."
+       data-pt="Construindo vidas reais na América. Fé, estrutura e propósito."
+       data-es="Construyendo vidas reales en América. Fe, estructura y propósito.">
+      Building real lives in America. Faith, structure, and purpose.
+    </p>
+    <nav class="site-footer-nav" aria-label="Footer navigation">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">About Us</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Services</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Free Guide</a>
+      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contact</a>
+    </nav>
+    <p class="site-footer-copy">© 2026 The Go Big Agency LLC</p>
+    <p class="site-footer-faith" aria-label="Matthew 6:33">Mt 6:33</p>
+    <p class="site-footer-design"><a href="/go-big.html">Designed by GO BIG</a></p>
+    <p class="site-footer-fogo"
+       data-en="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Coming soon."
+       data-pt="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Em breve."
+       data-es="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Pronto.">
+      O FOGO LIVE. <a href="/fogo-live.html">@ofogolive</a>. Coming soon.
+    </p>
+  </div>
 </footer>
 
-<script>
-  var currentLang = 'pt';
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
 
+<script>
+  // Apps Script endpoint placeholder. Phase 6 wires the live web app URL.
+  // Until set, native Netlify Forms handles capture and redirect.
+  var APPS_SCRIPT_ENDPOINT = '';
+
+  var currentLang = 'en';
+
+  // ES translations are currently PT placeholders. Mark element-by-element
+  // when a real ES translation lands. TODO: replace data-es="..." values
+  // throughout this file with native Spanish copy when JD provides ES strings.
   function setLanguage(lang) {
     currentLang = lang;
-    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es' : 'en');
 
     document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
-      el.innerHTML = el.getAttribute('data-' + lang);
+      var v = el.getAttribute('data-' + lang);
+      if (el.tagName === 'OPTION') {
+        el.textContent = v;
+      } else {
+        el.innerHTML = v;
+      }
     });
 
     document.querySelectorAll('.lang-btn').forEach(function(btn) {
@@ -740,11 +1283,123 @@
     });
   }
 
+  setLanguage('en');
+  document.documentElement.classList.add('lang-ready');
+
   document.querySelectorAll('.lang-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var lang = this.getAttribute('data-lang');
       if (lang !== currentLang) setLanguage(lang);
     });
+  });
+
+  // Apps Script forwarding hook. Activates only when APPS_SCRIPT_ENDPOINT is set.
+  var briefForm = document.getElementById('brief-form');
+  if (briefForm && APPS_SCRIPT_ENDPOINT) {
+    briefForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(briefForm);
+      fetch(APPS_SCRIPT_ENDPOINT, { method: 'POST', body: formData })
+        .catch(function(){})
+        .finally(function() {
+          window.location.href = '/obrigado-go-big.html';
+        });
+    });
+  }
+</script>
+
+<script>
+  // Precision Line System. Loads after GSAP/Lenis CDNs are ready.
+  // Honors prefers-reduced-motion.
+  window.addEventListener('load', function () {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || !window.gsap) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.defaults({ ease: 'power2.out' });
+
+    // Hero load reveal
+    gsap.timeline({ delay: 0.05 })
+      .from('.hero h1', { y: 18, opacity: 0, duration: 0.65 })
+      .from('.hero-rule', { width: 0, duration: 0.75, ease: 'expo.out' }, 0.18)
+      .from('.hero-sub', { y: 10, opacity: 0, duration: 0.45 }, 0.42)
+      .from('.hero .cta', { y: 10, opacity: 0, duration: 0.45 }, 0.56);
+
+    // Section reveals
+    gsap.utils.toArray('.section').forEach(function (section) {
+      // ALL eyebrow-rules within this section animate from 0 width on enter
+      var eyeRules = section.querySelectorAll('.eyebrow-rule');
+      if (eyeRules.length) {
+        gsap.from(eyeRules, {
+          width: 0, duration: 0.7, ease: 'expo.out',
+          scrollTrigger: { trigger: section, start: 'top 78%', once: true }
+        });
+      }
+      var items = section.querySelectorAll('.stmt-line, .ww-list li, .anec-quote p, .price-line, .price-terms, .brief-lede');
+      if (items.length) {
+        gsap.from(items, {
+          y: 14, opacity: 0, duration: 0.55, stagger: 0.07,
+          scrollTrigger: { trigger: section, start: 'top 78%', once: true }
+        });
+      }
+      var heads = section.querySelectorAll('.ww-col h3');
+      if (heads.length) {
+        gsap.from(heads, {
+          y: 14, opacity: 0, duration: 0.55,
+          scrollTrigger: { trigger: section, start: 'top 78%', once: true }
+        });
+      }
+      var wide = section.querySelector('.hairline-80');
+      if (wide) {
+        gsap.from(wide, {
+          scaleX: 0, transformOrigin: '50% 50%', duration: 0.9, ease: 'expo.out',
+          scrollTrigger: { trigger: section, start: 'top 72%', once: true }
+        });
+      }
+    });
+
+    // Closing reveal
+    gsap.from('.closing-line, .closing-mark, .closing-attr, .closing-copy', {
+      y: 10, opacity: 0, duration: 0.55, stagger: 0.10,
+      scrollTrigger: { trigger: '.closing', start: 'top 82%', once: true }
+    });
+
+    // Pricing climax: counter from 0 to 2500 + lift in
+    var priceEl = document.querySelector('.price-num');
+    if (priceEl) {
+      var counterObj = { val: 0 };
+      ScrollTrigger.create({
+        trigger: '.section.pricing-section',
+        start: 'top 70%',
+        once: true,
+        onEnter: function () {
+          priceEl.textContent = '$0';
+          gsap.fromTo(priceEl,
+            { y: 24, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.7, ease: 'expo.out' }
+          );
+          gsap.to(counterObj, {
+            val: 2500,
+            duration: 1.4,
+            ease: 'power2.out',
+            onUpdate: function () {
+              priceEl.textContent = '$' + Math.round(counterObj.val).toLocaleString('en-US');
+            }
+          });
+        }
+      });
+    }
+
+    // Lenis smooth scroll (desktop only)
+    if (window.Lenis && window.matchMedia('(min-width: 1024px)').matches) {
+      var lenis = new Lenis({
+        duration: 1.15,
+        easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }
+      });
+      lenis.on('scroll', ScrollTrigger.update);
+      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+    }
   });
 </script>
 

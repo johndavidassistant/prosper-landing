@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  V4 / Direction 2 — GB + structured frame, white ground
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="80" width="920" height="920"
+        fill="none" stroke="#C8952E" stroke-width="28"/>
+  <text x="540" y="555"
+        font-family="'Cabinet Grotesk Variable','Cabinet Grotesk','Inter',sans-serif"
+        font-weight="800"
+        font-size="500"
+        letter-spacing="-0.04em"
+        fill="#000000"
+        text-anchor="middle"
+        dominant-baseline="middle">GB</text>
+</svg>

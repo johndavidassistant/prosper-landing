@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  THE GO BIG AGENCY — Wordmark V7 (horizontal, navy on gold)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 540" width="1800" height="540">
+  <rect width="1800" height="540" fill="#C8952E"/>
+
+  <text x="144" y="290"
+        font-family="'Playfair Display','Playfair Display Black',serif"
+        font-weight="900"
+        font-size="220"
+        letter-spacing="-0.025em"
+        fill="#0A1628"
+        dominant-baseline="alphabetic">GO BIG.</text>
+
+  <text x="148" y="370"
+        font-family="'Inter','Helvetica Neue',sans-serif"
+        font-weight="500"
+        font-size="24"
+        letter-spacing="0.4em"
+        fill="#0A1628"
+        text-transform="uppercase">THE GO BIG AGENCY</text>
+</svg>

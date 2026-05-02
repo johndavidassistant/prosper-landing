@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Go Big — Logo V1 Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --gold: #C8952E;
+    --cream: #F6F1E9;
+    --navy: #0F1B2D;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #1a1a1a;
+    color: #e5e5e5;
+    padding: 40px;
+    line-height: 1.5;
+  }
+  h1 { font-weight: 700; margin-bottom: 8px; }
+  h2 { font-weight: 600; margin: 32px 0 12px; color: var(--gold); }
+  .meta { color: #888; margin-bottom: 24px; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 32px; }
+  .card { padding: 24px; border-radius: 12px; }
+  .card .label { display: block; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 16px; }
+  .bg-black { background: var(--black); color: white; }
+  .bg-gold { background: var(--gold); color: var(--black); }
+  .bg-white { background: #fff; color: var(--black); }
+  .bg-cream { background: var(--cream); color: var(--black); }
+  .bg-navy { background: var(--navy); color: white; }
+  .row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+  img.mono-1080 { width: 320px; height: 320px; }
+  img.mono-400 { width: 200px; height: 200px; }
+  img.mono-128 { width: 128px; height: 128px; }
+  img.mono-64 { width: 64px; height: 64px; }
+  img.wordmark { width: 100%; max-width: 480px; height: auto; }
+  .ig-mock { display: flex; align-items: center; gap: 12px; padding: 12px; background: white; color: black; border-radius: 8px; max-width: 360px; }
+  .ig-mock img { border-radius: 50%; width: 56px; height: 56px; }
+  .ig-mock .handle { font-weight: 600; font-size: 14px; }
+  .ig-mock .sub { font-size: 12px; color: #666; }
+  .proposal-mock { background: #fff; color: #000; padding: 48px 32px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }
+  .proposal-mock .top img { width: 240px; }
+  .proposal-mock .body { font-size: 14px; color: #333; }
+  .proposal-mock h3 { font-size: 28px; font-weight: 700; margin: 16px 0; }
+  .note { background: #232323; padding: 16px 20px; border-left: 3px solid var(--gold); border-radius: 4px; font-size: 13px; color: #ccc; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<h1>The Go Big Agency — Logo V1 Preview</h1>
+<div class="meta">Generated 2026-04-28 · Open this file in Safari/Chrome · Brief locked across Q1–Q13</div>
+
+<h2>1 — Monogram on multiple grounds</h2>
+<div class="grid">
+  <div class="card bg-black">
+    <span class="label">On Black (Primary)</span>
+    <img class="mono-1080" src="logo-monogram.svg" alt="GB on black">
+  </div>
+  <div class="card bg-cream">
+    <span class="label">On Cream</span>
+    <img class="mono-1080" src="logo-monogram.svg" alt="GB on cream">
+  </div>
+  <div class="card bg-navy">
+    <span class="label">On Navy (sister to PIA)</span>
+    <img class="mono-1080" src="logo-monogram.svg" alt="GB on navy">
+  </div>
+  <div class="card bg-gold">
+    <span class="label">On Gold</span>
+    <img class="mono-1080" src="logo-monogram.svg" alt="GB on gold">
+  </div>
+</div>
+
+<h2>2 — Monogram at scale (recognition test)</h2>
+<div class="card bg-black">
+  <span class="label">Same mark, four sizes — 1080 / 400 / 128 / 64 px</span>
+  <div class="row">
+    <img class="mono-1080" src="logo-monogram.svg" alt="">
+    <img class="mono-400" src="logo-monogram.svg" alt="">
+    <img class="mono-128" src="logo-monogram.svg" alt="">
+    <img class="mono-64" src="logo-monogram.svg" alt="">
+  </div>
+  <div class="note">If the GB still reads at 64px (the favicon and IG comment-thread size), we win.</div>
+</div>
+
+<h2>3 — Wordmark</h2>
+<div class="grid">
+  <div class="card bg-cream">
+    <span class="label">Wordmark on cream / proposal cover</span>
+    <img class="wordmark" src="logo-wordmark.svg" alt="GO BIG. wordmark on cream">
+  </div>
+  <div class="card bg-black">
+    <span class="label">Wordmark dark variant</span>
+    <img class="wordmark" src="logo-wordmark-dark.svg" alt="GO BIG. wordmark on black">
+  </div>
+</div>
+
+<h2>4 — Real-world contexts</h2>
+
+<div class="card bg-white" style="margin-bottom: 24px;">
+  <span class="label">Instagram profile (your eye-test)</span>
+  <div class="row">
+    <div class="ig-mock">
+      <img src="logo-monogram.svg" alt="">
+      <div>
+        <div class="handle">thegobigagency</div>
+        <div class="sub">Brand. Site. Marketing.</div>
+      </div>
+    </div>
+    <div class="ig-mock">
+      <img src="logo-monogram.svg" alt="" style="filter: drop-shadow(0 0 1px rgba(0,0,0,.2))">
+      <div>
+        <div class="handle">thegobigagency</div>
+        <div class="sub">Comment thread context — 32px</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card proposal-mock">
+  <div class="top">
+    <img src="logo-wordmark.svg" alt="GO BIG. wordmark">
+  </div>
+  <div class="body">
+    <h3>Proposal — Brand + Site Combo</h3>
+    <p>Prepared for [Client]. Investment: $2,500. Timeline: 3 weeks.</p>
+  </div>
+</div>
+
+<h2>5 — Decisions baked into this V1</h2>
+<div class="card bg-black">
+  <ul style="padding-left: 20px; line-height: 1.8;">
+    <li><strong>Palette:</strong> matte black + gold #C8952E (shared with PIA) + cream/white</li>
+    <li><strong>Type:</strong> heavy extended sans — Druk Wide / Tungsten Wide preferred, Saira (Google Font, free) as fallback</li>
+    <li><strong>Period in gold:</strong> recurring motif. Connects monogram and wordmark.</li>
+    <li><strong>Thin gold frame on monogram:</strong> minimal geometric structure (Q6 secondary).</li>
+    <li><strong>Tagline restraint:</strong> "THE GO BIG AGENCY" tracked very tight, never shouted.</li>
+  </ul>
+</div>
+
+<h2>6 — How to use these files</h2>
+<div class="card bg-white">
+  <p style="font-size: 14px; line-height: 1.7;">
+    <strong>For IG profile picture:</strong> right-click <code>logo-monogram.svg</code> → "Open With Preview" → Export as PNG, 1080×1080. Upload.<br><br>
+    <strong>For WhatsApp Business avatar:</strong> same PNG. WA crops to circle — the monogram still reads.<br><br>
+    <strong>For email signature:</strong> use <code>logo-wordmark.svg</code> at 240px wide.<br><br>
+    <strong>For proposal cover:</strong> see mock above. <code>logo-wordmark.svg</code> top-left.<br><br>
+    <strong>If the type does not feel right:</strong> install Druk Wide or Tungsten Wide on your Mac and reload this page. Premium fonts will render automatically (font stack falls through).
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  GO BIG — V8 / Square / NO tagline (wordmark only, optical center)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#D6A348"/>
+      <stop offset="50%" stop-color="#C8952E"/>
+      <stop offset="100%" stop-color="#B5841F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#0A1628"/>
+
+  <text x="540" y="560"
+        font-family="'Playfair Display','Playfair Display Black',serif"
+        font-weight="900"
+        font-size="260"
+        letter-spacing="-0.030em"
+        fill="url(#goldGrad)"
+        text-anchor="middle"
+        dominant-baseline="middle">GO BIG</text>
+</svg>

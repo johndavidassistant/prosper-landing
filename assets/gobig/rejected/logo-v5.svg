@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Go Big Agency — Logo V5 (custom vector paths, unified system)
+
+  Design system (locked):
+    Cap height H            = 700
+    Stem width  S            = 130   (~18.5% of H, modern heavy grotesk)
+    Corner radius R          = 60    (R = S/2 + 10, system rule)
+    Letter widths            G=540, B=460 (G:B ratio 1.174, balanced for visual weight)
+    Inter-letter spacing     30      (S/4.3, optical not nominal)
+    Chamfer cut on B         120 px each leg, exactly 45°
+    Gold accent              #C8952E hairline along the chamfer edge
+
+  Every metric derives from S. No arbitrary numbers, no defaults.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <rect width="1080" height="1080" fill="#000000"/>
+
+  <!-- G: single closed path. Outer perimeter wraps around middle bar + right
+       return as inset features. Lower counter exits via the bottom of the
+       perimeter, so no separate hole needed. -->
+  <path fill="#FFFFFF" d="
+    M 85 190
+    L 505 190
+    A 60 60 0 0 1 565 250
+    L 565 320
+    L 155 320
+    L 155 760
+    L 435 760
+    L 435 590
+    L 265 590
+    L 265 510
+    L 565 510
+    L 565 830
+    A 60 60 0 0 1 505 890
+    L 85 890
+    A 60 60 0 0 1 25 830
+    L 25 250
+    A 60 60 0 0 1 85 190
+    Z
+  "/>
+
+  <!-- B: outer perimeter (with 45° chamfer replacing the bottom-right round)
+       + 2 inner counters as holes via evenodd fill. -->
+  <path fill="#FFFFFF" fill-rule="evenodd" d="
+    M 655 190
+    L 995 190
+    A 60 60 0 0 1 1055 250
+    L 1055 770
+    L 935 890
+    L 655 890
+    A 60 60 0 0 1 595 830
+    L 595 250
+    A 60 60 0 0 1 655 190
+    Z
+    M 725 320
+    L 725 505
+    L 925 505
+    L 925 320
+    Z
+    M 725 595
+    L 725 760
+    L 925 760
+    L 925 595
+    Z
+  "/>
+
+  <!-- Gold hairline marking the chamfer edge. System rule: the cut is named,
+       not hidden. Off-White structural-tension reference. -->
+  <line x1="1055" y1="770" x2="935" y2="890"
+        stroke="#C8952E" stroke-width="6" stroke-linecap="square"/>
+</svg>

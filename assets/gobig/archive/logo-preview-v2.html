@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Go Big — Logo V2 Preview (A vs B)</title>
+<style>
+  :root { --black: #000000; --gold: #C8952E; --cream: #F6F1E9; --navy: #0F1B2D; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    background: #1a1a1a; color: #e5e5e5; padding: 40px; line-height: 1.5;
+  }
+  h1 { font-weight: 700; margin-bottom: 8px; font-size: 28px; }
+  h2 { font-weight: 600; margin: 40px 0 16px; color: var(--gold); font-size: 18px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .meta { color: #888; margin-bottom: 24px; font-size: 13px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .v { background: #232323; padding: 28px; border-radius: 12px; }
+  .v .vlabel { display: block; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.7; margin-bottom: 18px; }
+  .v .vtitle { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .v .vsub { font-size: 13px; opacity: 0.7; margin-bottom: 20px; }
+  .ground { padding: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .ground.bg-black { background: var(--black); }
+  .ground.bg-cream { background: var(--cream); }
+  .ground.bg-navy { background: var(--navy); }
+  .ground.bg-gold { background: var(--gold); }
+  .ground img { max-width: 100%; height: auto; }
+  .ground.size-xl img { width: 280px; }
+  .ground.size-md img { width: 140px; }
+  .ground.size-sm img { width: 64px; }
+  .ground.size-xs img { width: 32px; }
+  .row64 { display: flex; gap: 16px; align-items: center; padding: 16px; background: var(--black); border-radius: 8px; }
+  .row64 img { width: 64px; height: 64px; }
+  .row64 .text { font-size: 13px; opacity: 0.8; }
+  .ig-mock { display: flex; align-items: center; gap: 12px; padding: 14px; background: white; color: black; border-radius: 8px; }
+  .ig-mock img { border-radius: 50%; width: 56px; height: 56px; }
+  .ig-mock .handle { font-weight: 600; font-size: 14px; }
+  .ig-mock .sub { font-size: 12px; color: #666; }
+  .verdict { background: #111; padding: 20px; border-radius: 8px; border-left: 3px solid var(--gold); margin-top: 24px; }
+  .verdict h3 { color: var(--gold); margin-bottom: 8px; font-size: 14px; }
+  .verdict ul { padding-left: 20px; line-height: 1.7; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Go Big — Logo V2 (A vs B)</h1>
+<div class="meta">
+  V2 — heavier, custom-drawn paths (no font dependency). Stem width 35% of letter width. Tight kerning. Engineered, not typed.
+</div>
+
+<h2>Side by side — IG profile size (1080)</h2>
+<div class="pair">
+  <div class="v">
+    <span class="vlabel">Variant A</span>
+    <div class="vtitle">Pure GB</div>
+    <div class="vsub">No frame. No accents. Letters do all the work.</div>
+    <div class="ground bg-black size-xl"><img src="logo-monogram-v2-A.svg" alt="GB pure"></div>
+  </div>
+  <div class="v">
+    <span class="vlabel">Variant B</span>
+    <div class="vtitle">GB + Heavy Frame</div>
+    <div class="vsub">Same GB. Thick gold frame, stamped feel.</div>
+    <div class="ground bg-black size-xl"><img src="logo-monogram-v2-B.svg" alt="GB framed"></div>
+  </div>
+</div>
+
+<h2>The 64px stress test</h2>
+<div class="pair">
+  <div class="v">
+    <div class="row64">
+      <img src="logo-monogram-v2-A-64.png" alt="">
+      <div class="text">Variant A at 64px — IG comments, favicon</div>
+    </div>
+  </div>
+  <div class="v">
+    <div class="row64">
+      <img src="logo-monogram-v2-B-64.png" alt="">
+      <div class="text">Variant B at 64px — IG comments, favicon</div>
+    </div>
+  </div>
+</div>
+
+<h2>Across grounds (Variant A)</h2>
+<div class="pair">
+  <div class="ground bg-black size-md"><img src="logo-monogram-v2-A.svg" alt=""></div>
+  <div class="ground bg-cream size-md"><img src="logo-monogram-v2-A.svg" alt=""></div>
+  <div class="ground bg-navy size-md"><img src="logo-monogram-v2-A.svg" alt=""></div>
+  <div class="ground bg-gold size-md"><img src="logo-monogram-v2-A.svg" alt=""></div>
+</div>
+
+<h2>Across grounds (Variant B)</h2>
+<div class="pair">
+  <div class="ground bg-black size-md"><img src="logo-monogram-v2-B.svg" alt=""></div>
+  <div class="ground bg-cream size-md"><img src="logo-monogram-v2-B.svg" alt=""></div>
+  <div class="ground bg-navy size-md"><img src="logo-monogram-v2-B.svg" alt=""></div>
+  <div class="ground bg-gold size-md"><img src="logo-monogram-v2-B.svg" alt=""></div>
+</div>
+
+<h2>Instagram profile context</h2>
+<div class="pair">
+  <div class="v">
+    <span class="vlabel">Variant A</span>
+    <div class="ig-mock">
+      <img src="logo-monogram-v2-A.svg" alt="">
+      <div>
+        <div class="handle">thegobigagency</div>
+        <div class="sub">Brand. Site. Marketing.</div>
+      </div>
+    </div>
+  </div>
+  <div class="v">
+    <span class="vlabel">Variant B</span>
+    <div class="ig-mock">
+      <img src="logo-monogram-v2-B.svg" alt="">
+      <div>
+        <div class="handle">thegobigagency</div>
+        <div class="sub">Brand. Site. Marketing.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Decision call</h2>
+<div class="verdict">
+  <h3>What changed from V1</h3>
+  <ul>
+    <li><strong>Custom-drawn paths</strong> — no font, no rendering drift. Same look on every machine.</li>
+    <li><strong>Stem width raised to 35% of letter width</strong> — V1 was Saira-thin. V2 is Druk-Wide-heavy.</li>
+    <li><strong>Removed gold dot</strong> — was decoration, not structure. Gone.</li>
+    <li><strong>Variant A: no frame.</strong> Pure letterform discipline. Bugatti EB / YSL territory.</li>
+    <li><strong>Variant B: 24px frame.</strong> Stamped, sealed, intentional. No hairline.</li>
+    <li><strong>64px legibility:</strong> both pass. Bars stay solid, mouth of G stays open, B bowls stay clear.</li>
+  </ul>
+</div>
+
+</body>
+</html>

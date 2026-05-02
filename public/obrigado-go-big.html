@@ -1,130 +1,302 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing recebido. The Go Big Agency.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Received. The Go Big Agency.</title>
+
+  <style>html:not(.lang-ready) body{visibility:hidden}</style>
+  <noscript><style>body{visibility:visible !important}</style></noscript>
+
+  <meta name="description" content="Brief received. The Go Big Agency replies within 24 hours on WhatsApp.">
+  <link rel="canonical" href="https://prosperinamerica.com/obrigado-go-big.html">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-var-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/playfair-display-var-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/site-header.css">
+  <link rel="stylesheet" href="/css/site-footer.css">
+
   <style>
-    :root {
-      --navy:      #1B2A4A;
-      --navy-dark: #111D33;
-      --cream:     #F5F0E8;
-      --gold:      #C9973A;
-      --gold-lite: #E8C06A;
-      --muted:     #5A6A84;
-      --serif:     'Lora', Georgia, serif;
-      --sans:      'Inter', system-ui, sans-serif;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: var(--sans);
-      background: var(--navy);
-      color: var(--cream);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 48px 24px;
-      text-align: center;
-    }
-    .check {
-      width: 72px; height: 72px;
-      background: var(--gold);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 32px;
-      margin: 0 auto 32px;
-      color: var(--navy-dark);
-      font-weight: 700;
-    }
-    h1 {
-      font-family: var(--serif);
-      font-size: clamp(26px, 5vw, 40px);
-      color: var(--cream);
-      line-height: 1.2;
-      max-width: 560px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 17px;
-      color: rgba(245,240,232,0.72);
-      max-width: 520px;
-      line-height: 1.75;
-      margin-bottom: 16px;
-    }
-    .divider {
-      width: 48px; height: 3px;
-      background: var(--gold);
-      border-radius: 2px;
-      margin: 32px auto;
-    }
-    .next-label {
-      font-size: 11px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--gold);
-      display: block;
-      margin-bottom: 14px;
-    }
-    .wa-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: var(--gold);
-      color: var(--navy);
-      font-size: 16px; font-weight: 700;
-      padding: 14px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 8px;
-      transition: background 0.2s;
-    }
-    .wa-btn:hover { background: var(--gold-lite); }
-    .home-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: transparent;
-      color: rgba(245,240,232,0.75);
-      font-size: 14px; font-weight: 600;
-      padding: 12px 28px;
-      border-radius: 8px;
-      border: 1.5px solid rgba(245,240,232,0.25);
-      text-decoration: none;
-      margin-top: 14px;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .home-btn:hover {
-      border-color: rgba(245,240,232,0.55);
-      color: var(--cream);
-    }
-    footer {
-      margin-top: 56px;
-      font-size: 12px;
-      color: rgba(245,240,232,0.25);
-    }
+  :root {
+    --navy:        #0A1628;
+    --navy-mid:    #11203A;
+    --navy-deep:   #06101F;
+    --gold:        #C8952E;
+    --gold-light:  #DBA94A;
+    --gold-top:    #D6A348;
+    --gold-mid:    #C8952E;
+    --gold-bot:    #B5841F;
+    --white:       #FFFFFF;
+    --w-92: rgba(255,255,255,0.92);
+    --w-78: rgba(255,255,255,0.78);
+    --w-65: rgba(255,255,255,0.65);
+    --w-50: rgba(255,255,255,0.50);
+    --w-40: rgba(255,255,255,0.40);
+    --w-25: rgba(255,255,255,0.25);
+    --gold-rule: rgba(200,149,46,0.30);
+    --display: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: var(--sans);
+    background: var(--navy);
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  .stage {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .stage::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% -10%, var(--navy-mid) 0%, var(--navy) 65%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, var(--navy-deep) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 50% 45%, rgba(200,149,46,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .stage::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg,  transparent 0 39px, rgba(255,255,255,0.012) 39px 40px),
+      repeating-linear-gradient(90deg, transparent 0 39px, rgba(255,255,255,0.012) 39px 40px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .stage-inner {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+  }
+  .panel {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .accent-rule {
+    width: 64px; height: 2px;
+    background: linear-gradient(90deg, var(--gold-top), var(--gold-bot));
+    margin: 0 auto 48px;
+    border-radius: 2px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    opacity: 0.85;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(56px, 11vw, 112px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--white);
+    margin-bottom: 36px;
+  }
+
+  .lede {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2.6vw, 26px);
+    line-height: 1.5;
+    color: var(--w-78);
+    max-width: 36ch;
+    margin: 0 auto 56px;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--gold);
+    border-bottom: 1px solid rgba(200,149,46,0.40);
+    padding-bottom: 4px;
+    transition: color 160ms ease, border-color 160ms ease, gap 160ms ease;
+  }
+  .cta:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold-light);
+    gap: 14px;
+  }
+
+  .second {
+    margin-top: 28px;
+  }
+  .second a {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--w-50);
+    transition: color 160ms ease;
+  }
+  .second a:hover { color: var(--gold); }
+
+  /* OBRIGADO BANNER (top) */
+  .obrigado-banner {
+    position: relative;
+    z-index: 2;
+    padding: 22px 24px 18px;
+    border-bottom: 1px solid rgba(200,149,46,0.10);
+    text-align: center;
+  }
+  .obrigado-banner a { display: inline-block; }
+  .obrigado-banner img {
+    height: 28px; width: auto;
+    display: block; margin: 0 auto;
+    opacity: 0.92;
+  }
+
+  @media (max-width: 480px) {
+    .stage-inner { padding: 64px 20px; }
+    h1 { letter-spacing: -0.02em; }
+    .accent-rule { margin-bottom: 36px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cta, .second a, .footer-copy a { transition: none !important; }
+  }
   </style>
 </head>
 <body>
 
-  <div class="check">✓</div>
+<!-- ══ UNIFIED SITE HEADER (identical across all pages) ════════════════════ -->
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="/" aria-label="Prosper In America — Home">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" decoding="async">
+    </a>
+    <nav class="site-header-nav" aria-label="Primary">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
+      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
+    </nav>
+    <div class="site-header-right">
+      <div class="site-lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <h1>Recebido. Já tá na nossa fila.</h1>
+<div class="stage">
+  <div class="stage-inner">
+    <div class="panel">
+      <div class="accent-rule"></div>
+      <span class="eyebrow"
+            data-en="Brief received" data-pt="Briefing recebido">Brief received</span>
+      <h1 data-en="Received." data-pt="Recebido.">Received.</h1>
+      <p class="lede"
+         data-en="We will reply within 24 hours on WhatsApp. No automated response, no chase."
+         data-pt="A gente responde no WhatsApp em até 24 horas. Sem resposta automática, sem cobrança.">
+        We will reply within 24 hours on WhatsApp. No automated response, no chase.
+      </p>
+      <a href="https://wa.me/13526303930?text=Hi%2C%20I%20just%20submitted%20the%20Go%20Big%20brief." class="cta"
+         target="_blank" rel="noopener"
+         data-en="Open WhatsApp now →" data-pt="Abrir o WhatsApp agora →">
+        Open WhatsApp now →
+      </a>
+      <div class="second">
+        <a href="/" data-en="Back to Prosper In America" data-pt="Voltar para Prosper In America">
+          Back to Prosper In America
+        </a>
+      </div>
+    </div>
+  </div>
 
-  <p>A gente vai ler o seu briefing com calma e te chamar no WhatsApp em até 24 horas com o próximo passo. Sem resposta automática, sem robô.</p>
+</div>
 
-  <div class="divider"></div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
+    <a class="site-footer-logo" href="/index.html" aria-label="Prosper In America">
+      <img src="/assets/logo-gold.png" alt="Prosper In America" width="180" height="52" loading="lazy" decoding="async">
+    </a>
+    <p class="site-footer-tagline"
+       data-en="Building real lives in America. Faith, structure, and purpose."
+       data-pt="Construindo vidas reais na América. Fé, estrutura e propósito."
+       data-es="Construyendo vidas reales en América. Fe, estructura y propósito.">
+      Building real lives in America. Faith, structure, and purpose.
+    </p>
+    <nav class="site-footer-nav" aria-label="Footer navigation">
+      <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">About Us</a>
+      <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Services</a>
+      <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Free Guide</a>
+      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contact</a>
+    </nav>
+    <p class="site-footer-copy">© 2026 The Go Big Agency LLC</p>
+    <p class="site-footer-faith" aria-label="Matthew 6:33">Mt 6:33</p>
+    <p class="site-footer-design"><a href="/go-big.html">Designed by GO BIG</a></p>
+    <p class="site-footer-fogo"
+       data-en="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Coming soon."
+       data-pt="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Em breve."
+       data-es="O FOGO LIVE. <a href='/fogo-live.html'>@ofogolive</a>. Pronto.">
+      O FOGO LIVE. <a href="/fogo-live.html">@ofogolive</a>. Coming soon.
+    </p>
+  </div>
+</footer>
 
-  <span class="next-label">Enquanto isso</span>
+<script>
+  var currentLang = 'en';
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es' : 'en');
+    document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.site-lang-toggle .lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+  // Honor browser language for thank-you page
+  var pref = (navigator.language || 'en').toLowerCase();
+  setLanguage(pref.indexOf('pt') === 0 ? 'pt' : (pref.indexOf('es') === 0 ? 'es' : 'en'));
+  document.documentElement.classList.add('lang-ready');
 
-  <p>Se quiser adiantar, manda um oi no WhatsApp pra gente já te encaixar na agenda.</p>
-
-  <a href="https://wa.me/13526303930?text=Oi%2C%20acabei%20de%20enviar%20o%20briefing%20do%20Go%20Big." target="_blank" rel="noopener" class="wa-btn">
-    Falar no WhatsApp
-  </a>
-
-  <a href="/" class="home-btn">Voltar ao site</a>
-
-  <footer>© 2026 Prosper In America. The Go Big Agency.</footer>
+  document.querySelectorAll('.site-lang-toggle .lang-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var l = this.getAttribute('data-lang');
+      if (l && l !== currentLang) setLanguage(l);
+    });
+  });
+</script>
 
 </body>
 </html>

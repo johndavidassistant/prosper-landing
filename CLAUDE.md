@@ -4,6 +4,16 @@ Operating brief for Claude Code sessions on this project. Read before doing anyt
 
 ---
 
+## Cowork ↔ Code handoff
+
+At the start of every session, read this file FIRST:
+
+`/Users/miriampalma/Documents/OBSIDIAN/REINO DE DEUS/01 Systems/Context for Code.md`
+
+That file holds the latest strategic, brand, and decision state from Cowork. It is the source of truth for any vision, audience, brand relationship, image direction, or offer-model decision. If anything in this file conflicts with assumptions in this repo, the Obsidian Context for Code file wins.
+
+After reading that file, follow its links to deeper decision notes as needed, then return to this CLAUDE.md and `docs/CREATIVE_PRODUCTION_STACK.md`.
+
 ## Project Identity
 
 **Site:** Prosper In America (PIA)
