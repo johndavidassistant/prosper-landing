@@ -270,7 +270,7 @@
             data-pt="↓ Baixar o Guia Financeiro"
             data-es="↓ Descargar la Guía Financiera">↓ Baixar o Guia Financeiro</span>
     </a>
-    <a href="/assets/prosper_in_america_guide.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
+    <a href="/assets/guides/financial-guide-en.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
       ↓ &nbsp;English version
     </a>
     <a href="/assets/prosper_in_america_guia_pt.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
@@ -367,8 +367,10 @@
     var dl = document.getElementById('dl-primary');
     if (dl) {
       // Financial guide currently has only PT and EN. ES uses PT as fallback.
-      var file = lang === 'en' ? 'prosper_in_america_guide.pdf' : 'prosper_in_america_guia_pt.pdf';
-      dl.href = '/assets/' + file;
+      // EN: V2 financial guide (Playfair/Inter, 29 pages). PT: legacy until V2 PT is built.
+      dl.href = lang === 'en'
+        ? '/assets/guides/financial-guide-en.pdf'
+        : '/assets/prosper_in_america_guia_pt.pdf';
     }
   }
   var lang = readLang();

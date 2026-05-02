@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>7 Steps to Building Your Life in America</title>
+<style>
+  @font-face{font-family:'Inter';font-style:normal;font-weight:400;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/inter-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:500;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/inter-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:600;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/inter-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:700;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/inter-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-latin.woff2') format('woff2');}
+  @font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-italic-latin.woff2') format('woff2');}
+  @font-face{font-family:'Playfair Display';font-style:italic;font-weight:600;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-italic-latin.woff2') format('woff2');}
+  @font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;src:url('file:///Users/miriampalma/AI-OS/projects/prosper-landing/public/assets/fonts/playfair-display-var-italic-latin.woff2') format('woff2');}
+
+  :root {
+    --navy: #0F1B2D;
+    --pearl: #FAF7F2;
+    --gold-deep: #8A6516;
+    --gold: #B58620;
+    --gold-bright: #D4A446;
+    --gold-pale: #FFF3C9;
+    --ink: #1F2937;
+    --ink-soft: #4B5563;
+    --rule: rgba(181, 134, 32, 0.35);
+  }
+
+  @page {
+    size: letter;
+    margin: 0.95in 0.9in 1.05in 0.9in;
+    background: var(--pearl);
+    @bottom-left { content: "A Prosper In America Guide"; font-family: 'Inter', sans-serif; font-size: 8pt; letter-spacing: 0.14em; text-transform: uppercase; color: #6B7280; padding-bottom: 0.3in; }
+    @bottom-right { content: counter(page); font-family: 'Playfair Display', serif; font-style: italic; font-size: 10pt; color: var(--gold-deep); padding-bottom: 0.3in; }
+    @bottom-center { content: "Mt 6:33"; font-family: 'Playfair Display', serif; font-style: italic; font-size: 9pt; color: var(--gold-deep); padding-bottom: 0.3in; }
+  }
+  @page cover { margin: 0; background: var(--navy); @bottom-left { content: none; } @bottom-right { content: none; } @bottom-center { content: none; } }
+  @page closing { margin: 0; background: var(--navy);
+    @bottom-left { content: "A Prosper In America Guide"; font-family: 'Inter', sans-serif; font-size: 8pt; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250, 247, 242, 0.7); padding: 0 0.9in 0.4in; }
+    @bottom-right { content: counter(page); font-family: 'Playfair Display', serif; font-style: italic; font-size: 10pt; color: var(--gold-bright); padding: 0 0.9in 0.4in; }
+    @bottom-center { content: "Mt 6:33"; font-family: 'Playfair Display', serif; font-style: italic; font-size: 9pt; color: var(--gold-bright); padding-bottom: 0.4in; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: 'Inter', -apple-system, sans-serif; color: var(--ink); background: transparent; font-weight: 400; line-height: 1.55; }
+
+  /* COVER */
+  .cover { page: cover; page-break-after: always; width: 8.5in; height: 11in; position: relative;
+    background: radial-gradient(ellipse 130% 65% at 50% 115%, rgba(232, 120, 43, 0.28) 0%, rgba(212, 164, 70, 0.18) 25%, rgba(15, 27, 45, 0) 60%), var(--navy);
+    color: var(--pearl); overflow: hidden; }
+  .cover-mark { position: absolute; top: 1.05in; left: 1in; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold-bright); }
+  .cover-center { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); text-align: center; padding: 0 0.9in; }
+  .cover-eyebrow { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 17pt; color: var(--gold-bright); margin-bottom: 0.18in; }
+  .cover-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 600; font-size: 42pt; line-height: 1.08; color: var(--gold-bright); margin-bottom: 0.3in; }
+  .cover-rule { width: 1in; height: 1.5px; background: var(--gold-bright); margin: 0 auto 0.3in; opacity: 0.85; }
+  .cover-subtitle { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 16pt; color: rgba(250, 247, 242, 0.92); margin-bottom: 0.55in; max-width: 5.5in; margin-left: auto; margin-right: auto; line-height: 1.3; }
+  .cover-byline { font-family: 'Inter', sans-serif; font-size: 11pt; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(250, 247, 242, 0.78); }
+  .cover-byline strong { font-weight: 600; color: var(--pearl); }
+  .cover-bottom { position: absolute; bottom: 1.1in; left: 0; right: 0; text-align: center; }
+  .cover-bottom-rule { width: 0.6in; height: 1px; background: var(--gold-bright); margin: 0 auto 0.18in; opacity: 0.7; }
+  .cover-bottom-line { font-family: 'Inter', sans-serif; font-size: 8.5pt; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(250, 247, 242, 0.68); }
+
+  /* PAGES */
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  /* OPENING NOTE */
+  .opening { padding-top: 0.5in; }
+  .opening-eyebrow { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.25in; }
+  .opening-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 700; font-size: 38pt; line-height: 1.1; color: var(--navy); margin-bottom: 0.2in; letter-spacing: -0.012em; }
+  .opening-rule { width: 0.85in; height: 1.5px; background: var(--gold); margin-bottom: 0.4in; }
+  .opening p { font-family: 'Inter', sans-serif; font-size: 13pt; line-height: 1.7; color: var(--ink); margin-bottom: 0.22in; max-width: 5.6in; }
+  .opening-sig { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 16pt; color: var(--gold-deep); margin-top: 0.45in; }
+  .opening-meta { font-family: 'Inter', sans-serif; font-size: 10pt; color: var(--ink-soft); margin-top: 0.1in; line-height: 1.5; }
+
+  /* HOW TO USE */
+  .how-eyebrow { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.25in; }
+  .how-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 700; font-size: 32pt; line-height: 1.1; color: var(--navy); margin-bottom: 0.2in; letter-spacing: -0.012em; }
+  .how-rule { width: 0.65in; height: 1.5px; background: var(--gold); margin-bottom: 0.35in; }
+  .how p { font-family: 'Inter', sans-serif; font-size: 12pt; line-height: 1.7; color: var(--ink); margin-bottom: 0.18in; max-width: 5.7in; }
+  .steps-list { list-style: none; padding: 0; margin: 0.35in 0; max-width: 5.7in; border-top: 1px solid var(--rule); }
+  .steps-list li { font-family: 'Inter', sans-serif; font-size: 12pt; padding: 0.15in 0; border-bottom: 1px solid var(--rule); display: flex; gap: 0.18in; align-items: baseline; }
+  .steps-list .num { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; color: var(--gold-deep); font-size: 11pt; min-width: 0.32in; }
+  .steps-list .label { color: var(--navy); font-weight: 500; }
+
+  /* CHAPTERS */
+  .chapter { page-break-after: always; padding-top: 0.45in; }
+  .chapter-num { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 12pt; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.18in; }
+  .chapter-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 700; font-size: 32pt; line-height: 1.08; color: var(--navy); margin-bottom: 0.18in; letter-spacing: -0.012em; max-width: 5.8in; }
+  .chapter-lede { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 14.5pt; color: var(--ink-soft); margin-bottom: 0.35in; max-width: 5.6in; line-height: 1.4; }
+  .chapter-rule { width: 0.65in; height: 1.5px; background: var(--gold); margin-bottom: 0.4in; }
+
+  /* BODY CONTENT */
+  .chapter h3.subhead { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 600; font-size: 17pt; color: var(--navy); margin-top: 0.32in; margin-bottom: 0.14in; line-height: 1.2; max-width: 5.8in; }
+  .chapter p { font-family: 'Inter', sans-serif; font-size: 12pt; line-height: 1.65; color: var(--ink); margin-bottom: 0.18in; max-width: 5.8in; }
+  .chapter p.lede-line { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 13.5pt; color: var(--ink-soft); margin-bottom: 0.2in; }
+  .chapter ul.bullets { list-style: none; padding: 0; margin: 0.05in 0 0.22in; max-width: 5.8in; }
+  .chapter ul.bullets li { font-family: 'Inter', sans-serif; font-size: 12pt; line-height: 1.55; color: var(--ink); padding-left: 0.28in; position: relative; margin-bottom: 0.08in; }
+  .chapter ul.bullets li::before { content: "▪"; position: absolute; left: 0.08in; color: var(--gold); font-size: 11pt; }
+  .chapter blockquote.pullquote { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 15pt; color: var(--navy); border-left: 2px solid var(--gold); padding: 0.05in 0 0.05in 0.22in; margin: 0.3in 0 0.3in 0; max-width: 5.5in; line-height: 1.4; }
+
+  /* ACTION BOX */
+  .action-box { background: rgba(212, 164, 70, 0.08); border-left: 3px solid var(--gold); padding: 0.22in 0.28in; margin: 0.35in 0 0.18in; max-width: 5.8in; }
+  .action-box .label { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 9.5pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.12in; }
+  .action-box ul { list-style: none; padding: 0; margin: 0; }
+  .action-box li { font-family: 'Inter', sans-serif; font-size: 11.5pt; line-height: 1.55; color: var(--ink); padding-left: 0.28in; position: relative; margin-bottom: 0.07in; }
+  .action-box li::before { content: "■"; position: absolute; left: 0.05in; color: var(--gold); font-size: 9pt; top: 0.04in; }
+
+  /* DISCLAIMER */
+  .disclaimer { font-family: 'Inter', sans-serif; font-style: italic; font-size: 9.5pt; line-height: 1.5; color: var(--ink-soft); margin-top: 0.18in; max-width: 5.8in; }
+
+  /* TRANSITION LINE (between chapters) */
+  .transition { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 12pt; color: var(--gold-deep); margin-top: 0.25in; max-width: 5.6in; }
+
+  /* CLOSING */
+  .closing { page: closing; page-break-before: always; page-break-after: avoid; width: 8.5in; height: 11in; background: var(--navy); color: var(--pearl); position: relative; overflow: hidden; }
+  .closing-inner { position: absolute; inset: 0; padding: 1.1in 0.9in 0.9in; }
+  .closing-eyebrow { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 0.22in; }
+  .closing-title { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-weight: 600; font-size: 32pt; line-height: 1.1; color: var(--gold-bright); margin-bottom: 0.18in; }
+  .closing-rule { width: 0.85in; height: 1.5px; background: var(--gold-bright); margin-bottom: 0.4in; opacity: 0.85; }
+  .closing p { font-family: 'Inter', sans-serif; font-size: 12pt; line-height: 1.65; color: rgba(250, 247, 242, 0.95); margin-bottom: 0.16in; max-width: 5.6in; }
+  .closing p.tight { margin-bottom: 0.06in; }
+  .closing .cta-block { margin-top: 0.4in; max-width: 5.6in; padding: 0.22in 0.28in; border-left: 2px solid var(--gold-bright); }
+  .closing .cta-label { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 9.5pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 0.08in; }
+  .closing .cta-link { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 15pt; color: var(--gold-bright); display: block; margin-top: 0.04in; }
+  .closing-sig { font-family: 'Playfair Display', 'Garamond', 'Cambria', 'Georgia', serif; font-style: italic; font-size: 15pt; color: var(--gold-bright); margin-top: 0.45in; }
+  .closing-coda { font-family: 'Inter', sans-serif; font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(250, 247, 242, 0.6); margin-top: 0.35in; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-mark">PROSPER IN AMERICA</div>
+  <div class="cover-center">
+    <div class="cover-eyebrow">Seven Steps to</div>
+    <h1 class="cover-title">Building Your Life<br>in America</h1>
+    <div class="cover-rule"></div>
+    <div class="cover-subtitle">The map nobody gave you.</div>
+    <div class="cover-byline">By <strong>John David &amp; Wellen</strong></div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-bottom-rule"></div>
+    <div class="cover-bottom-line">A Prosper In America Guide · Designed by GO BIG</div>
+  </div>
+</section>
+
+<!-- OPENING NOTE -->
+<section class="page opening">
+  <div class="opening-eyebrow">A Note From John David &amp; Wellen</div>
+  <h2 class="opening-title">You didn't come here<br>to stay where you started.</h2>
+  <div class="opening-rule"></div>
+  <p>Neither did we.</p>
+  <p>When we got here, we didn't know how to open an account. Didn't understand credit. Didn't even know where to begin. We learned by getting things wrong.</p>
+  <p>We know what it's like to work hard and not move forward.</p>
+  <p>This guide exists for one reason: to give you clarity, give you direction, and help you skip the price of mistakes nobody explained to you.</p>
+  <p>Read it carefully. And more importantly: put it into practice.</p>
+  <p>If you want help applying this to your real life, message us on WhatsApp.</p>
+  <div class="opening-sig">— John David &amp; Wellen</div>
+  <div class="opening-meta">Prosper In America<br>wa.me/13526303930</div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="page how">
+  <div class="how-eyebrow">How to use this guide</div>
+  <h2 class="how-title">Find where you are.<br>Start there.</h2>
+  <div class="how-rule"></div>
+
+  <p>This guide has 7 steps. They follow a sequence, but you don't have to start at the beginning.</p>
+  <p>If you already have a bank account, jump to Step 3. If credit is your biggest gap, start at Step 4. If you're worried about protecting your family, go straight to Step 5. If your foundation is set and you're ready to grow, Steps 6 and 7 are where the real shift happens.</p>
+
+  <ol class="steps-list" style="counter-reset: none;">
+    <li><span class="num">01</span><span class="label">Why Most Stay Stuck</span></li>
+    <li><span class="num">02</span><span class="label">Get Your Numbers in Order</span></li>
+    <li><span class="num">03</span><span class="label">Open the Right Account</span></li>
+    <li><span class="num">04</span><span class="label">Build Your Credit</span></li>
+    <li><span class="num">05</span><span class="label">Protect What You're Building</span></li>
+    <li><span class="num">06</span><span class="label">Grow Your Income</span></li>
+    <li><span class="num">07</span><span class="label">Build Something That Lasts</span></li>
+  </ol>
+
+  <p style="font-size: 10.5pt; color: var(--ink-soft); margin-top: 0.3in;"><em>Prosper In America is a consulting service. We help families organize the financial foundation, protect what they're building, and create paths to grow income. This guide is free. If you want help applying what's in here, the conversation starts on WhatsApp. No commitment.</em></p>
+</section>
+
+<!-- STEP 01 -->
+<section class="page chapter">
+  <div class="chapter-num">Step One</div>
+  <h2 class="chapter-title">Why Most Stay Stuck</h2>
+  <p class="chapter-lede">It's not a lack of effort. It's a lack of structure.</p>
+  <div class="chapter-rule"></div>
+
+  <p>You work hard. That's never been the problem.</p>
+  <p>The problem is not knowing what to do with what you earn.</p>
+  <p>You came here to build something. But years go by, and nothing changes. Money comes in. Money goes out. Nothing stays.</p>
+  <p>That's not a lack of effort. It's a lack of direction.</p>
+
+  <h3 class="subhead">Nobody gave you the map</h3>
+  <p>The financial system here doesn't explain itself. It assumes you already know. If you didn't know, you've been learning in the dark.</p>
+  <p>You decided based on what showed up. What someone said. What you saw on WhatsApp. What seemed to make sense in the moment.</p>
+  <p>And some of those decisions are already costing you. You just haven't seen how much yet.</p>
+
+  <h3 class="subhead">What changes when you have the right information</h3>
+  <ul class="bullets">
+    <li>You stop making decisions out of fear or assumptions.</li>
+    <li>You know which step comes first, and why.</li>
+    <li>You stop wasting time on the wrong things.</li>
+    <li>The path becomes clear.</li>
+  </ul>
+
+  <blockquote class="pullquote">The difference is almost never effort. It's almost always information &mdash; and knowing the order to act in.</blockquote>
+
+  <div class="action-box">
+    <div class="label">Your action for this step</div>
+    <ul>
+      <li>Identify the area where you feel most behind: bank account · credit history · tax filing · protecting my family · building income</li>
+      <li>When you know where you are, the next step is finding out what you actually have access to</li>
+    </ul>
+  </div>
+</section>
+
+<!-- STEP 02 -->
+<section class="page chapter">
+  <div class="chapter-num">Step Two</div>
+  <h2 class="chapter-title">Get Your Numbers in Order</h2>
+  <p class="chapter-lede">ITIN and SSN &mdash; what each one is and what each one opens.</p>
+  <div class="chapter-rule"></div>
+
+  <p>You know you need a number to start. You're just not sure exactly what each one opens.</p>
+
+  <h3 class="subhead">SSN &mdash; Social Security Number</h3>
+  <p>Issued by the Social Security Administration to people authorized to work in the United States. If you have work authorization &mdash; through a visa, green card, or other status &mdash; you may be eligible to apply.</p>
+  <p>If you don't have work authorization, you can't get an SSN. That's where the ITIN comes in.</p>
+
+  <h3 class="subhead">ITIN &mdash; Individual Taxpayer Identification Number</h3>
+  <p>Issued by the IRS. It's a tax-processing number. It's not proof of immigration status, not work authorization, and not a path to benefits on its own. It exists for people who have a U.S. tax filing obligation but aren't eligible for an SSN.</p>
+
+  <p style="margin-top: 0.18in;"><strong>What an ITIN is commonly used for:</strong></p>
+  <ul class="bullets">
+    <li>Opening certain bank accounts</li>
+    <li>Filing income tax returns</li>
+    <li>Building credit history at some institutions</li>
+    <li>Applying for certain financial products</li>
+  </ul>
+
+  <h3 class="subhead">How the application works, generally</h3>
+  <p>You fill out IRS Form W-7 and submit it with your tax return and identity documents. Certified agents &mdash; called Certifying Acceptance Agents (CAAs) &mdash; can help with the process. Many accounting firms and nonprofits offer this service. Processing times vary; check the IRS site for current estimates.</p>
+
+  <h3 class="subhead">What this means for you</h3>
+  <p>If you have an SSN, you already have an advantage. Understand what it opens, and what it doesn't.</p>
+  <p>If you have an ITIN, you have a real starting point. Many banks, lenders, and services accept it.</p>
+  <p>If you have neither, find out whether the ITIN applies to your situation. For many people without work authorization, it's the doorway to everything that follows.</p>
+
+  <blockquote class="pullquote">Don't wait to get an SSN before you start building. For many people, the ITIN is what opens the first real doors.</blockquote>
+
+  <div class="action-box">
+    <div class="label">Your action for this step</div>
+    <ul>
+      <li>Confirm whether you have an SSN or ITIN</li>
+      <li>If you have neither, research the ITIN process &mdash; an accountant or CAA can guide you</li>
+      <li>Write down what you want to use the number for: banking, credit, filing</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">Eligibility for ITIN and SSN depends on individual immigration status. General information only &mdash; consult a licensed tax or immigration professional for your specific case.</p>
+
+  <p class="transition">With the right number in hand, the next step is where your money will live.</p>
+</section>
+
+<!-- STEP 03 -->
+<section class="page chapter">
+  <div class="chapter-num">Step Three</div>
+  <h2 class="chapter-title">Open the Right Account</h2>
+  <p class="chapter-lede">If your account is wrong, everything that comes after gets harder.</p>
+  <div class="chapter-rule"></div>
+
+  <p>You can't build credit in the U.S. without an account. You can't pay rent, bills, and insurance reliably without one. And if you opened the wrong account, or skipped this step, you're paying a price you maybe haven't noticed.</p>
+
+  <h3 class="subhead">Why the wrong account slows everything down</h3>
+  <p>Not every bank account is built the same. Some were designed for people who are already established. They charge monthly fees, require minimum balances, and have penalties that drain what you're trying to build.</p>
+  <p>For someone starting from zero, an account with a $15 monthly fee and a $500 minimum balance isn't just inconvenient. That's not a fee. That's a leak.</p>
+
+  <h3 class="subhead">What to look for</h3>
+  <ul class="bullets">
+    <li><strong>Accepts your documents.</strong> Many banks accept ITIN, passport, and proof of U.S. address &mdash; no SSN required. Confirm directly before applying.</li>
+    <li><strong>No monthly fees.</strong> Some accounts charge you just to exist. Find one without a fee, or one easily waived.</li>
+    <li><strong>No minimum balance.</strong> If you're starting from zero, you shouldn't be penalized for low balances.</li>
+    <li><strong>Online and mobile access.</strong> Basic. If the account doesn't offer it, keep looking.</li>
+    <li><strong>A path to credit.</strong> Some banks offer credit-building products to existing customers. This matters more than most people realize.</li>
+  </ul>
+
+  <h3 class="subhead">What to avoid</h3>
+  <ul class="bullets">
+    <li><strong>Prepaid card as a substitute for an account.</strong> Doesn't report to credit bureaus. Doesn't build banking history. Emergency tool, not a foundation.</li>
+    <li><strong>Accounts with stacked fees.</strong> Monthly fee + overdraft fee + out-of-network ATM fee. Read the fee schedule before opening anything.</li>
+    <li><strong>Waiting until you have an SSN.</strong> In many cases, ITIN and passport are enough. Waiting costs time you don't need to lose.</li>
+  </ul>
+
+  <h3 class="subhead">Documents typically requested</h3>
+  <ul class="bullets">
+    <li>Valid passport</li>
+    <li>ITIN or SSN (when required)</li>
+    <li>Proof of U.S. address &mdash; lease, utility bill, or official mail</li>
+  </ul>
+
+  <p>Always call or check the institution's site before going. Requirements can vary between branches of the same bank.</p>
+
+  <blockquote class="pullquote">The right account doesn't impress anyone. It simply works &mdash; without taking your money while it does.</blockquote>
+
+  <div class="action-box">
+    <div class="label">Your action for this step</div>
+    <ul>
+      <li>Research 2&ndash;3 account options that accept your current documents</li>
+      <li>Compare the fees &mdash; the full schedule, not just the marketing</li>
+      <li>Confirm the requirements directly with the institution before applying</li>
+      <li>Open an account that doesn't charge you to exist</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">Account eligibility varies by institution and state. Confirm requirements directly with the bank or credit union before applying.</p>
+
+  <p class="transition">With the right account open, the system starts looking at your credit history.</p>
+</section>
+
+<!-- STEP 04 -->
+<section class="page chapter">
+  <div class="chapter-num">Step Four</div>
+  <h2 class="chapter-title">Build Your Credit</h2>
+  <p class="chapter-lede">All your financial history from your home country is worth nothing here.<br>You start from zero.</p>
+  <div class="chapter-rule"></div>
+
+  <p>Many newcomers arrive with no U.S. credit history. Not bad credit. <em>No</em> credit. To the financial system, you don't exist yet.</p>
+  <p>That's why people stay stuck longer than they expected.</p>
+  <p>You can't rush credit history. What you can do: avoid the mistakes that force you to start over &mdash; and take the right steps early enough that time works for you.</p>
+
+  <h3 class="subhead">What actually matters &mdash; the three factors</h3>
+  <ul class="bullets">
+    <li><strong>Payment history.</strong> The most important factor. Pay on time, always. One late payment can stay on your report for years.</li>
+    <li><strong>Credit utilization.</strong> How much of your available credit you're using. High utilization signals financial pressure. Keep balances low.</li>
+    <li><strong>Length of history.</strong> Older accounts help. Closing your first account to "upgrade" is usually a mistake.</li>
+  </ul>
+  <p>Everything else &mdash; credit inquiries, account mix &mdash; matters less. Focus on these three first.</p>
+
+  <h3 class="subhead">How newcomers commonly start building</h3>
+  <ul class="bullets">
+    <li><strong>Secured credit card.</strong> A deposit becomes your limit. Use it, pay it off. Payment behavior builds history &mdash; not the deposit.</li>
+    <li><strong>Authorized user.</strong> Someone trusted adds you to their card. Their history can appear on your report &mdash; one of the fastest ways to establish a starting score.</li>
+    <li><strong>Credit-builder loan.</strong> Offered by some banks and credit unions. Fixed monthly payments reported to the bureau. Ask where you already have an account.</li>
+  </ul>
+
+  <h3 class="subhead">What to avoid</h3>
+  <ul class="bullets">
+    <li><strong>Late payment &mdash; even once.</strong> Set up automatic minimum payment. A late payment can stay on your report for up to seven years.</li>
+    <li><strong>Maxing out a card.</strong> High utilization hurts your score even if you pay it off later. Keep balances well under your limit.</li>
+    <li><strong>Applying for many products at once.</strong> Each application is an inquiry. Research first, apply once.</li>
+    <li><strong>Assuming your home-country credit history transfers.</strong> It doesn't. The U.S. system has no access to it. That's not punishment. That's how the system works.</li>
+  </ul>
+  <p>People who learn this late look back and see years they can't recover.</p>
+
+  <blockquote class="pullquote">You can't rush credit history. What you can do is avoid the mistakes that force you to start over.</blockquote>
+
+  <div class="action-box">
+    <div class="label">Your action for this step</div>
+    <ul>
+      <li>Check whether you have U.S. credit history at annualcreditreport.com (free)</li>
+      <li>Research a secured card or credit-builder product that fits your situation</li>
+      <li>Set up autopay on every existing account</li>
+      <li>Identify someone trusted who could add you as an authorized user &mdash; and have that conversation</li>
+    </ul>
+  </div>
+
+  <h3 class="subhead">A note on business credit</h3>
+  <p>Personal credit is the foundation. If you own a business &mdash; or want to &mdash; there's a parallel game called business credit. Different bureaus. Different rules. Different leverage. A dedicated guide for business owners is in the works. Message us if you want it when it drops.</p>
+
+  <p class="disclaimer">Credit scores and credit decisions depend on many individual factors. Educational content only &mdash; not financial advice. Consult a qualified financial professional for your specific situation.</p>
+
+  <p class="transition">As your credit history starts to build, the next question is: what happens if everything stops?</p>
+</section>
+
+<!-- STEP 05 -->
+<section class="page chapter">
+  <div class="chapter-num">Step Five</div>
+  <h2 class="chapter-title">Protect What You're Building</h2>
+  <p class="chapter-lede">Many people spend years building &mdash; and protect none of it.</p>
+  <div class="chapter-rule"></div>
+
+  <p>This is the step people most often delay. Not because they don't care about their family. Because they're focused on surviving now, and protection feels like something to figure out later, when things are more stable.</p>
+  <p>That logic is common. And it's exactly how families end up in crisis.</p>
+
+  <h3 class="subhead">What the risk actually looks like</h3>
+  <p>You're the one supporting the household. You work. You pay rent. You cover the bills.</p>
+  <p>Every month, it's you.</p>
+  <p>Now think about it: if you stopped for six months, who holds everything? If something happened to you, who supports your family? And family back home counting on you &mdash; what about them?</p>
+  <p>This isn't about fear. It's about responsibility. And responsibility requires preparation.</p>
+
+  <h3 class="subhead">What most people picture vs. what actually works</h3>
+  <p>Most people picture life insurance as one thing: you die, your family gets a check. That's term insurance &mdash; the simplest form. It works for what it does.</p>
+  <p>There's a more powerful structure most people never get explained to them: <strong>Indexed Universal Life</strong>, or IUL.</p>
+
+  <h3 class="subhead">What an IUL actually is</h3>
+  <ul class="bullets">
+    <li><strong>Permanent coverage</strong> &mdash; not a 20-year term that disappears.</li>
+    <li><strong>A death benefit</strong> your family receives if the worst happens.</li>
+    <li><strong>Cash value</strong> that grows inside the policy, indexed to a market &mdash; participating in upside without direct market exposure.</li>
+    <li><strong>Living benefits</strong> &mdash; you can access the death benefit early if you face a chronic, critical, or terminal illness that meets the policy's criteria.</li>
+    <li><strong>Tax-advantaged growth.</strong></li>
+    <li><strong>A pool of capital</strong> you can borrow against, often without triggering taxes.</li>
+  </ul>
+
+  <blockquote class="pullquote">You don't have to die to use it.</blockquote>
+
+  <p>If you get cancer. If you have a heart attack. If you're diagnosed with a chronic condition that meets the policy's criteria &mdash; you can pull from the policy while you're alive, when the medical bills hit hardest. That's the living benefit. Term doesn't do this.</p>
+
+  <h3 class="subhead">For business owners &mdash; Infinite Banking</h3>
+  <p>If you own a business or want to, an IUL becomes a private capital pool. You build cash value over time. When you need money &mdash; to invest, to expand, to bridge a season &mdash; you borrow against your own policy instead of going to a bank. You pay yourself back the interest. The cash value continues growing while you're using it.</p>
+  <p>This concept is sometimes called <em>Infinite Banking</em>. It's not magic. It's structured permanence + leverage + tax efficiency working together. It takes intentional setup and a licensed professional who actually understands the strategy.</p>
+
+  <h3 class="subhead">The timing problem</h3>
+  <p>You can't make this decision after the diagnosis. You can't apply for life insurance after the cancer scan. You can't get an IUL underwritten after the heart attack.</p>
+  <p>The window is now, while you're healthy. Not when you "feel ready." Not when "things are stable." Now.</p>
+
+  <h3 class="subhead">Health coverage still matters</h3>
+  <p>Medical debt is one of the leading causes of financial collapse in the U.S. &mdash; even for working families. A single uncovered hospital stay can erase years of savings. If you don't have coverage, that's the first call to make this week.</p>
+
+  <h3 class="subhead">IUL, life insurance, and immigration status</h3>
+  <p>Many families assume they need an SSN to qualify. That assumption costs years of coverage they could have had.</p>
+  <p>Some policies accept ITIN applicants. Underwriting varies by policy and carrier. But the option exists. If you've been waiting until you have an SSN, find out what you might already qualify for now.</p>
+
+  <h3 class="subhead">What to avoid</h3>
+  <ul class="bullets">
+    <li><strong>Waiting to feel stable.</strong> There's no such thing as stable. Stability is built, not waited for.</li>
+    <li><strong>Assuming you won't qualify.</strong> Most people never check. That assumption is wrong more often than people realize.</li>
+    <li><strong>Choosing coverage on price alone.</strong> Cheapest and right aren't always the same.</li>
+    <li><strong>Leaving the conversation until something forces it.</strong> The time to think about protecting your family isn't during a crisis. It's before.</li>
+  </ul>
+
+  <blockquote class="pullquote">Protection isn't what you build after you're stable. It's part of what makes stability possible.</blockquote>
+
+  <p>This step almost always gets delayed until something forces the decision. By then, the options are smaller &mdash; or gone.</p>
+
+  <div class="action-box">
+    <div class="label">Your action for this step</div>
+    <ul>
+      <li>Ask yourself: if I got sick today, or if I couldn't work for six months &mdash; what happens to my family?</li>
+      <li>Research health coverage options &mdash; start at healthcare.gov or a local navigator</li>
+      <li>Find out whether you qualify for an IUL given your current documents and health</li>
+      <li>Talk to a licensed professional who understands IUL and Infinite Banking &mdash; not to buy anything yet, but to understand what exists</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">IUL, life insurance, and health coverage eligibility vary by individual circumstances, health, immigration status, and state. Underwriting, policy structure, and product details depend on the carrier and the licensed professional designing the strategy. Informational content only &mdash; not insurance, financial, or tax advice. Consult a licensed professional before making decisions.</p>
+
+  <p class="transition">With the foundation protected, the question becomes: how do you grow what you're earning?</p>
+</section>
+
+<!-- STEP 06 -->
+<section class="page chapter">
+  <div class="chapter-num">Step Six</div>
+  <h2 class="chapter-title">Grow Your Income</h2>
+  <p class="chapter-lede">Income is the lever everyone underestimates.</p>
+  <div class="chapter-rule"></div>
+
+  <p>You can save every spare dollar. Cut every coupon. Skip every dinner out.</p>
+  <p>But there's a ceiling on saving. There's no ceiling on income.</p>
+  <p>If you only spend less, you cap your future. If you grow what you earn, you change the math entirely.</p>
+
+  <h3 class="subhead">The three income tracks</h3>
+  <p>Most people only have one &mdash; and don't know there are three.</p>
+  <ul class="bullets">
+    <li><strong>W-2 income.</strong> Your day job.</li>
+    <li><strong>Side income.</strong> Work on top of W-2 &mdash; rideshare, content, freelance, sales, indication.</li>
+    <li><strong>Business income.</strong> Work that runs without you in the chair.</li>
+  </ul>
+  <p>Each has a different shape. Each has a different ceiling. Most lasting wealth comes from owning all three at once. Master one before stacking the next.</p>
+
+  <h3 class="subhead">Skill premium beats hour stacking</h3>
+  <p>Two ways to make more in your day job:</p>
+  <ul class="bullets">
+    <li>Work more hours.</li>
+    <li>Be worth more per hour.</li>
+  </ul>
+  <p>Most people pick option 1, and burn out before they get anywhere. Option 2 is harder and slower. But it compounds.</p>
+  <p>A certification. A new tool. A specialization in your field. A reputation for doing the thing the right way. These don't pay you back next month. They pay you back in raises, in rate increases, in offers that come to you instead of you chasing them.</p>
+  <p>Specialize first. Diversify later.</p>
+
+  <h3 class="subhead">The side income bridge</h3>
+  <p>A side income stream is how most families fund the leap. The most accessible bridges:</p>
+  <ul class="bullets">
+    <li><strong>Rideshare.</strong> Uber, Lyft. Set your hours. Get paid weekly.</li>
+    <li><strong>Content / UGC.</strong> Short videos for brands. Low entry cost, real income for people who already create.</li>
+    <li><strong>Indication / referral.</strong> Bring qualified leads to a business, earn a percentage. Common in financial services, real estate, insurance.</li>
+    <li><strong>Freelance.</strong> Translation, virtual assistance, design, accounting prep. Anything you already know.</li>
+    <li><strong>Selling something with margin.</strong> Products, food, services to your community.</li>
+  </ul>
+  <p>Pick one. Run it for 90 days before adding a second. Track every dollar in and every dollar out.</p>
+
+  <h3 class="subhead">The honest take on "passive income"</h3>
+  <p>The internet sells you the dream of money that comes while you sleep. Most "passive income" isn't passive &mdash; at least not at first.</p>
+  <p>Real estate? Tenants call. A business? Decisions need making. Investments? They need monitoring.</p>
+  <p>The honest version: income that takes less of your time over time, after a lot of upfront work. Still worth building. Just don't expect month one.</p>
+
+  <blockquote class="pullquote">Income is what funds the future. Saving alone never gets there.</blockquote>
+
+  <div class="action-box">
+    <div class="label">Your action for this step</div>
+    <ul>
+      <li>Pick ONE income track to grow this quarter</li>
+      <li>If it's W-2: identify the one skill or certification that would increase your rate the most</li>
+      <li>If it's side income: pick ONE bridge and run it for 90 days</li>
+      <li>Track three numbers monthly: gross income, net income, hours worked</li>
+      <li>Set a 90-day income goal &mdash; specific dollar amount</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">Income strategies depend on your authorization to work, your local market, and your existing skills. Educational content only. For tax and structuring questions on side or business income, consult a licensed tax professional.</p>
+
+  <p class="transition">Once income starts growing, the question becomes: what do you build with it?</p>
+</section>
+
+<!-- STEP 07 -->
+<section class="page chapter">
+  <div class="chapter-num">Step Seven</div>
+  <h2 class="chapter-title">Build Something That Lasts</h2>
+  <p class="chapter-lede">You don't want to be doing what you're doing now in twenty years.<br>So you have to build something that does the work for you.</p>
+  <div class="chapter-rule"></div>
+
+  <h3 class="subhead">The asset shift</h3>
+  <p>Up to this point, you've been trading time for money. W-2, side income, even most business income &mdash; it's still time-for-money at some scale.</p>
+  <p>The real shift happens when you start owning <strong>assets</strong>. An asset is something that generates value without your active hours.</p>
+  <ul class="bullets">
+    <li>A house with equity (instead of just paying rent)</li>
+    <li>A business with systems (instead of you doing every task)</li>
+    <li>A brand or reputation that brings opportunities to you</li>
+    <li>Investment accounts that compound while you sleep</li>
+  </ul>
+  <p>Hours are finite. Assets are not.</p>
+
+  <h3 class="subhead">Retirement isn't a default</h3>
+  <p>Most people don't have a retirement plan. They have a hope.</p>
+  <p>When we say "retirement," we don't mean a part-time job at Walmart or Dollar Tree at 70 because the math ran out. That's the default outcome for most Americans &mdash; immigrant or otherwise. We mean something different: time you own. Choices you control. Vacation forever, if that's what you want.</p>
+  <p>The difference between those two outcomes is not luck. It's planning. One hour of intentional planning today can change years of your life later.</p>
+  <p>The vehicles that build the path:</p>
+  <ul class="bullets">
+    <li><strong>Roth IRA.</strong> After-tax contributions grow tax-free. Pull tax-free in retirement. Powerful for younger earners and anyone with available cash flow.</li>
+    <li><strong>Traditional 401(k).</strong> Pre-tax contributions through your employer. If they match, that match is free money &mdash; take it.</li>
+    <li><strong>SEP IRA / Solo 401(k).</strong> For self-employed and business owners. Higher contribution limits than the personal IRAs.</li>
+    <li><strong>IUL.</strong> Covered in Step 5. Also functions as a retirement supplement &mdash; the cash value can become tax-advantaged income later.</li>
+  </ul>
+  <p>You don't need to figure out the mix today. You just need to start.</p>
+
+  <h3 class="subhead">Real estate &mdash; when it's smart, when it's a trap</h3>
+  <p>The classic American dream: buy a house. Sometimes it's smart. Sometimes it's a trap.</p>
+  <p><strong>When it's smart:</strong></p>
+  <ul class="bullets">
+    <li>You plan to stay 5+ years</li>
+    <li>Your monthly payment (including taxes, insurance, maintenance) is at or below comparable rent</li>
+    <li>You have a down payment AND an emergency fund left over</li>
+    <li>Your credit and income are stable</li>
+  </ul>
+  <p><strong>When it's a trap:</strong></p>
+  <ul class="bullets">
+    <li>You're stretching to "make it work"</li>
+    <li>You're buying because everyone says you should</li>
+    <li>You're underwater on the math when you include taxes, insurance, HOA, and repairs</li>
+    <li>You'd be wiped out by six months of unemployment</li>
+  </ul>
+  <p>Renting isn't throwing money away. Renting buys flexibility. Buying buys equity. Both have a real cost. Run the numbers before deciding.</p>
+
+  <h3 class="subhead">Business equity &mdash; your name is the asset</h3>
+  <p>If you run a business, the most valuable asset you'll ever build is your name. A business is just a name plus systems plus customers plus reputation.</p>
+  <p>Customers can leave. Systems can break. But a name with a reputation built over years &mdash; that's compounding equity.</p>
+  <p><strong>What builds the name:</strong></p>
+  <ul class="bullets">
+    <li>Doing what you said you'd do</li>
+    <li>Showing up consistently &mdash; same quality, same voice, same reliability</li>
+    <li>Treating people the right way when nobody is watching</li>
+  </ul>
+  <p><strong>What kills the name:</strong></p>
+  <ul class="bullets">
+    <li>Cutting corners to win the next sale</li>
+    <li>Letting one bad client interaction define your brand</li>
+    <li>Disappearing when things get hard</li>
+  </ul>
+
+  <h3 class="subhead">Brand and reputation as long-term assets</h3>
+  <p>Even if you don't own a business, your reputation in your industry IS an asset. The colleague who knows you'll show up early. The boss who knows you handle the hardest cases without complaint. The client who keeps coming back because you don't surprise them.</p>
+  <p>That reputation creates options. And options are the foundation of freedom.</p>
+
+  <h3 class="subhead">Generosity as a wealth principle</h3>
+  <p>Most personal finance books skip this. We won't.</p>
+  <p>There's a paradox most people miss: the more you give, the more capacity returns. It's not magic. It's structural.</p>
+  <p>Generous people build deeper networks (givers attract). Stay tied to community (which buffers against bad seasons). Develop a healthier relationship with money (which protects against fear-based decisions).</p>
+  <p>We tithe. That's our practice. Yours might be different &mdash; donating, helping family, mentoring, supporting your church. But generosity, in some form, is part of how lasting wealth gets built. Not despite it. Because of it.</p>
+
+  <blockquote class="pullquote">You don't build wealth by squeezing tighter. You build it by what you keep, what you grow, and what you give.</blockquote>
+
+  <div class="action-box">
+    <div class="label">Your action for this step</div>
+    <ul>
+      <li>Identify ONE asset class to start building this year (real estate, business equity, retirement account, brand)</li>
+      <li>Set a clear 12-month milestone for that asset</li>
+      <li>Decide on a generosity percentage &mdash; your monthly giving number &mdash; and start it before you "feel ready"</li>
+      <li>Write down your 5-year vision: what would "lasting" actually look like for your family?</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">Real estate, business, and investment decisions are highly personal and depend on your full financial picture, local market, and goals. Informational content only &mdash; not financial, tax, or real estate advice. Consult licensed professionals for specific guidance.</p>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-inner">
+    <div class="closing-eyebrow">Closing · Until next time</div>
+    <h1 class="closing-title">You've seen<br>the full path.</h1>
+    <div class="closing-rule"></div>
+
+    <p>Most people stop at Step 5. Some never get past Step 1.</p>
+    <p>If you read this far, you're already in the minority.</p>
+    <p class="tight">But understanding isn't doing.</p>
+    <p>You have two choices now: close this guide and stay where you are. Or pick the step you're weakest on, and start this week.</p>
+    <p>You don't have to fix everything today. But you do have to decide whether you'll keep walking the same road, or start adjusting it on purpose.</p>
+
+    <div class="cta-block">
+      <div class="cta-label">Want to talk about your situation?</div>
+      <p style="font-size: 11.5pt; margin-bottom: 0.04in;">If this guide made sense to you, the conversation continues on WhatsApp.</p>
+      <p style="font-size: 11.5pt; margin-bottom: 0.04in;">Tell us where you are today. We look together. No pressure. No promise. Just direction.</p>
+      <span class="cta-link">wa.me/13526303930</span>
+    </div>
+
+    <div class="closing-sig">— John David &amp; Wellen</div>
+
+    <div class="closing-coda">If you read this far, you're not the majority · prosperinamerica.com · @prosperinamerica</div>
+  </div>
+</section>
+
+</body>
+</html>
