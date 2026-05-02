@@ -552,13 +552,21 @@
         Restaurantes locais, lugares escondidos, dicas para economizar, parques além da Disney, passeios de um dia. De quem mora aqui.
       </p>
       <form class="card-form" id="orlando-form" novalidate>
+        <input type="text" name="name" required
+               aria-label="Name"
+               autocomplete="name"
+               data-placeholder-en="Your name"
+               data-placeholder-pt="Seu nome"
+               data-placeholder-es="Tu nombre">
         <input type="email" name="email" required
                aria-label="Email"
+               autocomplete="email"
                data-placeholder-en="Your email"
                data-placeholder-pt="Seu email"
                data-placeholder-es="Tu correo">
         <input type="tel" name="phone"
                aria-label="Phone"
+               autocomplete="tel"
                data-placeholder-en="Phone (optional)"
                data-placeholder-pt="Telefone (opcional)"
                data-placeholder-es="Teléfono (opcional)">
@@ -605,13 +613,21 @@
         Um guia direto para te dar clareza, evitar erros e começar a construir com estrutura nos Estados Unidos.
       </p>
       <form class="card-form" id="financial-form" novalidate>
+        <input type="text" name="name" required
+               aria-label="Name"
+               autocomplete="name"
+               data-placeholder-en="Your name"
+               data-placeholder-pt="Seu nome"
+               data-placeholder-es="Tu nombre">
         <input type="email" name="email" required
                aria-label="Email"
+               autocomplete="email"
                data-placeholder-en="Your email"
                data-placeholder-pt="Seu email"
                data-placeholder-es="Tu correo">
         <input type="tel" name="phone"
                aria-label="Phone"
+               autocomplete="tel"
                data-placeholder-en="Phone (optional)"
                data-placeholder-pt="Telefone (opcional)"
                data-placeholder-es="Teléfono (opcional)">
@@ -832,28 +848,66 @@
     });
   });
 
-  // Generic guide form handler — redirects to a thank-you page with ?lang query.
-  // Phase 6 deferred: ConvertKit + Apps Script will receive email + phone + language + tag.
+  // Guide form handler. Posts to /.netlify/functions/ride-intake (which
+  // forwards to V2 CRM Apps Script with the secret held server-side), then
+  // redirects to the thank-you page so the user always sees the download.
   function bindGuideForm(formId, opts) {
     var form = document.getElementById(formId);
     if (!form) return;
     form.addEventListener('submit', function(e) {
       e.preventDefault();
+      var nameEl  = form.querySelector('input[name="name"]');
       var emailEl = form.querySelector('input[name="email"]');
       var phoneEl = form.querySelector('input[name="phone"]');
       var langEl  = form.querySelector('select[name="lang"]');
+      var name  = nameEl  && nameEl.value  && nameEl.value.trim();
       var email = emailEl && emailEl.value && emailEl.value.trim();
       var phone = phoneEl && phoneEl.value && phoneEl.value.trim();
-      var lang  = langEl && langEl.value;
+      var lang  = langEl  && langEl.value;
       if (!email || email.indexOf('@') === -1) { emailEl && emailEl.focus(); return; }
-      // PHASE-6 TODO: POST to ConvertKit with tag=opts.tag, source=ride
-      console.log('[' + opts.tag + ']', { email: email, phone: phone, lang: lang });
+      if (!name) { nameEl && nameEl.focus(); return; }
+
+      var thankYou = opts.thankYouPath + '?lang=' + encodeURIComponent(lang || 'pt');
+
+      // Local backup so a network failure does not lose the lead silently.
       try {
         var pending = JSON.parse(localStorage.getItem(opts.storeKey) || '[]');
-        pending.push({ email: email, phone: phone, lang: lang, ts: Date.now() });
+        pending.push({ name: name, email: email, phone: phone, lang: lang, ts: Date.now() });
         localStorage.setItem(opts.storeKey, JSON.stringify(pending));
       } catch (_) {}
-      window.location.href = opts.thankYouPath + '?lang=' + encodeURIComponent(lang || 'pt');
+
+      // Disable submit briefly so a double-click does not double-submit.
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+
+      var payload = {
+        name: name,
+        email: email,
+        phone: phone,
+        lang: lang,
+        form_id: formId,
+        tag: opts.tag
+      };
+
+      var redirected = false;
+      function go() {
+        if (redirected) return;
+        redirected = true;
+        window.location.href = thankYou;
+      }
+      // Hard cap so a slow function does not keep the user on /ride.
+      var safety = setTimeout(go, 4000);
+
+      fetch('/.netlify/functions/ride-intake', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(function() { /* swallowed; redirect still happens */ })
+        .finally(function() {
+          clearTimeout(safety);
+          go();
+        });
     });
   }
   bindGuideForm('orlando-form',   { tag: 'orlando-insider-guide',  storeKey: 'orlandoLeads',   thankYouPath: '/obrigado-orlando.html' });
