@@ -1133,6 +1133,13 @@
       <p class="honeypot">
         <label>Do not fill: <input name="bot-field"></label>
       </p>
+      <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" value="">
+      <input type="hidden" name="form_loaded_at" value="">
+      <p class="form-error" id="brief-form-error" role="alert" aria-live="polite" style="display:none;color:#E8782B;font-size:13px;font-weight:600;margin:-18px 0 22px;letter-spacing:0.02em;">
+        <span data-en="Please enter a valid name."
+              data-pt="Por favor, insira um nome válido."
+              data-es="Por favor, ingresa un nombre válido.">Por favor, insira um nome válido.</span>
+      </p>
 
       <div class="form-row">
         <label for="name" data-en="Name" data-pt="Nome" data-es="Nome">Name</label>
@@ -1302,6 +1309,21 @@
   // fallback: if JS is disabled, the form submits to Netlify Forms instead.
   var briefForm = document.getElementById('brief-form');
   if (briefForm) {
+    // Spam time-gate: stamp page-load time on the form. Server rejects if
+    // submission arrives < 2000ms after load (bots fill forms instantly).
+    var loadedAtEl = briefForm.querySelector('[name="form_loaded_at"]');
+    if (loadedAtEl) loadedAtEl.value = String(Date.now());
+
+    // Client-side name validity. Server re-validates as defense in depth.
+    function isValidName(s) {
+      if (!s) return false;
+      var t = s.trim();
+      if (t.length < 3 || t.length > 100) return false;
+      if (t.indexOf(' ') === -1) return false;
+      var alpha = (t.match(/[A-Za-zÀ-ÖØ-öø-ÿ]/g) || []).length;
+      return (alpha / t.length) >= 0.70;
+    }
+
     briefForm.addEventListener('submit', function(e) {
       e.preventDefault();
       var get = function(n) {
@@ -1311,6 +1333,16 @@
 
       var name  = get('name');
       var email = get('email');
+      var errEl = document.getElementById('brief-form-error');
+
+      if (!isValidName(name)) {
+        if (errEl) errEl.style.display = 'block';
+        var ne = briefForm.querySelector('[name="name"]'); if (ne) ne.focus();
+        return;
+      } else if (errEl) {
+        errEl.style.display = 'none';
+      }
+
       if (!email || email.indexOf('@') === -1) {
         var ee = briefForm.querySelector('[name="email"]'); if (ee) ee.focus();
         return;
@@ -1325,7 +1357,9 @@
         not_working:    get('not_working'),
         want:           get('want'),
         budget:         get('budget'),
-        lang:           currentLang
+        lang:           currentLang,
+        website_url:    get('website_url'),
+        form_loaded_at: get('form_loaded_at')
       };
 
       // Local backup so a network failure does not lose the brief silently.

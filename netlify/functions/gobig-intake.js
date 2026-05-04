@@ -78,6 +78,13 @@ exports.handler = async (event) => {
     not_working: String(payload.not_working || '').trim(),
     want: String(payload.want || '').trim(),
     budget: String(payload.budget || '').trim(),
+
+    // Spam-check fields. V14 server-side rejects submissions where:
+    //   website_url is non-empty (honeypot — only bots fill hidden fields)
+    //   (now - form_loaded_at_ms) < 2000  (form filled too fast)
+    // See dev-kit/v14-apps-script-spam-update.md for the full validation contract.
+    website_url: String(payload.website_url || '').trim(),
+    form_loaded_at: String(payload.form_loaded_at || '').trim(),
   };
 
   const upstreamUrl = `${execUrl}?secret=${encodeURIComponent(secret)}`;
