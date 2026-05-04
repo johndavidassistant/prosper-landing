@@ -265,7 +265,7 @@
           data-en="Download now"
           data-pt="Baixar agora"
           data-es="Descargar ahora">Baixar agora</span>
-    <a id="dl-primary" href="/assets/prosper_in_america_guia_pt.pdf" target="_blank" rel="noopener" class="dl-btn dl-btn-primary">
+    <a id="dl-primary" href="/assets/guides/financial-guide-pt.pdf" target="_blank" rel="noopener" class="dl-btn dl-btn-primary">
       <span data-en="↓ Download Financial Guide"
             data-pt="↓ Baixar o Guia Financeiro"
             data-es="↓ Descargar la Guía Financiera">↓ Baixar o Guia Financeiro</span>
@@ -273,7 +273,10 @@
     <a href="/assets/guides/financial-guide-en.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
       ↓ &nbsp;English version
     </a>
-    <a href="/assets/prosper_in_america_guia_pt.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
+    <a href="/assets/guides/financial-guide-es.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
+      ↓ &nbsp;Versión en Español
+    </a>
+    <a href="/assets/guides/financial-guide-pt.pdf" target="_blank" rel="noopener" class="dl-btn-ghost">
       ↓ &nbsp;Versão em Português
     </a>
   </div>
@@ -366,11 +369,10 @@
     });
     var dl = document.getElementById('dl-primary');
     if (dl) {
-      // Financial guide currently has only PT and EN. ES uses PT as fallback.
-      // EN: V2 financial guide (Playfair/Inter, 29 pages). PT: legacy until V2 PT is built.
-      dl.href = lang === 'en'
-        ? '/assets/guides/financial-guide-en.pdf'
-        : '/assets/prosper_in_america_guia_pt.pdf';
+      // Financial guide v2 — EN/PT/ES, all three languages live.
+      if (lang === 'en') dl.href = '/assets/guides/financial-guide-en.pdf';
+      else if (lang === 'es') dl.href = '/assets/guides/financial-guide-es.pdf';
+      else dl.href = '/assets/guides/financial-guide-pt.pdf';
     }
   }
   var lang = readLang();
