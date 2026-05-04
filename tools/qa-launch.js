@@ -1,5 +1,5 @@
 // Launch QA: screenshots + targeted before/after section captures.
-// Captures index, go-big, fogo-live, ride, obrigado*, and section-level focus shots.
+// Captures index, go-big, lives, ride, obrigado*, and section-level focus shots.
 // Usage: node tools/qa-launch.js <out-dir> [base-url]
 
 const puppeteer = require('puppeteer-core');
@@ -15,7 +15,7 @@ if (!OUT_DIR) { console.error('Usage: node tools/qa-launch.js <out-dir> [base-ur
 const ROUTES = [
   '/index.html',
   '/go-big.html',
-  '/fogo-live.html',
+  '/lives/',
   '/ride.html',
   '/obrigado.html',
   '/obrigado-go-big.html',

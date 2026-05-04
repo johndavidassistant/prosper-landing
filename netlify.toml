@@ -4,3 +4,16 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+# Old FOGO LIVE page → unified LIVE schedule under master brand
+[[redirects]]
+  from = "/fogo-live.html"
+  to = "/lives/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fogo-live"
+  to = "/lives/"
+  status = 301
+  force = true

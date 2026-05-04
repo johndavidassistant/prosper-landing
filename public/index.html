@@ -1037,26 +1037,6 @@
     margin: 4px auto 0;
     line-height: 1.7;
   }
-  /* FOGO LIVE — quiet pre-launch mention beneath Mt 6:33. */
-  .footer-fogo {
-    font-family: var(--display);
-    font-style: italic;
-    font-size: 11px;
-    letter-spacing: 0.10em;
-    color: rgba(200,149,46,0.55);
-    margin: 2px auto 0;
-    line-height: 1.7;
-  }
-  .footer-fogo a {
-    color: inherit;
-    border-bottom: 1px dotted rgba(200,149,46,0.35);
-    transition: color 0.2s, border-color 0.2s;
-  }
-  .footer-fogo a:hover {
-    color: var(--gold-light);
-    border-bottom-color: rgba(219,169,74,0.7);
-  }
-
   /* ═══════════════════════════════════════════════════
      MOBILE OVERRIDES
   ═══════════════════════════════════════════════════ */
@@ -1068,129 +1048,6 @@
     .nav-right { gap: 12px; }
     .btn.nav-cta { padding: 10px 18px; font-size: 13px; }
   }
-
-  /* ═══════════════════════════════════════════════════
-     FOGO LIVE — PRE-LAUNCH TEASER STRIP (between trust + paths)
-  ═══════════════════════════════════════════════════ */
-  .fogo-strip {
-    position: relative;
-    background: var(--navy-deep);
-    border-top: 1px solid rgba(200,149,46,0.18);
-    border-bottom: 1px solid rgba(200,149,46,0.18);
-    padding: 26px 24px;
-    overflow: hidden;
-    isolation: isolate;
-  }
-  /* Dawn ember radial glow at lower-left corner — FOGO LIVE accent. */
-  .fogo-strip::before {
-    content: '';
-    position: absolute;
-    width: 320px; height: 320px;
-    left: -80px; bottom: -120px;
-    background: radial-gradient(circle, rgba(232,120,43,0.18) 0%, rgba(232,120,43,0) 65%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  /* Gold accent line, top edge, single point of light. */
-  .fogo-strip::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 80px; height: 1px;
-    background: linear-gradient(90deg, rgba(200,149,46,0) 0%, rgba(200,149,46,0.85) 50%, rgba(200,149,46,0) 100%);
-    z-index: 1;
-  }
-  .fogo-strip__inner {
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    text-align: center;
-  }
-  @media (min-width: 880px) {
-    .fogo-strip__inner {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-      gap: 32px;
-    }
-  }
-  .fogo-strip__copy {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .fogo-strip__eyebrow {
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.34em;
-    text-transform: uppercase;
-    color: var(--gold);
-    opacity: 0.85;
-  }
-  .fogo-strip__title {
-    font-family: var(--display);
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(16px, 2.2vw, 20px);
-    color: rgba(255,255,255,0.92);
-    line-height: 1.4;
-    letter-spacing: 0.005em;
-  }
-  .fogo-strip__form {
-    display: flex;
-    gap: 8px;
-    width: 100%;
-    max-width: 420px;
-  }
-  .fogo-strip__form input[type="email"] {
-    flex: 1;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(200,149,46,0.30);
-    border-radius: 8px;
-    color: var(--white);
-    font-family: var(--sans);
-    font-size: 14px;
-    padding: 10px 14px;
-    outline: none;
-    transition: border-color 0.18s, background 0.18s;
-    min-width: 0;
-  }
-  .fogo-strip__form input[type="email"]::placeholder {
-    color: rgba(255,255,255,0.35);
-  }
-  .fogo-strip__form input[type="email"]:focus {
-    border-color: rgba(200,149,46,0.7);
-    background: rgba(255,255,255,0.10);
-  }
-  .fogo-strip__form button {
-    background: var(--gold);
-    color: var(--navy-deep);
-    border: none;
-    border-radius: 8px;
-    font-family: var(--sans);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    padding: 10px 18px;
-    cursor: pointer;
-    transition: background 0.18s;
-    white-space: nowrap;
-  }
-  .fogo-strip__form button:hover { background: var(--gold-light); }
-  .fogo-strip__msg {
-    display: none;
-    font-size: 12px;
-    color: var(--gold);
-    margin-top: 4px;
-  }
-  .fogo-strip__msg.is-visible { display: block; }
 
   /* ═══════════════════════════════════════════════════
      GUIDE DOWNLOAD
@@ -1221,7 +1078,7 @@
       <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
       <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
       <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
-      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="/lives/">LIVE</a>
       <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
     </nav>
     <div class="site-header-right">
@@ -1308,36 +1165,6 @@
           data-pt="Fé · Família · Estrutura">Faith · Family · Structure</span>
   </div>
 </div>
-
-
-<!-- ══════════════════════════════════════ FOGO LIVE — PRE-LAUNCH TEASER ═════════════ -->
-<aside class="fogo-strip" aria-label="O FOGO LIVE pre-launch">
-  <div class="fogo-strip__inner">
-    <div class="fogo-strip__copy">
-      <span class="fogo-strip__eyebrow"
-            data-en="O FOGO LIVE. Coming soon."
-            data-pt="O FOGO LIVE. Em breve.">O FOGO LIVE. Em breve.</span>
-      <span class="fogo-strip__title"
-            data-en="Free weekly English and Faith. Hosted by John David."
-            data-pt="Inglês e Fé toda semana. Apresentado por John David.">
-        Inglês e Fé toda semana. Apresentado por John David.
-      </span>
-    </div>
-    <form class="fogo-strip__form" id="fogo-strip-form" novalidate>
-      <input type="email" name="email" required
-             aria-label="Email"
-             placeholder=""
-             data-placeholder-en="Your email"
-             data-placeholder-pt="Seu email">
-      <button type="submit"
-              data-en="Notify me"
-              data-pt="Avise-me">Avise-me</button>
-    </form>
-  </div>
-  <p class="fogo-strip__msg" id="fogo-strip-msg" role="status"
-     data-en="Thanks. We'll write before episode one."
-     data-pt="Obrigado. Avisamos antes do primeiro episódio."></p>
-</aside>
 
 
 <!-- ══════════════════════════════════════ GUIDE DOWNLOAD ════════════════════════════ -->
@@ -1653,7 +1480,7 @@
       <a href="/index.html#nossa-historia" data-en="About Us" data-pt="Sobre Nós" data-es="Sobre Nosotros">Sobre Nós</a>
       <a href="/index.html#caminhos" data-en="Services" data-pt="Serviços" data-es="Servicios">Serviços</a>
       <a href="/index.html#guia" data-en="Free Guide" data-pt="Guia Gratuito" data-es="Guía Gratis">Guia Gratuito</a>
-      <a href="/fogo-live.html">O FOGO LIVE</a>
+      <a href="/lives/">LIVE</a>
       <a href="mailto:johndavid@prosperinamerica.com" data-en="Contact" data-pt="Contato" data-es="Contacto">Contato</a>
     </nav>
     <p class="site-footer-copy">© 2026 Prosper In America</p>
@@ -1734,31 +1561,6 @@
     });
   });
 
-  // ── FOGO LIVE pre-launch email capture ─────────────────────────────────────
-  // Phase 6 deferred: Wire to ConvertKit with tag `fogo-live-pre-launch`.
-  // For launch, capture intent locally and confirm in-place.
-  var fogoForm = document.getElementById('fogo-strip-form');
-  if (fogoForm) {
-    fogoForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var emailEl = fogoForm.querySelector('input[name="email"]');
-      var msg = document.getElementById('fogo-strip-msg');
-      var email = emailEl && emailEl.value && emailEl.value.trim();
-      if (!email || email.indexOf('@') === -1) {
-        emailEl && emailEl.focus();
-        return;
-      }
-      // PHASE-6 TODO: POST to ConvertKit with tag=fogo-live-pre-launch
-      console.log('[fogo-live-pre-launch]', email);
-      try {
-        var pending = JSON.parse(localStorage.getItem('fogoLivePreLaunch') || '[]');
-        pending.push({ email: email, ts: Date.now() });
-        localStorage.setItem('fogoLivePreLaunch', JSON.stringify(pending));
-      } catch (_) {}
-      fogoForm.reset();
-      if (msg) msg.classList.add('is-visible');
-    });
-  }
 </script>
 
 <script>
